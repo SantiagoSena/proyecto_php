@@ -37,31 +37,31 @@
             <hr class="bg-primary">
           </li>
           <li class="nav-item">
-              <a class="nav-link active text-white" href="productos.html"><i class="fa fa-shopping-basket mx-2" aria-hidden="true"></i>Productos</a>
+              <a class="nav-link active text-white" href="productos.php"><i class="fa fa-shopping-basket mx-2" aria-hidden="true"></i>Productos</a>
               <hr class="bg-primary">
           </li>
         <li class="nav-item">
-          <a class="nav-link text-white" href="usuarios.html"><i class="fa fa-book mx-2" aria-hidden="true"></i>Listado Usuarios</a>
+          <a class="nav-link text-white" href="usuarios.php"><i class="fa fa-book mx-2" aria-hidden="true"></i>Listado Usuarios</a>
           <hr class="bg-primary">
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white" href="ventas.html"><i class="fa fa-book mx-2" aria-hidden="true"></i>Listado Ventas</a>
+          <a class="nav-link text-white" href="ventas.php"><i class="fa fa-book mx-2" aria-hidden="true"></i>Listado Ventas</a>
           <hr class="bg-primary"> 
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white" href="pedidos.html"><i class="fa fa-cart-plus mx-2" aria-hidden="true"></i>Listado Pedidos</a>
+          <a class="nav-link text-white" href="pedidos.php"><i class="fa fa-cart-plus mx-2" aria-hidden="true"></i>Listado Pedidos</a>
           <hr class="bg-primary"> 
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white" href="domicilios_db.html"><i class="fa fa-truck mx-2" aria-hidden="true"></i>Listado Domicilios</a>
+          <a class="nav-link text-white" href="domicilios_db.php"><i class="fa fa-truck mx-2" aria-hidden="true"></i>Listado Domicilios</a>
           <hr class="bg-primary">
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white" href="proveedores.html"><i class="fa fa-user fa-lg mx-2" aria-hidden="true"></i>Proveedores</a>
+          <a class="nav-link text-white" href="proveedores.php"><i class="fa fa-user fa-lg mx-2" aria-hidden="true"></i>Proveedores</a>
           <hr class="bg-primary"> 
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white" href="calificaciones.html"><i class="fa fa-star mx-2" aria-hidden="true"></i>Atención Cliente</a>
+          <a class="nav-link text-white" href="calificaciones.php"><i class="fa fa-star mx-2" aria-hidden="true"></i>Atención Cliente</a>
           <hr class="bg-primary">
         </li>
       </ul>

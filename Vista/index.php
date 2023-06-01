@@ -177,7 +177,7 @@
     <br>
     <h1><strong>Productos Destacados</strong></h1>
     </div>
-   
+    </div>
   <div class="container mt-5">
     <div class="row">
       <div class="col-3"> 
@@ -269,6 +269,6 @@
       <h6>Correo: Asago@gmail.com</h6>
     </div>
     </footer>
-</div>
+
 </body>
 </html>

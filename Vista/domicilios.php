@@ -4,21 +4,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/domicilios.css">
+    <link rel="stylesheet" href="/Vista/Css/domicilios.css">
     <title>Domicilio ASAGO</title>
 </head>
 <body>
     <div class="app">
         <header class="header">
             <div class="imagen_logo">
-                <a href="index.html">
+                <a href="index.php">
                     <img src="imagenes/logo_empresa.png" alt="Logo" width="70" height="70" class="d-inline-block align-text-top">
                 </a>
             </div>
             <div class="logo">ASAGO</div>   
         </header>
         <div class="navigation">
-            <div class="inicio"><a href="index.html">Inicio</a></div>
+            <div class="inicio"><a href="index.php">Inicio</a></div>
         </div>
         <div class="main">
             <div class="form">

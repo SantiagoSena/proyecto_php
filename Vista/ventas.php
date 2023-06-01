@@ -13,7 +13,7 @@
 <body>
   <nav class="navbar" style="background-color: rgb(194, 16, 16);" data-bs-theme="dark" >
       <div class="container-fluid">
-        <a class="navbar-brand" href="index.html">
+        <a class="navbar-brand" href="index.php">
           <img src="imagenes/logo_empresa.png" alt="Logo" width="70" height="70" class="d-inline-block align-text-top">
           BIENVENIDO ADMINISTRADOR</a>
           <form class="d-flex col-sm-6 col-md-6 col-md-lg-6 col-xl-6" role="search">
@@ -24,7 +24,7 @@
             <h5>
               <a class="fa fa-envelope me-2 text-white btn" style="background-color: rgb(230, 72, 72);" href="#" data-toggle="tooltip" title="Correo" aria-hidden="true"></a>
               <a class="fa fa-bell me-2 text-white btn" style="background-color: rgb(230, 72, 72);" href="#" data-toggle="tooltip" title="Notificaciones" aria-hidden="true"></a>
-              <a class="fa fa-close me-2 text-white btn" style="background-color: rgb(230, 72, 72);" href="index.html" data-toggle="tooltip" title="Cerrar" aria-hidden="true"></a>
+              <a class="fa fa-close me-2 text-white btn" style="background-color: rgb(230, 72, 72);" href="index.php" data-toggle="tooltip" title="Cerrar" aria-hidden="true"></a>
             </h5>
           </div>
       </div>
@@ -33,7 +33,7 @@
       <div class="col-md-2 bg-danger mt-0 pr-3 pt-4">
         <ul class="nav flex-column ml-3 mb-5">
           <li class="nav-item">
-            <a class="nav-link active text-white" href="categorias.html"><i class="fa fa-bookmark mx-2" aria-hidden="true"></i>Categorias</a>
+            <a class="nav-link active text-white" href="categorias.php"><i class="fa fa-bookmark mx-2" aria-hidden="true"></i>Categorias</a>
             <hr class="bg-primary">
           </li>
           <li class="nav-item">

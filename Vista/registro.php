@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE php>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -20,7 +20,7 @@
 <body> 
     <nav class="navbar " style="background-color: rgb(194, 16, 16);" data-bs-theme="dark" >
         <div class="container-fluid">
-          <a class="navbar-brand" href="ingresar.html">
+          <a class="navbar-brand" href="ingresar.php">
             <img src="imagenes/logo_empresa.png" alt="Logo" width="70" height="70" class="d-inline-block align-text-top">
             ASAGO</a>
         </div>
@@ -115,4 +115,4 @@
     </div>       
       
 </body>
-</html>
+</php>

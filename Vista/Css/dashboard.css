@@ -9,7 +9,7 @@
 
 body{
     min-height: 100vh;
-    background-color: var(#ddd2ea);
+    background-color: var(#ffffff);
 }
 
 nav{
@@ -20,6 +20,7 @@ nav{
     width: 250px;
     padding: 10px 14px;
     background-color: var(#e2daeb);
+    border-right: 1px solid #adadad;
 }
 
 nav .logo-name{
@@ -44,7 +45,12 @@ nav .logo-name .logo_name{
     font-weight: 600;
     color: var(#000000);
     margin-left: 14px;
+    transition: var(5s);
+}
 
+nav.close .logo-name{
+    opacity: 0;
+    pointer-events: none;
 }
 
 nav .menu-items{
@@ -63,6 +69,17 @@ nav .menu-items{
     align-items: center;
     height: 60px;
     text-decoration: none;
+    position: relative;
+}
+
+.menu-items li a:hover:before{
+    content: "";
+    position: absolute;
+    left: -7px;
+    height: 5px;
+    width: 5px;
+    border-radius: 50%;
+    background-color: rgb(194, 16, 16);
 }
 
 i{
@@ -79,45 +96,132 @@ i{
     font-size: 18px;
     font-weight: 400;
     color: #7c7a7d;
+    transition: var(5s);
+}
+
+nav.close li a .link-name{
+    opacity: 0;
+    pointer-events: none;
 }
 
 .nav-links li a:hover i,
 .nav-links li a:hover .link-name{
-    color: #000000;
+    color: rgb(194, 16, 16);
 }
 
 .dashboard{
     position: relative;
     left: 250px;
-    background-color: rgb(214, 222, 222);
     height: 100vh;
+    background-color: white;
     width: calc(100% - 250px);
 }
 
 .dashboard .top{
     top: 0;
-    display: flex;
     left: 250px;
-    padding: 20px;
-    background-color: rgb(194, 16, 16);
-    align-items: center;
-    
-}
-
-.dashboard .buscar{
+    position: fixed;
     display: flex;
-    margin-left: 20rem;
+    width: calc(100% - 250px);
+    justify-content: space-between;
     align-items: center;
+    padding: 10px 14px;   
 }
 
 .dashboard i{
-    color: #e2daeb;
+    color: black;
     font-size: 26px;
     cursor: pointer;
 }
 
-.dashboard input{
-    padding: 10px;
-    border-radius: 20px;
-    width: 20rem;
+.dashboard .top .search-box{
+    position: relative;
+    height: 45px;
+    max-width: 500px;
+    width: 100%;
+    margin: 0 30px;
+}
+
+.top .search-box input{
+    position: absolute;
+    padding: 0 25px 0 20px;
+    height: 100%;
+    width: 100%;
+}
+
+.top .search-box i{
+    position: absolute;
+    left: 0;
+    z-index: 10;
+    align-items: center;
+    margin-left: 28rem;
+    
+}
+
+.top img{
+    left: 14rem;
+    width: 50px;
+    border-radius: 50%;
+}
+
+.dashboard .dash-content{
+    padding-top: 40px;
+}
+
+.dash-content .title{
+    display: flex;
+    align-items: center;
+    margin: 70px 0 30px 0;
+}
+
+.dash-content .title i{
+    position: relative;
+    margin-left: 15px;
+    height: 35px;
+    width: 35px;
+    background-color:  rgb(194, 16, 16);
+    border-radius: 6px;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+}
+
+.dash-content .title .text{
+    font-size: 24px;
+    font-weight: 500;
+    color: #000;
+    margin-left: 10px;
+}
+
+.dash-content .boxes{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.dash-content .boxes .box{
+    display: flex;
+    align-items: center;
+    border-radius: 12px;
+    width: calc(100% / 3 - 15px);
+    padding: 15px 20px;
+}
+
+.box i{
+    font-size: 40px;
+    color: #000;
+}
+
+.box .text{
+    white-space: nowrap;
+    font-size: 20px;
+    font-weight: 500;
+    color: #000;
+}
+
+.box .number{
+    font-size: 30px;
+    font-weight: 500;
+    color: #000;
 }

@@ -18,134 +18,151 @@
         </div>
 
         <div class="menu-items">
-            <ul class="nav-links">
-                <li><a href="">
-                    <i class="uil uil-estate"></i>
-                    <span class="link-name">Inicio</span>
-                </a></li>
+            <div class="navigation">
+                <ul> 
+                    <li><a href="">
+                        <i class="uil uil-estate"></i>
+                        <span class="link-name">Inicio</span>
+                    </a></li>
 
-                <li><a href="">
-                    <i class="uil uil-users-alt"></i>
-                    <span class="link-name">Usuarios</span>
-                </a></li>
+                    <li><a href="usuarios.php">
+                        <i class="uil uil-users-alt"></i>
+                        <span class="link-name">Usuarios</span>
+                    </a></li>
 
-                <li><a href="">
-                    <i class="uil uil-shopping-bag"></i>
-                    <span class="link-name">Productos</span>
-                </a></li>
+                    <li><a href="productos.php">
+                        <i class="uil uil-shopping-bag"></i>
+                        <span class="link-name">Productos</span>
+                    </a></li>
 
-                <li><a href="">
-                    <i class="uil uil-bill"></i>
-                    <span class="link-name">Ventas</span>
-                </a></li>
+                    <li><a href="ventas.php">
+                        <i class="uil uil-bill"></i>
+                        <span class="link-name">Ventas</span>
+                    </a></li>
 
-                <li><a href="">
-                    <i class="uil uil-shopping-cart"></i>
-                    <span class="link-name">Pedidos</span>
-                </a></li>
+                    <li><a href="pedidos.php">
+                        <i class="uil uil-shopping-cart"></i>
+                        <span class="link-name">Pedidos</span>
+                    </a></li>
 
-                <li><a href="">
-                    <i class="uil uil-truck"></i>
-                    <span class="link-name">Domicilios</span>
-                </a></li>
+                    <li><a href="domicilios_db.php">
+                        <i class="uil uil-truck"></i>
+                        <span class="link-name">Domicilios</span>
+                    </a></li>
 
-                <li><a href="">
-                    <i class="uil uil-store"></i>
-                    <span class="link-name">Compras</span>
-                </a></li>
+                    <li><a href="">
+                        <i class="uil uil-store"></i>
+                        <span class="link-name">Compras</span>
+                    </a></li>
 
-                <li><a href="">
-                    <i class="uil uil-book-reader"></i>
-                    <span class="link-name">Atención al Cliente</span>
-                </a></li>
-            </ul>
+                    <li><a href="">
+                        <i class="uil uil-book-reader"></i>
+                        <span class="link-name">Atención al Cliente</span>
+                    </a></li>
 
-            <ul class="sesion">
-                <li><a href="">
-                    <i class="uil uil-sign-out-alt"></i>
-                    <span class="link-name">Cerrar Sesión</span>
-                </a></li>
-            </ul>
+                    <li class="close-seccion"><a href="index.php">
+                        <i class="uil uil-sign-out-alt"></i>
+                        <span class="link-name">Cerrar Sesión</span>
+                    </a></li>
+                </ul>
+            </div>
         </div>
     </nav>
 
-    <section class="dashboard">
-        <div class="top">
-            <i class="uil uil-bars"></i>
-
-            <div class="search-box">
-                <input type="text" placeholder="¿Qué buscas?">
-                <i class="uil uil-search"></i>
+    <div class="main">
+        <div class="topbar">
+            <div class="toggle">
+                <i class="uil uil-bars"></i>
             </div>
 
-            <img src="/imagenes/avatar.PNG" alt="">
+            <div class="search">
+                <label>
+                    <input type="text" placeholder="Busca aquí...">
+                    <i class="uil uil-search"></i>
+                </label>
+            </div>
 
+            <div class="user">
+                <img src="/imagenes/avatar.PNG" alt="">
+            </div>
         </div>
+    </div>
 
-        <div class="dash-content">
-            <div class="overview">
-                <div class="title">
-                    <i class="uil uil-bookmark"></i>
-                    <span class="text">Dashboard</span>
-                </div>
-
-                <div class="boxes">
-                    <div class="box">
-                        <div class="box1">
-                            <span class="text">Usuarios</span>
-                            <i class="uil uil-users-alt"></i>
-                            <span class="number">20</span>
-                        </div>
-
-                        <div class="box2">
-                            <span class="text">Productos</span>
-                            <i class="uil uil-shopping-bag"></i>
-                            <span class="number">500</span>
-                        </div>
-
-                        <div class="box3">
-                            <span class="text">Ventas</span>
-                            <i class="uil uil-bill"></i>
-                            <span class="number">80</span>
-                        </div>
-
-                        <div class="box4">
-                            <span class="text">Pedidos</span>
-                            <i class="uil uil-shopping-cart"></i>
-                            <span class="number">60</span>
-                        </div>
-
-                        <div class="box5">
-                            <span class="text">Domicilios</span>
-                            <i class="uil uil-truck"></i>
-                            <span class="number">60</span>
-                        </div>
-
-                        <div class="box6">
-                            <span class="text">Compras</span>
-                            <i class="uil uil-store"></i>
-                            <span class="number" >40</span>
-                        </div>
-
-                        <div class="box7">
-                            <span class="text">Comentarios</span>
-                            <i class="uil uil-comments"></i>
-                            <span class="number">30</span>
-                        </div>
-
-                        <div class="box8">
-                            <span class="text">Calificaciones</span>
-                            <i class="uil uil-star"></i>
-                            <span class="number">30</span>
-                        </div>
-
-                    </div>
-                </div>
+    <div class="cardBox">
+        <div class="card">
+            <div>
+                <div class="text"><a href="usuarios.php">Usuarios</a></div>
+                <div class="number">100</div>
+            </div>
+            <div class="iconBx">
+                <i class="uil uil-users-alt"></i>
             </div>
         </div>
 
+        <div class="card">
+            <div>
+                <div class="text"><a href="productos.php">Productos</a></div>
+                <div class="number">200</div>
+            </div>
+            <div class="iconBx">
+                <i class="uil uil-shopping-bag"></i>
+            </div>
+        </div>
 
-    </section>
-    
+        <div class="card">
+            <div>
+                <div class="text"><a href="ventas.php">Ventas</a></div>
+                <div class="number">80</div>
+            </div>
+            <div class="iconBx">
+                <i class="uil uil-bill"></i>
+            </div>
+        </div>
+
+        <div class="card">
+            <div>
+                <div class="text"><a href="domicilios_db.php" >Domicilios</a></div>
+                <div class="number">60</div>
+            </div>
+                <div class="iconBx">
+                <i class="uil uil-truck"></i>
+            </div>
+        </div>
+    </div>
+
+    <div class="cardBox">
+        <div class="card">
+            <div>
+                <span class="text"><a href="">Compras</a></span>
+                <div class="number">50</div>
+            </div>
+            <div class="iconBx">
+                <i class="uil uil-store"></i>
+            </div>
+        </div>
+
+        <div class="card">
+            <div>
+                <div class="text"><a href="pqrs.php">Comentarios</a></div>
+                <div class="number">56</div>
+            </div>
+            <div class="iconBx">
+                <i class="uil uil-comments"></i>
+            </div>
+        </div>
+
+        <div class="card">
+            <div>
+                <div class="text">Alertas</div>
+                <div class="number">30</div>
+            </div>
+                <div class="iconBx">
+                <i class="uil uil-exclamation-triangle"></i>
+            </div>
+        </div>
+    </div>
+
+
+       
 </body>
 </html>

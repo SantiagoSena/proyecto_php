@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+< lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -21,7 +21,7 @@
 <body>
     <nav class="navbar " style="background-color: rgb(194, 16, 16);" data-bs-theme="dark" >
         <div class="container-fluid">
-          <a class="navbar-brand" href="index.html">
+          <a class="navbar-brand" href="index.php">
             <img src="imagenes/logo_empresa.png" alt="Logo" width="70" height="70" class="d-inline-block align-text-top">
             ASAGO</a>
         </div>
@@ -44,10 +44,10 @@
                 <br>
                 <br>
                 <a href="" class="btn btn-danger">Enviar</a>
-                <a href="acceso.html" class="btn btn-danger">Volver atras</a>
+                <a href="acceso.php" class="btn btn-danger">Volver atras</a>
             </center>
             <br>
         </div>
     </div>
 </body>
-</html>
+    </html>

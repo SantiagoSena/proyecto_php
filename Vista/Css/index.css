@@ -1,6 +1,13 @@
 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
 body {
-    margin: 0rem;
+	margin: 0rem;
   background-image: url(/imagenes/fondo_blanco_pagina2.jpg);
   background-size: cover;
   background-repeat: no-repeat;
@@ -12,12 +19,188 @@ body {
 {
     color: red;
 }
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
+
+nav{
+	width: 100%;
+	height: 10%;
 }
+
+.carousel{
+	margin-top: 4.5rem;
+}
+
+.carousel-item img{
+	width: 100%;
+	height: 100%;
+}
+
+.carousel-item .chicken{
+	height: 38rem;
+}
+
+.carousel-item .chuletas{
+	height: 38rem;
+}
+
+
+.main{
+    top: 0;
+    position: absolute;
+    width: calc(100% - 300px);
+    left: 300px;
+    min-height: 100vh;
+    transition: 0.5s;
+    padding-top: 10px;
+}
+
+.topbar{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-image{
+    display: flex;
+    justify-content: center;
+    min-width: 45px;
+}
+
+.logo-image img{
+    width: 80px;
+    border-radius: 30%;
+	margin-top: 10px;
+	margin-left: -7rem;
+
+}
+
+.logo .logo_name{
+	margin-left: -1.5rem;
+    font-size: 22px;
+    font-weight: 600;
+    color: white;
+    transition: var(5s);
+}
+
+.search{
+    position: relative;
+    width: 400px;
+    margin: 0 20rem;
+	margin-left: 10rem;
+
+}
+
+.search label{
+    position: relative;
+    width: 100%;
+}
+
+.search label input{
+    width: 200%;
+    height: 40px;
+	margin-left: -7rem;
+    border-radius: 40px;
+    padding: 5px 20px;
+    padding-left: 50px;
+    outline: none;
+    border: 1px solid  #7a7a7d;
+}
+
+.search i{
+    position: absolute;
+    top: 0;
+    margin-left: -6rem;
+    font-size: 26px;
+}
+.menu{
+	font-size: 18px;
+}
+
+.menu .hi{
+	margin-left: 17rem;
+	color: white;
+}
+
+.menu .sesion{
+	color: white;
+	margin-left: 13rem;
+}
+
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+	margin-right: 5rem;
+  }
+  
+  .dropbtn {
+    background: none;
+    padding: 0;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+	color: white;
+  }
+
+  .dropbtn i{
+    margin-right: 70px;
+    font-size: 30px;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+	margin-left: -4.5rem;
+    min-width: 160px;
+	border-radius: 14px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 10px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .container-card{
 	width: 100%;

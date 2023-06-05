@@ -87,9 +87,6 @@
                 <img src="/imagenes/avatar.PNG" alt="">
             </div>
 
-            <div class="menu">
-                <span class="text">Administrador</span>
-            </div>
             <div class="dropdown">
                 <button class="dropbtn"><i class="uil uil-angle-down"></i></button>
                 <div class="dropdown-content">

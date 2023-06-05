@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pagina Asago</title>
-    <link rel="stylesheet" href="/Vista/Css/index.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <link rel="stylesheet" href="/Vista/Css/index.css">
+    <title>Pagina Asago</title>
   
 </head>
 <body>
@@ -17,27 +18,43 @@
       <button class="navbar-toggler" style="background-color: rgb(230, 72, 72);" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
           <span class="navbar-toggler-icon"></span>
       </button>
-        <div class="text-white text-center" style="margin-right: 10px; font-size: 20px">
-          <img src="/imagenes/logo_empresa.png" alt="Logo" width="70" height="70" class="d-inline-block align-text-top">
-          ASAGO</div> 
-      <form class="d-flex col-sm-6 col-md-6 col-md-lg-6 col-xl-6" role="search">
-        <input class="form-control me-2" type="search" placeholder="¿Qué producto buscas?" aria-label="Search">
-        <button type="submit" style="background-color: rgb(230, 72, 72);" class="btn btn-danger me-2">Buscar</button>
-      </form>
-      <div class="icon m-8">
-        <h5>
-        <div class="dropdown">
-          <a class="fa fa-headphones fa-lg me-2 text-white btn" style="background-color: rgb(230, 72, 72);" data-bs-toggle="dropdown" title="Atención al cliente" aria-hidden="true"></a>
-          <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="chat_pqrs.php">Chat</a></li>
-              <li><a class="dropdown-item" href="llamanos.php">Llamada</a></li>
-              <li><a class="dropdown-item" href="whatsapp.php">Whatsapp</a></li>
-          </ul>
-          <a class="fa fa-user-circle fa-lg me-2 text-white btn" style="background-color: rgb(230, 72, 72);" href="ingresar.php" data-toggle="tooltip" title="Ingresar" aria-hidden="true"></a>
-          <a class="fa fa-truck fa-lg me-2 text-white btn" style="background-color: rgb(230, 72, 72);" href="domicilios.php" data-toggle="tooltip" title="Domicilios" aria-hidden="true"></a>
+
+      <div class="main">
+        <div class="topbar">
+          <div class="logo-image">
+              <img src="/imagenes/logo_asago1.png" alt="">
+          </div>
+
+          <div class="logo">
+            <span class="logo_name">Asago S.A.S</span>
+          </div>
+    
+          <div class="search">
+              <label>
+                  <input type="text" placeholder="Busca aquí...">
+                  <i class="uil uil-search"></i>
+              </label>
+          </div>
+
+          <div class="menu">
+              <span class="hi">Hola,</span>
+              <br>
+              <span class="sesion"> Inicia Sesión</span>
+          </div>
+
+          <div class="dropdown">
+              <button class="dropbtn"><i class="uil uil-angle-down"></i></button>
+              <div class="dropdown-content">
+              <a href="ingresar.php">Iniciar Sesión</a>
+              <a href="registro.php">Registrarse</a>
+              <hr>
+              <a href="#">Mi cuenta</a>
+          </div>            
         </div>
-        </h5>
       </div>
+
+      
+      
 
       <div class="offcanvas offcanvas-start" id="offcanvasNavbar">
         <div class="offcanvas-header" style="background-color: rgb(230, 72, 72);">
@@ -78,21 +95,21 @@
   </nav>  
   <br>
 
-  <div class="container">
-    <div class="row">
-      <div class="col-12">
+ 
+   
+    
         <div class="carousel slide" id="carouselExampleAutoplaying" data-bs-ride="carousel">
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <img src="/imagenes/producto_5.jpg"  alt="Promocion1" width="1300" height="500">
+              <img  src="/imagenes/producto_5.jpg"  alt="Promocion1">
             </div>
 
             <div class="carousel-item">
-              <img src="/imagenes/carnicos.jpeg" alt="Promocion2" width="1400" height="500">
+              <img class="chicken" src="/imagenes/carnicos.jpeg" alt="Promocion2">
             </div>
 
             <div class="carousel-item">
-              <img src="/imagenes/productos4.jpg"  alt="Promocion3" width="1400" height="500">
+              <img class="chuletas" src="/imagenes/productos4.jpg"  alt="Promocion3">
             </div>
           </div>
 

@@ -64,7 +64,7 @@ nav .logo-name .logo_name{
 }
 
 .navigation .close-seccion{
-    margin-top: 28px;
+    margin-top: 19rem;
 }
 
 .menu-items li{
@@ -146,7 +146,8 @@ i{
 .search{
     position: relative;
     width: 400px;
-    margin: 0 10px;
+    margin: 0 28rem;
+
 }
 
 .search label{
@@ -175,7 +176,11 @@ i{
     left: 14rem;
     width: 50px;
     border-radius: 50%;
-    margin-right: 20px;
+    margin-right: -20px;
+}
+
+.menu{
+    padding-right: 55px;
 }
 
 .cardBox{

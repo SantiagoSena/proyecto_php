@@ -41,21 +41,21 @@
                     </a></li>
 
                     <li><a href="pedidos.php">
-                        <i class="uil uil-shopping-cart"></i>
+                        <i class="uil uil-truck"></i>
                         <span class="link-name">Pedidos</span>
                     </a></li>
 
-                    <li><a href="domicilios_db.php">
-                        <i class="uil uil-truck"></i>
-                        <span class="link-name">Domicilios</span>
-                    </a></li>
-
-                    <li><a href="">
+                    <li><a href="compras.php">
                         <i class="uil uil-store"></i>
                         <span class="link-name">Compras</span>
                     </a></li>
 
-                    <li><a href="">
+                    <li><a href="compras.php">
+                        <i class="uil uil-user"></i>
+                        <span class="link-name">Proveedores</span>
+                    </a></li>
+
+                    <li><a href="calificaciones.php">
                         <i class="uil uil-book-reader"></i>
                         <span class="link-name">Atención al Cliente</span>
                     </a></li>
@@ -84,6 +84,10 @@
 
             <div class="user">
                 <img src="/imagenes/avatar.PNG" alt="">
+            </div>
+
+            <div class="menu">
+                <span class="text">Administrador</span>
             </div>
         </div>
     </div>

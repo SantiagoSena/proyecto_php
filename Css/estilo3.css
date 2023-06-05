@@ -54,9 +54,9 @@ input{
 .btn{
     display: flex;
     float: right;
-    background-color: #f9da2afe;
+    background-color: #f92a2afe;
     padding: 10px;
-    color: black;
+    color: white;
     border-radius: 5px;
     margin-top: 20px;
     text-align: center;
@@ -64,7 +64,7 @@ input{
 
 
 .btn:hover{
-    background-color: #faa73afe;
+    background-color: #950b0bfe;
     color: rgb(0, 0, 0);
     text-align: center;
 }

@@ -1,3 +1,7 @@
+<?php
+  include ("conexion.php");
+  $producto = "SELECT * FROM producto "
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -129,91 +133,35 @@
           <table class="table table-striped table-bordered">
             <thead>
               <tr>
-                <th scope="col">N°</th>
-                <th scope="col">IdProducto</th>
-                <th scope="col">Nombre</th>
-                <th scope="col">FechVencimiento</th>
-                <th scope="col">Categoría</th>
-                <th scope="col">ValorPorLibra</th>
+                <th scope="col">Id Producto</th>
+                <th scope="col">Fecha Registro</th>
+                <th scope="col">Nombre Producto</th>
+                <th scope="col">Nombre Categoria</th>
+                <th scope="col">cantidad</th>
+                <th scope="col">Fecha Vencimiento</th>
+                <th scope="col">Valor libra</th>
+                <th scope="col">Saldo</th>
               </tr>
             </thead>
-      
+        
             <tbody>
               <tr>
-                <th scope="row">1</th>
-                <td>5146</td>
-                <td>Jamón</td>
-                <td>07/07/2023</td>
-                <td>Carnicos </td>
-                <td>$5.0000</td>
+              <?php
+               $resultado = mysqli_query($conexion, $cliente);
+                while($row = mysqli_fetch_assoc($resultado)){
+              ?>
+                <td><?php echo $row["IdProducto"] ?></td>
+                <td><?php echo $row["FechaRegistro"] ?></td>
+                <td><?php echo $row["NomProducto"] ?></td>
+                <td><?php echo $row["NomCategoria"] ?></td>
+                <td><?php echo $row["cantidad"] ?></td>
+                <td><?php echo $row["FechaVencimiento"] ?></td>
+                <td><?php echo $row["Valorlibra"] ?></td>
+                <td><?php echo $row["Saldo"] ?></td>
                 <td><i class="fa fa-pencil-square-o bg-success p-2 text-white rounded btn " data-toggle="tooltip" title="Editar" aria-hidden="true"></i></td>
-              </tr>
-      
-              <tr>
-                <th scope="row">2</th>
-                <td>7895</td>
-                <td>Filete de ternera</td>
-                <td>08/07/2023</td>
-                <td>Carncicos</td>
-                <td>$10.000</td>
-                <td><i class="fa fa-pencil-square-o bg-success p-2 text-white rounded btn" data-toggle="tooltip" title="Editar" aria-hidden="true"></i></td>
-              </tr>
-      
-              <tr>
-                <th scope="row">3</th>
-                <td>3648</td>
-                <td>Lomo de ternera</td>
-                <td>09/07/2023</td>
-                <td>Carncicos</td>
-                <td>$12.000</td>
-                <td><i class="fa fa-pencil-square-o bg-success p-2 text-white rounded btn" data-toggle="tooltip" title="Editar" aria-hidden="true"></i></td>
-              </tr>
-      
-              <tr>
-                <th scope="row">4</th>          
-                <td>4357</td>
-                <td>Chuleta de ternera</td>
-                <td>10/07/2023</td>
-                <td>Carnicos</td>
-                <td>$7.000</td>
-                <td><i class="fa fa-pencil-square-o bg-success p-2 text-white rounded btn" data-toggle="tooltip" title="Editar" aria-hidden="true"></i></td>
-              </tr>
-              
-              <tr>
-                <th scope="row">5</th>
-                <td>7893</td>
-                <td>Pecho de res</td>
-                <td>11/07/2023</td>
-                <td>Carnicos</td>
-                <td>$10.000</td>
-                <td><i class="fa fa-pencil-square-o bg-success p-2 text-white rounded btn" data-toggle="tooltip" title="Editar" aria-hidden="true"></i></td>
-              </tr>
-              <tr>
-                <th scope="row">6</th>
-                <td>1513</td>
-                <td>Morrillo</td>
-                <td>12/07/2023</td>
-                <td>Carnicos</td>
-                <td>$14.000</td>
-                <td><i class="fa fa-pencil-square-o bg-success p-2 text-white rounded btn" data-toggle="tooltip" title="Editar" aria-hidden="true"></i></td>
-              </tr>
-              <tr>
-                <th scope="row">7</th>
-                <td>8423</td>
-                <td>Falda</td>
-                <td>13/07/2023</td>
-                <td>Carnicos</td>
-                <td>$10.000</td>
-                <td><i class="fa fa-pencil-square-o bg-success p-2 text-white rounded btn" data-toggle="tooltip" title="Editar" aria-hidden="true"></i></td>
-              </tr>
-              <tr>
-                <th scope="row">8</th>
-                <td>2256</td>
-                <td>Costillar de res</td>
-                <td>14/07/2023</td>
-                <td>Carnicos</td>
-                <td>$7.000</td>
-                <td><i class="fa fa-pencil-square-o bg-success p-2 text-white rounded btn" data-toggle="tooltip" title="Editar" aria-hidden="true"></i></td>
+                <?php
+                } mysqli_free_result($resultado);
+                ?>
               </tr>
             </tbody>
           </table>

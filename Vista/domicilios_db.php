@@ -1,3 +1,8 @@
+<?php
+ include ("conexion.php");
+ $domicilio = "SELECT * FROM domicilio"
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -36,10 +41,6 @@
   <div class="row no-gutters ">
     <div class="col-md-2 bg-danger mt-0 pr-3 pt-4">
       <ul class="nav flex-column ml-3 mb-5">
-        <li class="nav-item">
-          <a class="nav-link active text-white" href="categorias.php"><i class="fa fa-bookmark mx-2" aria-hidden="true"></i>Categorias</a>
-          <hr class="bg-primary">
-        </li>
         <li class="nav-item">
             <a class="nav-link active text-white" href="productos.php"><i class="fa fa-shopping-basket mx-2" aria-hidden="true"></i>Productos</a>
             <hr class="bg-primary">
@@ -133,49 +134,33 @@
         <table class="table table-striped table-bordered">
         <thead>
             <tr>
-            <th scope="col">N°</th>
-            <th scope="col">Id_Pedido</th>
-            <th scope="col">Nombre Cliente</th>
-            <th scope="col">Id_Cliente</th>
-            <th scope="col">Telefono</th>
-            <th scope="col">Direccion</th>
+            <th scope="col">Id Domicilio</th>
+            <th scope="col">Fecha Emision</th>
+            <th scope="col">Id Usuario</th>
+            <th scope="col">Hora Entrega</th>
+            <th scope="col">Id Venta</th>
+            <th scope="col">Descripcion Domicilio</th>
             
             </tr>
         </thead>
 
         <tbody>
-            <tr>
-            <th scope="row">1</th>
-            <td>17394</td>
-            <td>Jonathan Reina</td>
-            <td>165694</td>
-            <td>3137509712</td>
-            <td>Calle 63 # 76 - 26</td>
-            <td><i class="fa fa-pencil-square-o bg-success p-2 text-white rounded" data-toggle="tooltip" title="Editar" aria-hidden="true"></i></td>
-            
-            </tr>
-
-            <tr>
-                <th scope="row">2</th>
-                <td>74539</td>
-                <td>Santiago León</td>
-                <td>162950</td>
-                <td>3058256923</td>
-                <td>Carrera 45 # 34 - 12</td>
-                <td><i class="fa fa-pencil-square-o bg-success p-2 text-white rounded" data-toggle="tooltip" title="Editar" aria-hidden="true"></i></td>
-                
-            </tr>
-
-            <tr>
-                <th scope="row">3</th>
-                <td>28405</td>
-                <td>Camilo Rodriguez</td>
-                <td>1305648</td>
-                <td>3174026556</td>
-                <td>Carrera 78 # 18 - 45</td>
-                <td><i class="fa fa-pencil-square-o bg-success p-2 text-white rounded" data-toggle="tooltip" title="Editar" aria-hidden="true"></i></td>
-                
-            </tr>
+             <?php
+                $resultado = mysqli_query($conexion, $domicilio);
+                while($row = mysqli_fetch_assoc($resultado)){
+              ?>
+              <tr>
+                <td><?php echo $row["IdDomicilio"];?></td>
+                <td><?php echo $row["FechaEmision"];?></td>
+                <td><?php echo $row["IdUsuario"];?></td>
+                <td><?php echo $row["HoraEntrega"];?></td>
+                <td><?php echo $row["IdVenta"];?></td>
+                <td><?php echo $row["DescDomicilio"];?></td>
+                <td><i class="fa fa-pencil-square-o bg-success p-2 text-white rounded btn " data-toggle="tooltip" title="Editar" aria-hidden="true"></i></td>
+              </tr>
+              <?php
+                } mysqli_free_result($resultado);
+                ?>
         
         </tbody>
         </table>

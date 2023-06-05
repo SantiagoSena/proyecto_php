@@ -1,3 +1,7 @@
+<?php
+  include ("conexion.php");
+  $Usuario_cliente = "SELECT * FROM usuarios WHERE Rol = '354'";
+  ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -32,10 +36,6 @@
     <div class="col-md-2 bg-danger mt-0 pr-3 pt-4">
       <ul class="nav flex-column ml-3 mb-5">
         <li class="nav-item">
-          <a class="nav-link active text-white" href="categorias.php"><i class="fa fa-bookmark mx-2" aria-hidden="true"></i>Categorias</a>
-          <hr class="bg-primary">
-        </li>
-        <li class="nav-item">
             <a class="nav-link active text-white" href="productos.php"><i class="fa fa-shopping-basket mx-2" aria-hidden="true"></i>Productos</a>
             <hr class="bg-primary">
         </li>
@@ -44,9 +44,9 @@
         <hr class="bg-primary">
       </li>
       <li class="nav-item">
-        <a class="nav-link text-swhite" href="ventas.php"><i class="fa fa-book mx-2" aria-hidden="true"></i>Listado Ventas</a>
-        <hr class="bg-primary"> 
-      </li>
+          <a class="nav-link text-white" href="ventas.php"><i class="fa fa-book mx-2" aria-hidden="true"></i>Listado Ventas</a>
+          <hr class="bg-primary"> 
+        </li>
       <li class="nav-item">
         <a class="nav-link text-white" href="pedidos.php"><i class="fa fa-cart-plus mx-2" aria-hidden="true"></i>Listado Pedidos</a>
         <hr class="bg-primary"> 
@@ -82,59 +82,40 @@
         <table class="table table-striped table-bordered">
           <thead>
             <tr>
-              <th scope="col">N°</th>
-              <th scope="col">Nombre Usuario</th>
-              <th scope="col">Id</th>
-              <th scope="col">Telefono</th>
-              <th scope="col">Direccion</th>   
+                <th scope="col">Id Usuario</th>
+                <th scope="col">Rol</th>
+                <th scope="col">Estado</th>
+                <th scope="col">Nombres</th>
+                <th scope="col">Apellido</th>
+                <th scope="col">Fecha de Nacimiento</th>
+                <th scope="col">Direccion</th>
+                <th scope="col">Telefono</th>
+                <th scope="col">Email</th>
+                <th scope="col">Contraseña</th>      
             </tr>
           </thead>
     
           <tbody>
-            <tr>
-              <th scope="row">1</th>
-              <td>Pedro Sanchez</td>
-              <td>106475</td>
-              <td>3296506723</td>
-              <td>Calle 57sur # 12-23 </td>
-              <td><i class="fa fa-pencil-square-o bg-success p-2 text-white rounded" data-toggle="tooltip" title="Editar" aria-hidden="true"></i></td>
-            </tr>
-    
-            <tr>
-              <th scope="row">2</th>
-              <td>Camilo Rodriguez</td>
-              <td>130564</td>
-              <td>3174026556</td>
-              <td>Carrera 78 # 18-45</td>
-              <td><i class="fa fa-pencil-square-o bg-success p-2 text-white rounded" data-toggle="tooltip" title="Editar" aria-hidden="true"></i></td>
-            </tr>
-    
-            <tr>
-              <th scope="row">3</th>
-              <td>Santiago Leon</td>
-              <td>162950</td>
-              <td>3058256923</td>
-              <td>Carrera 45 # 34-12</td>
-              <td><i class="fa fa-pencil-square-o bg-success p-2 text-white rounded" data-toggle="tooltip" title="Editar" aria-hidden="true"></i></td>
-            </tr>
-    
-            <tr>
-              <th scope="row">4</th>          
-              <td>Jonathan Reina</td>
-              <td>165694</td>
-              <td>3137509712</td>
-              <td>Calle 63 # 76-26</td>
-              <td><i class="fa fa-pencil-square-o bg-success p-2 text-white rounded" data-toggle="tooltip" title="Editar" aria-hidden="true"></i></td>
-            </tr>
-            
-            <tr>
-              <th scope="row">5</th>
-              <td>Paula Quiñones</td>
-              <td>104137</td>
-              <td>3283143068</td>
-              <td>Calle 97 # 24-17</td>
-              <td><i class="fa fa-pencil-square-o bg-success p-2 text-white rounded" data-toggle="tooltip" title="Editar" aria-hidden="true"></i></td>
-            </tr>
+          <?php
+                $resultado = mysqli_query($conexion, $Usuario_cliente);
+                while($row = mysqli_fetch_assoc($resultado)){
+              ?>
+              <tr>
+                <td><?php echo $row["IdUsuario"];?></td>
+                <td><?php echo $row["Rol"];?></td>
+                <td><?php echo $row["Estado"];?></td>
+                <td><?php echo $row["Nombres"];?></td>
+                <td><?php echo $row["Apellidos"];?></td>
+                <td><?php echo $row["FechaNacimiento"];?></td>
+                <td><?php echo $row["Direccion"];?></td>
+                <td><?php echo $row["Telefono"];?></td>
+                <td><?php echo $row["Email"];?></td>
+                <td><?php echo $row["Contrasena"];?></td>
+                <td><i class="fa fa-pencil-square-o bg-success p-2 text-white rounded btn " data-toggle="tooltip" title="Editar" aria-hidden="true"></i></td>
+              </tr>
+              <?php
+                } mysqli_free_result($resultado);
+                ?>
           </tbody>
         </table>
       </div>
@@ -149,58 +130,48 @@
           </li>
         </ul>
       </div>
+<?php
+ $Usuario_vendedor = "SELECT * FROM usuarios WHERE Rol = '214'"
+?>
       <div class="card-body">
         <table class="table table-striped table-bordered">
           <thead>
             <tr>
-              <th scope="col">N°</th>
-              <th scope="col">Nombre Usuario</th>
-              <th scope="col">Id</th>
-              <th scope="col">Telefono</th>
+                <th scope="col">Id Usuario</th>
+                <th scope="col">Rol</th>
+                <th scope="col">Estado</th>
+                <th scope="col">Nombres</th>
+                <th scope="col">Apellido</th>
+                <th scope="col">Fecha de Nacimiento</th>
+                <th scope="col">Direccion</th>
+                <th scope="col">Telefono</th>
+                <th scope="col">Email</th>
+                <th scope="col">Contraseña</th>    
               
             </tr>
           </thead>
     
           <tbody>
-            <tr>
-              <th scope="row">1</th>
-              <td>Monica Ramirez</td>
-              <td>115492</td>
-              <td>3753496542</td>
-              <td><i class="fa fa-pencil-square-o bg-success p-2 text-white rounded" data-toggle="tooltip" title="Editar" aria-hidden="true"></i></td>
-            </tr>
-    
-            <tr>
-              <th scope="row">2</th>
-              <td>Alejandra Maldonado</td>
-              <td>183456</td>
-              <td>3193507225</td>
-              <td><i class="fa fa-pencil-square-o bg-success p-2 text-white rounded" data-toggle="tooltip" title="Editar" aria-hidden="true"></i></td>
-            </tr>
-    
-            <tr>
-              <th scope="row">3</th>
-              <td>Marisol Velazques</td>
-              <td>102436</td>
-              <td>3082106483</td>
-              <td><i class="fa fa-pencil-square-o bg-success p-2 text-white rounded" data-toggle="tooltip" title="Editar" aria-hidden="true"></i></td>
-            </tr>
-
-            <tr>
-              <th scope="row">4</th>          
-              <td>Andrea Mendoza</td>
-              <td>102545</td>
-              <td>3710475693</td>
-              <td><i class="fa fa-pencil-square-o bg-success p-2 text-white rounded" data-toggle="tooltip" title="Editar" aria-hidden="true"></i></td>
-            </tr>
-            
-            <tr>
-              <th scope="row">5</th>
-              <td>Fernando Gonzales</td>
-              <td>198574</td>
-              <td>3284650275</td>
-              <td><i class="fa fa-pencil-square-o bg-success p-2 text-white rounded" data-toggle="tooltip" title="Editar" aria-hidden="true"></i></td>
-            </tr>
+          <?php
+                $resultado = mysqli_query($conexion, $Usuario_vendedor);
+                while($row = mysqli_fetch_assoc($resultado)){
+              ?>
+              <tr>
+                <td><?php echo $row["IdUsuario"];?></td>
+                <td><?php echo $row["Rol"];?></td>
+                <td><?php echo $row["Estado"];?></td>
+                <td><?php echo $row["Nombres"];?></td>
+                <td><?php echo $row["Apellidos"];?></td>
+                <td><?php echo $row["FechaNacimiento"];?></td>
+                <td><?php echo $row["Direccion"];?></td>
+                <td><?php echo $row["Telefono"];?></td>
+                <td><?php echo $row["Email"];?></td>
+                <td><?php echo $row["Contrasena"];?></td>
+                <td><i class="fa fa-pencil-square-o bg-success p-2 text-white rounded btn " data-toggle="tooltip" title="Editar" aria-hidden="true"></i></td>
+              </tr>
+              <?php
+                } mysqli_free_result($resultado);
+                ?>
           </tbody>
       </table>  
       </div>
@@ -215,50 +186,163 @@
           </li>
         </ul>
       </div>
+<?php
+  $Usuario_Domiciliario = "SELECT * FROM usuarios WHERE Rol = '201'"
+?>
       <div class="card-body">
         <table class="table table-striped table-bordered">
           <thead>
-            <tr>
-            <th scope="col">N°</th>
-            <th scope="col">Nombre Domiciliario</th>
-            <th scope="col">Id Domiciliario</th>
-            <th scope="col">Telefono</th>
-            <th scope="col">Correo</th>
+                <th scope="col">Id Usuario</th>
+                <th scope="col">Rol</th>
+                <th scope="col">Estado</th>
+                <th scope="col">Nombres</th>
+                <th scope="col">Apellido</th>
+                <th scope="col">Fecha de Nacimiento</th>
+                <th scope="col">Direccion</th>
+                <th scope="col">Telefono</th>
+                <th scope="col">Email</th>
+                <th scope="col">Contraseña</th>   
             </tr>
           </thead>
 
           <tbody>
-            <tr>
-              <th scope="row">1</th>
-              <td>Raul Rodriguez</td>
-              <td>534268</td>
-              <td>3017895462</td>
-              <td>raul@gmail.com</td>
-              <td><i class="fa fa-pencil-square-o bg-success p-2 text-white rounded" data-toggle="tooltip" title="Editar" aria-hidden="true"></i></td>
-            </tr>
-
-            <tr>
-              <th scope="row">2</th>
-              <td>Julia	Moreno</td>
-              <td>397489</td>
-              <td>3002225460</td>
-              <td>Julia@yahoo.es</td>
-              <td><i class="fa fa-pencil-square-o bg-success p-2 text-white rounded" data-toggle="tooltip" title="Editar" aria-hidden="true"></i></td>
-            </tr>
-
-            <tr>
-              <th scope="row">3</th>
-              <td>Gabo Garcia</td>
-              <td>482985</td>
-              <td>3195064123</td>
-              <td>gabo@outlook.com</td>
-              <td><i class="fa fa-pencil-square-o bg-success p-2 text-white rounded" data-toggle="tooltip" title="Editar" aria-hidden="true"></i></td>
-            </tr>           
+          <?php
+                $resultado = mysqli_query($conexion, $Usuario_Domiciliario);
+                while($row = mysqli_fetch_assoc($resultado)){
+              ?>
+              <tr>
+                <td><?php echo $row["IdUsuario"];?></td>
+                <td><?php echo $row["Rol"];?></td>
+                <td><?php echo $row["Estado"];?></td>
+                <td><?php echo $row["Nombres"];?></td>
+                <td><?php echo $row["Apellidos"];?></td>
+                <td><?php echo $row["FechaNacimiento"];?></td>
+                <td><?php echo $row["Direccion"];?></td>
+                <td><?php echo $row["Telefono"];?></td>
+                <td><?php echo $row["Email"];?></td>
+                <td><?php echo $row["Contrasena"];?></td>
+                <td><i class="fa fa-pencil-square-o bg-success p-2 text-white rounded btn " data-toggle="tooltip" title="Editar" aria-hidden="true"></i></td>
+              </tr>
+              <?php
+                } mysqli_free_result($resultado);
+                ?>         
           </tbody>
         </table>
       </div>
     </div>
+    <hr>
+    <div class="card text-center col-sm-12 col-md-10 col-lg-10 col-xl-10 col-xl-10">
+      <div class="card-header">
+        <ul class="nav nav-pills card-header-pills">
+          <li class="nav-item">
+            <h4><i class="fa fa-people me-2" aria-hidden="true"></i> Listado Administrador</h4>
+          </li>
+        </ul>
+      </div>
+<?php
+ $Usuario_administrador = "SELECT * FROM usuarios WHERE Rol = '578'"
+?>
+      <div class="card-body">
+        <table class="table table-striped table-bordered">
+          <thead>
+            <tr>
+                <th scope="col">Id Usuario</th>
+                <th scope="col">Rol</th>
+                <th scope="col">Estado</th>
+                <th scope="col">Nombres</th>
+                <th scope="col">Apellido</th>
+                <th scope="col">Fecha de Nacimiento</th>
+                <th scope="col">Direccion</th>
+                <th scope="col">Telefono</th>
+                <th scope="col">Email</th>
+                <th scope="col">Contraseña</th>    
+              
+            </tr>
+          </thead>
+    
+          <tbody>
+          <?php
+                $resultado = mysqli_query($conexion, $Usuario_administrador);
+                while($row = mysqli_fetch_assoc($resultado)){
+              ?>
+              <tr>
+                <td><?php echo $row["IdUsuario"];?></td>
+                <td><?php echo $row["Rol"];?></td>
+                <td><?php echo $row["Estado"];?></td>
+                <td><?php echo $row["Nombres"];?></td>
+                <td><?php echo $row["Apellidos"];?></td>
+                <td><?php echo $row["FechaNacimiento"];?></td>
+                <td><?php echo $row["Direccion"];?></td>
+                <td><?php echo $row["Telefono"];?></td>
+                <td><?php echo $row["Email"];?></td>
+                <td><?php echo $row["Contrasena"];?></td>
+                <td><i class="fa fa-pencil-square-o bg-success p-2 text-white rounded btn " data-toggle="tooltip" title="Editar" aria-hidden="true"></i></td>
+              </tr>
+              <?php
+                } mysqli_free_result($resultado);
+                ?>
+          </tbody>
+      </table>  
+      </div>
+    </div> 
+    <hr>
+    <div class="card text-center col-sm-12 col-md-10 col-lg-10 col-xl-10 col-xl-10">
+      <div class="card-header">
+        <ul class="nav nav-pills card-header-pills">
+          <li class="nav-item">
+            <h4><i class="fa fa-people me-2" aria-hidden="true"></i> Listado SuperAdmin</h4>
+          </li>
+        </ul>
+      </div>
+<?php
+ $Usuario_SuperAdmin = "SELECT * FROM usuarios WHERE Rol = '971'"
+?>
+      <div class="card-body">
+        <table class="table table-striped table-bordered">
+          <thead>
+            <tr>
+                <th scope="col">Id Usuario</th>
+                <th scope="col">Rol</th>
+                <th scope="col">Estado</th>
+                <th scope="col">Nombres</th>
+                <th scope="col">Apellido</th>
+                <th scope="col">Fecha de Nacimiento</th>
+                <th scope="col">Direccion</th>
+                <th scope="col">Telefono</th>
+                <th scope="col">Email</th>
+                <th scope="col">Contraseña</th>    
+              
+            </tr>
+          </thead>
+    
+          <tbody>
+          <?php
+                $resultado = mysqli_query($conexion, $Usuario_SuperAdmin);
+                while($row = mysqli_fetch_assoc($resultado)){
+              ?>
+              <tr>
+                <td><?php echo $row["IdUsuario"];?></td>
+                <td><?php echo $row["Rol"];?></td>
+                <td><?php echo $row["Estado"];?></td>
+                <td><?php echo $row["Nombres"];?></td>
+                <td><?php echo $row["Apellidos"];?></td>
+                <td><?php echo $row["FechaNacimiento"];?></td>
+                <td><?php echo $row["Direccion"];?></td>
+                <td><?php echo $row["Telefono"];?></td>
+                <td><?php echo $row["Email"];?></td>
+                <td><?php echo $row["Contrasena"];?></td>
+                <td><i class="fa fa-pencil-square-o bg-success p-2 text-white rounded btn " data-toggle="tooltip" title="Editar" aria-hidden="true"></i></td>
+              </tr>
+              <?php
+                } mysqli_free_result($resultado);
+                ?>
+          </tbody>
+      </table>  
+      </div>
+    </div> 
+    <hr>
   </div>
+  
 
 </body>
 </html>

@@ -35,9 +35,9 @@
       </form>
       <div class="icon m-8">
         <h5>
-        <a class="fa fa-user-circle fa-lg me-2 text-white btn" style="background-color: rgb(230, 72, 72);" href="ingresar.html" data-toggle="tooltip" title="Ingresar" aria-hidden="true"></a>
-        <a class="fa fa-truck fa-lg me-2 text-white btn" style="background-color: rgb(230, 72, 72);" href="domicilios.html" data-toggle="tooltip" title="Domicilios" aria-hidden="true"></a>
-        <a class="fa fa-close me-2 text-white btn" style="background-color: rgb(230, 72, 72);" href="index.html" data-toggle="tooltip" title="Cerrar" aria-hidden="true"></a>
+        <a class="fa fa-user-circle fa-lg me-2 text-white btn" style="background-color: rgb(230, 72, 72);" href="ingresar.php" data-toggle="tooltip" title="Ingresar" aria-hidden="true"></a>
+        <a class="fa fa-truck fa-lg me-2 text-white btn" style="background-color: rgb(230, 72, 72);" href="domicilios.php" data-toggle="tooltip" title="Domicilios" aria-hidden="true"></a>
+        <a class="fa fa-close me-2 text-white btn" style="background-color: rgb(230, 72, 72);" href="index.php" data-toggle="tooltip" title="Cerrar" aria-hidden="true"></a>
         </h5>
       </div>
 
@@ -50,27 +50,27 @@
         <div class="offcanvas-body" style="background-color: white" > 
           <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
             <li class="nav-item">
-              <a class="fa fa-shopping-bag fa-lg text-black me-2 btn"  href="categorias.html" aria-hidden="true"> Inventario</a>
+              <a class="fa fa-shopping-bag fa-lg text-black me-2 btn"  href="categorias.php" aria-hidden="true"> Inventario</a>
               <hr>
             </li>
             <li class="nav-item">
-              <a class="fa fa-shopping-cart fa-lg text-black me-3 btn"  href="pedidos.html" aria-hidden="true"> Mis Pedidos</a>
+              <a class="fa fa-shopping-cart fa-lg text-black me-3 btn"  href="pedidos.php" aria-hidden="true"> Mis Pedidos</a>
               <hr>
             </li>
             <li class="nav-item">
-              <a class="fa fa-truck fa-lg text-black me-3 btn"  href="domicilios_db.html" aria-hidden="true"> Domicilios</a>
+              <a class="fa fa-truck fa-lg text-black me-3 btn"  href="domicilios_db.php" aria-hidden="true"> Domicilios</a>
               <hr>
             </li>
             <li class="nav-item">
-              <a class="fa fa-lock fa-lg text-black me-3 btn"  href="ingresar.html" aria-hidden="true"> Compras</a>
+              <a class="fa fa-lock fa-lg text-black me-3 btn"  href="ingresar.php" aria-hidden="true"> Compras</a>
               <hr>    
             </li>
             <li class="nav-item">
-              <a class="fa fa-user fa-lg text-black me-3 btn"  href="proveedores.html" aria-hidden="true"> Mis Proveedores</a>
+              <a class="fa fa-user fa-lg text-black me-3 btn"  href="proveedores.php" aria-hidden="true"> Mis Proveedores</a>
               <hr>    
             </li>
             <li class="nav-item">
-              <a class="fa fa-user fa-lg text-black me-3 btn"  href="ingresar.html" aria-hidden="true"> Atencion al cliente</a></i>
+              <a class="fa fa-user fa-lg text-black me-3 btn"  href="ingresar.php" aria-hidden="true"> Atencion al cliente</a></i>
               <hr>
             </li>
           </ul>
@@ -165,4 +165,4 @@
    
 
 </body>
-</html>
+    </html>

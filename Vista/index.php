@@ -65,7 +65,7 @@
         <div class="offcanvas-body" style="background-color: white" > 
           <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
             <li class="nav-item">
-              <a class="fa fa-shopping-bag fa-lg text-black me-2 btn"  href="categorias.php" aria-hidden="true"> Inventario</a>
+              <a class="fa fa-shopping-bag fa-lg text-black me-2 btn"  href="productos.php" aria-hidden="true"> Inventario</a>
               <hr>
             </li>
             

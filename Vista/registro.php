@@ -1,3 +1,7 @@
+<?php
+    include("conexion.php");
+?>
+
 <!DOCTYPE php>
 <html lang="en">
 <head>
@@ -37,20 +41,20 @@
                 <hr>
             </div>
 
-            <form class="was-validated row g-3 mx-5">
+            <form class="was-validated row g-3 mx-5" method="post">
                 <div class="col-6">
                     <label class="form-label"> Nombres</label>
-                    <input class="form-control" type="text" required>
+                    <input name="nombres" class="form-control" type="text" required>
                 </div>
 
                 <div class="col-6">
                     <label class="form-label">Apellidos</label>
-                    <input class="form-control" type="text" required>
+                    <input name="apellidos" class="form-control" type="text" required>
                 </div>
 
                 <div class="col-6">
                     <label class="form-label">Tipo de Documento</label>
-                    <select class="form-select" >
+                    <select name="tipo_documento" class="form-select" >
                         <option value="">Seleccione un tipo</option>
                         <option value="Cedula de ciudadadnia">Cédula de ciudadanía</option>
                         <option value="Tarjeta de extranjeria">Tarjeta de extranjería</option>
@@ -60,47 +64,47 @@
 
                 <div class="col-6">
                     <label class="form-label"> Numero Documento</label>
-                    <input class="form-control" type="number" required>
+                    <input name="cedula" class="form-control" type="number" required>
                 </div>
 
                 <div class="col-6">
                     <label class="form-label"> Fecha de nacimiento</label>
-                    <input class="form-control" type="date" required>
+                    <input name="edad" class="form-control" type="date" required>
                 </div>
 
                 <div class="col-6">
                     <label class="form-label"> Celular</label>
-                    <input class="form-control" type="tel" required>
+                    <input name="celular" class="form-control" type="tel" required>
                 </div>
 
                 <div class="col-13">
                     <label class="form-label"> Dirección</label>
-                    <input class="form-control" type="text" required>
+                    <input name="direccion" class="form-control" type="text" required>
                 </div>
 
                 <div class="col-6">
                     <label class="form-label"> Correo Electrónico</label>
-                    <input class="form-control" type="email" placeholder="name@example.com" required>
+                    <input name="correo" class="form-control" type="email" placeholder="name@example.com" required>
                 </div>
 
                 <div class="col-6">
                     <label class="form-label"> Confirmar Correo </label>
-                    <input class="form-control" type="email"  placeholder="name@example.com" required>
+                    <input name="correo2" class="form-control" type="email"  placeholder="name@example.com" required>
                 </div>
 
                 <div class="col-6">
                     <label class="form-label"> Contraseña</label>
-                    <input class="form-control" type="password" required>
+                    <input name="contraseña" class="form-control" type="password" required>
                 </div>
 
                 <div class="col-6">
                     <label class="form-label"> Confirmar Contraseña</label>
-                    <input class="form-control" type="password" required>
+                    <input name="contraseña2" class="form-control" type="password" required>
                     <br>
                 </div>
 
                 <div class="form-check mx-3">
-                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                    <input class="form-check-input"  type="checkbox" value="" id="flexCheckChecked">
                     <label class="form-check-label text-dark" for="flexCheckChecked">
                       <p>Acepto términos y condiciones</p>
                     </label>

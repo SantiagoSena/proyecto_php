@@ -1,3 +1,7 @@
+<?php
+ include ("conexion.php");
+ $pedido = "SELECT * FROM pedido"
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -34,10 +38,7 @@
   <div class="row no-gutters ">
     <div class="col-md-2 bg-danger mt-0 pr-3 pt-4">
       <ul class="nav flex-column ml-3 mb-5">
-        <li class="nav-item">
-          <a class="nav-link active text-white" href="categorias.php"><i class="fa fa-bookmark mx-2" aria-hidden="true"></i>Categorias</a>
-          <hr class="bg-primary">
-        </li>
+       
         <li class="nav-item">
             <a class="nav-link active text-white" href="productos.php"><i class="fa fa-shopping-basket mx-2" aria-hidden="true"></i>Productos</a>
             <hr class="bg-primary">
@@ -140,7 +141,6 @@
           <table class="table table-striped table-bordered">
             <thead>
               <tr>
-                <th scope="col">N°</th>
                 <th scope="col">Id Pedido</th>
                 <th scope="col">Id Cliente</th>
                 <th scope="col">Fecha Emisión</th>
@@ -151,55 +151,21 @@
             </thead>
 
             <tbody>
+            <?php
+                $resultado = mysqli_query($conexion, $pedido);
+                while($row = mysqli_fetch_assoc($resultado)){
+              ?>
               <tr>
-                <th scope="row">1</th>
-                <td>17394</td>
-                <td>106475</td>
-                <td>10-03-2023</td>    
-                <td>Enviado</td>
-                <td>55.000</td>
-                <td><i class="fa fa-pencil-square-o bg-success p-2 text-white rounded btn" data-toggle="tooltip" title="Editar" aria-hidden="true"></i></td>
+                <td><?php echo $row["IdPedido"];?></td>
+                <td><?php echo $row["IdUsuario"];?></td>
+                <td><?php echo $row["FechaEmision"];?></td>
+                <td><?php echo $row["Estado"];?></td>
+                <td><?php echo $row["ValorTotal"];?></td>
+                <td><i class="fa fa-pencil-square-o bg-success p-2 text-white rounded btn " data-toggle="tooltip" title="Editar" aria-hidden="true"></i></td>
               </tr>
-
-              <tr>
-                <th scope="row">2</th>
-                <td>74539</td>
-                <td>162950</td>
-                <td>17-03-2023</td>
-                <td>Enlistamiento</td>
-                <td>42.000</td>
-                <td><i class="fa fa-pencil-square-o bg-success p-2 text-white rounded btn" data-toggle="tooltip" title="Editar" aria-hidden="true"></i></td>
-              </tr>
-
-              <tr>
-                <th scope="row">3</th>
-                <td>28405</td>
-                <td>104137</td>
-                <td>11-02-2023</td>
-                <td>Anulado</td>
-                <td>44.000</td>
-                <td><i class="fa fa-pencil-square-o bg-success p-2 text-white rounded btn" data-toggle="tooltip" title="Editar" aria-hidden="true"></i></td>
-              </tr>
-
-              <tr>
-                <th scope="row">4</th>
-                <td>10365</td>
-                <td>165694</td>
-                <td>06-03-2023</td>
-                <td>Entregado</td>
-                <td>60.000</td>
-                <td><i class="fa fa-pencil-square-o bg-success p-2 text-white rounded btn" data-toggle="tooltip" title="Editar" aria-hidden="true"></i></td>
-              </tr>
-
-              <tr>
-                <th scope="row">5</th>
-                <td>83649</td>
-                <td>130564</td>
-                <td>17-03-2023</td>
-                <td>Enviado</td>
-                <td>50.000</td>
-                <td><i class="fa fa-pencil-square-o bg-success p-2 text-white rounded btn" data-toggle="tooltip" title="Editar" aria-hidden="true"></i></td>
-              </tr>   
+              <?php
+                } mysqli_free_result($resultado);
+                ?>
             </tbody>
           </table>
         </div>

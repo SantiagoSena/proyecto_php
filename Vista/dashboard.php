@@ -1,6 +1,4 @@
-<?php
-    include ("conexion.php");
-?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -92,13 +90,26 @@
             <div class="menu">
                 <span class="text">Administrador</span>
             </div>
+            <div class="dropdown">
+                <button class="dropbtn"><i class="uil uil-angle-down"></i></button>
+                <div class="dropdown-content">
+                <a href="#">Opción 1</a>
+                <a href="#">Opción 2</a>
+                <a href="#">Opción 3</a>
+                </div>
+            </div>            
         </div>
+    </div>
+
+    <div class="title">
+        <i class="uil uil-tachometer-fast-alt"></i>
+        <h1></i>Estadisticas Diarias</h1>
     </div>
 
     <div class="cardBox">
         <div class="card">
             <div>
-                <div class="text"><a href="usuarios.php">Usuarios</a></div>
+                <div class="text">Usuarios</div>
                 <div class="number">100</div>
             </div>
             <div class="iconBx">
@@ -108,7 +119,7 @@
 
         <div class="card">
             <div>
-                <div class="text"><a href="productos.php">Productos</a></div>
+                <div class="text">Productos</div>
                 <div class="number">200</div>
             </div>
             <div class="iconBx">
@@ -118,7 +129,7 @@
 
         <div class="card">
             <div>
-                <div class="text"><a href="ventas.php">Ventas</a></div>
+                <div class="text">Ventas</div>
                 <div class="number">80</div>
             </div>
             <div class="iconBx">
@@ -128,7 +139,7 @@
 
         <div class="card">
             <div>
-                <div class="text"><a href="domicilios_db.php" >Domicilios</a></div>
+                <div class="text">Pedidos</div>
                 <div class="number">60</div>
             </div>
                 <div class="iconBx">
@@ -137,34 +148,35 @@
         </div>
     </div>
 
-    <div class="cardBox">
-        <div class="card">
-            <div>
-                <span class="text"><a href="">Compras</a></span>
-                <div class="number">50</div>
-            </div>
-            <div class="iconBx">
-                <i class="uil uil-store"></i>
-            </div>
-        </div>
-
-        <div class="card">
-            <div>
-                <div class="text"><a href="pqrs.php">Comentarios</a></div>
-                <div class="number">56</div>
-            </div>
-            <div class="iconBx">
-                <i class="uil uil-comments"></i>
-            </div>
-        </div>
-
-        <div class="card">
-            <div>
-                <div class="text">Alertas</div>
-                <div class="number">30</div>
-            </div>
+        <div class="cardBox">
+            <div class="card">
+                <div>
+                    <span class="text">Compras</span>
+                    <div class="number">50</div>
+                </div>
                 <div class="iconBx">
-                <i class="uil uil-exclamation-triangle"></i>
+                    <i class="uil uil-store"></i>
+                </div>
+            </div>
+
+            <div class="card">
+                <div>
+                    <div class="text">Proveedores</div>
+                    <div class="number">10</div>
+                </div>
+                    <div class="iconBx">
+                    <i class="uil uil-user"></i>
+                </div>
+            </div>
+
+            <div class="card">
+                <div>
+                    <div class="text">Comentarios</div>
+                    <div class="number">56</div>
+                </div>
+                <div class="iconBx">
+                    <i class="uil uil-comments"></i>
+                </div>
             </div>
         </div>
     </div>

@@ -27,7 +27,7 @@
       <button class="navbar-toggler" style="background-color: rgb(230, 72, 72);" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
           <span class="navbar-toggler-icon"></span>
       </button>
-      <a href="index.html">
+      <a href="index.php">
         <img src="imagenes/logo_empresa.png" alt="Logo" width="70" height="70" class="d-inline-block align-text-top">
       </a>
       <div class="text-white">
@@ -39,9 +39,9 @@
       </form>
       <div class="icon m-8">
         <h5>
-        <a class="fa fa-user-circle fa-lg me-2 text-white btn" style="background-color: rgb(230, 72, 72);" href="ingresar.html" data-toggle="tooltip" title="Ingresar" aria-hidden="true"></a>
-        <a class="fa fa-truck fa-lg me-2 text-white btn" style="background-color: rgb(230, 72, 72);" href="domicilios.html" data-toggle="tooltip" title="Domicilios" aria-hidden="true"></a>
-        <a class="fa fa-close me-2 text-white btn" style="background-color: rgb(230, 72, 72);" href="index.html" data-toggle="tooltip" title="Cerrar" aria-hidden="true"></a>
+        <a class="fa fa-user-circle fa-lg me-2 text-white btn" style="background-color: rgb(230, 72, 72);" href="ingresar.php" data-toggle="tooltip" title="Ingresar" aria-hidden="true"></a>
+        <a class="fa fa-truck fa-lg me-2 text-white btn" style="background-color: rgb(230, 72, 72);" href="domicilios.php" data-toggle="tooltip" title="Domicilios" aria-hidden="true"></a>
+        <a class="fa fa-close me-2 text-white btn" style="background-color: rgb(230, 72, 72);" href="index.php" data-toggle="tooltip" title="Cerrar" aria-hidden="true"></a>
         </h5>
       </div>
 
@@ -54,23 +54,23 @@
         <div class="offcanvas-body" style="background-color: white;" > 
           <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
             <li class="nav-item">
-              <a class="fa fa-shopping-bag fa-lg text-black me-2 btn"  href="categorias.html" aria-hidden="true"> Inventario</a>
+              <a class="fa fa-shopping-bag fa-lg text-black me-2 btn"  href="categorias.php" aria-hidden="true"> Inventario</a>
               <hr>
             </li>
             <li class="nav-item">
-              <a class="fa fa-shopping-cart fa-lg text-black me-3 btn"  href="pedidos.html" aria-hidden="true"> Mis Pedidos</a>
+              <a class="fa fa-shopping-cart fa-lg text-black me-3 btn"  href="pedidos.php" aria-hidden="true"> Mis Pedidos</a>
               <hr>
             </li>
             <li class="nav-item">
-              <a class="fa fa-truck fa-lg text-black me-3 btn"  href="domicilios_db.html" aria-hidden="true"> Domicilios</a>
+              <a class="fa fa-truck fa-lg text-black me-3 btn"  href="domicilios_db.php" aria-hidden="true"> Domicilios</a>
               <hr>
             </li>
             <li class="nav-item">
-              <a class="fa fa-user fa-lg text-black me-3 btn"  href="proveedores.html" aria-hidden="true"> Mis Proveedores</a>
+              <a class="fa fa-user fa-lg text-black me-3 btn"  href="proveedores.php" aria-hidden="true"> Mis Proveedores</a>
               <hr>    
             </li>
             <li class="nav-item">
-              <a class="fa fa-user fa-lg text-black me-3 btn"  href="calificaciones.html" aria-hidden="true"> Atención al cliente</a></i>
+              <a class="fa fa-user fa-lg text-black me-3 btn"  href="calificaciones.php" aria-hidden="true"> Atención al cliente</a></i>
               <hr>
             </li>
           </ul>
@@ -95,7 +95,7 @@
             <h5 class="card-title mt-4">Carnicos De Luxe</h5>
             <p class="card-text">Esta empresa nos brinda carne de res asi mismo una pequeña variedad de chorizo </p>
             <div class="d-grid gap-2">  
-              <a class="btn btn-danger" href="productos_luxe.html" aria-hidden="true">Ver productos</a>
+              <a class="btn btn-danger" href="productos_luxe.php" aria-hidden="true">Ver productos</a>
             </div>
           </div>
         </div>
@@ -108,7 +108,7 @@
             <h5 class="card-title mt-4"> Carnicos Fama</h5>
             <p class="card-text">Esta empresa nos brinda carne de res asi mismo una pequeña variedad de chorizo</p>
             <div class="d-grid gap-2">
-              <a class="btn btn-danger" href="productos_carnicos_fama.html" aria-hidden="true">Ver productos</a>
+              <a class="btn btn-danger" href="productos_carnicos_fama.php" aria-hidden="true">Ver productos</a>
             </div>
           </div>
         </div>
@@ -121,7 +121,7 @@
             <h5 class="card-title mt-4">Carnicos Versalles</h5>
             <p class="card-text">Esta empresa nos brinda una gran variedad de carne de res en diferentes cortes. </p>
             <div class="d-grid gap-2">
-              <a class="btn btn-danger" href="productos_carnicos_versalles.html" aria-hidden="true">Ver productos</a>
+              <a class="btn btn-danger" href="productos_carnicos_versalles.php" aria-hidden="true">Ver productos</a>
             </div>
           </div>
         </div>
@@ -133,7 +133,7 @@
             <h5 class="card-title mt-4">El Gran Campo</h5>
             <p class="card-text">Esta empresa nos brinda carne de res asi mismo una pequeña variedad de pollo</p>
             <div class="d-grid gap-2">
-              <a class="btn btn-danger" href="productos_el_gran_campo.html" aria-hidden="true">Ver productos</a>
+              <a class="btn btn-danger" href="productos_el_gran_campo.php" aria-hidden="true">Ver productos</a>
             </div>
           </div>
         </div>
@@ -145,7 +145,7 @@
             <h5 class="card-title mt-4"> la cumbre </h5>
             <p class="card-text">Esta empresa nos brinda una gran variedad de pollo en diferentes cortes.</p>
             <div class="d-grid gap-2">
-              <a class="btn btn-danger" href="productos_la_cumbre.html" aria-hidden="true">Ver productos</a>
+              <a class="btn btn-danger" href="productos_la_cumbre.php" aria-hidden="true">Ver productos</a>
             </div>
           </div>
         </div>
@@ -157,7 +157,7 @@
             <h5 class="card-title mt-4">Carnicos el campo </h5>
             <p class="card-text">Esta empresa nos brinda una gran variedad de pollo en diferentes cortes.</p>
             <div class="d-grid gap-2">
-              <a class="btn btn-danger" href="productos_carnicos_del_campo.html" aria-hidden="true">Ver productos</a>
+              <a class="btn btn-danger" href="productos_carnicos_del_campo.php" aria-hidden="true">Ver productos</a>
             </div>
           </div>
         </div>
@@ -169,7 +169,7 @@
             <h5 class="card-title mt-4">carnicos torino </h5>
             <p class="card-text">Esta empresa nos brinda una gran variedad de carne de cerdo en diferentes cortes.</p>
             <div class="d-grid gap-2">
-              <a class="btn btn-danger" href="productos_carnicos_torino.html" aria-hidden="true">Ver productos</a>
+              <a class="btn btn-danger" href="productos_carnicos_torino.php" aria-hidden="true">Ver productos</a>
             </div>
           </div>
         </div>
@@ -181,7 +181,7 @@
             <h5 class="card-title mt-4">carnicos monaco</h5>
             <p class="card-text">Esta empresa nos brinda una gran variedad de carne de cerdo en diferentes cortes.</p>
             <div class="d-grid gap-2">
-              <a class="btn btn-danger" href="productos_carnicos_monaco.html" aria-hidden="true">Ver productos</a>
+              <a class="btn btn-danger" href="productos_carnicos_monaco.php" aria-hidden="true">Ver productos</a>
             </div>
           </div>
         </div>
@@ -197,7 +197,7 @@
               <h5 class="card-title mt-4">Carnes La Especial</h5>
               <p class="card-text">Esta empresa nos brinda una gran variedad de carne de cerdo en diferentes cortes.</p>
               <div class="d-grid gap-2">
-                <a class="btn btn-danger" href="productos_carnicos_la_especial.html" aria-hidden="true">Ver productos</a>
+                <a class="btn btn-danger" href="productos_carnicos_la_especial.php" aria-hidden="true">Ver productos</a>
               </div>
             </div>
           </div>
@@ -209,7 +209,7 @@
               <h5 class="card-title mt-4">carnicos prime </h5>
               <p class="card-text">Esta empresa nos brinda carne de chorizo asi mismo una pequeña variedad de carne de cerdo</p>
               <div class="d-grid gap-2">
-                <a class="btn btn-danger" href="productos_carnicos_prime.html" aria-hidden="true">Ver productos</a>
+                <a class="btn btn-danger" href="productos_carnicos_prime.php" aria-hidden="true">Ver productos</a>
               </div>
             </div>
           </div>

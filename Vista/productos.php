@@ -1,6 +1,6 @@
 <?php
   include ("conexion.php");
-  $producto = "SELECT * FROM producto "
+  $producto = "SELECT * FROM producto WHERE NomCategoria = 'Carnicos'";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -27,7 +27,7 @@
                 <h5>
                   <a class="fa fa-envelope me-2 text-white btn" style="background-color: rgb(230, 72, 72);" href="#" data-toggle="tooltip" title="Correo" aria-hidden="true"></a>
                   <a class="fa fa-bell me-2 text-white btn" style="background-color: rgb(230, 72, 72);" href="#" data-toggle="tooltip" title="Notificaciones" aria-hidden="true"></a>
-                  <a class="fa fa-close me-2 text-white btn" style="background-color: rgb(230, 72, 72);" href="index.html" data-toggle="tooltip" title="Cerrar" aria-hidden="true"></a>
+                  <a class="fa fa-close me-2 text-white btn" style="background-color: rgb(230, 72, 72);" href="index.php" data-toggle="tooltip" title="Cerrar" aria-hidden="true"></a>
                 </h5>
               </div>
         </div>
@@ -36,10 +36,6 @@
     <div class="row no-gutters ">
       <div class="col-md-2 bg-danger mt-0 pr-3 pt-4">
         <ul class="nav flex-column ml-3 mb-5">
-          <li class="nav-item">
-            <a class="nav-link active text-white" href="categorias.php"><i class="fa fa-bookmark mx-2" aria-hidden="true"></i>Categorías</a>
-            <hr class="bg-primary">
-          </li>
           <li class="nav-item">
               <a class="nav-link active text-white" href="productos.php"><i class="fa fa-shopping-basket mx-2" aria-hidden="true"></i>Productos</a>
               <hr class="bg-primary">
@@ -145,28 +141,31 @@
             </thead>
         
             <tbody>
-              <tr>
-              <?php
-               $resultado = mysqli_query($conexion, $cliente);
+            <?php
+               $resultado = mysqli_query($conexion, $producto);
                 while($row = mysqli_fetch_assoc($resultado)){
               ?>
-                <td><?php echo $row["IdProducto"] ?></td>
-                <td><?php echo $row["FechaRegistro"] ?></td>
-                <td><?php echo $row["NomProducto"] ?></td>
-                <td><?php echo $row["NomCategoria"] ?></td>
-                <td><?php echo $row["cantidad"] ?></td>
-                <td><?php echo $row["FechaVencimiento"] ?></td>
-                <td><?php echo $row["Valorlibra"] ?></td>
-                <td><?php echo $row["Saldo"] ?></td>
+              <tr>
+                <td><?php echo $row["IdProducto"];?></td>
+                <td><?php echo $row["FechaRegistro"];?></td>
+                <td><?php echo $row["NomProducto"];?></td>
+                <td><?php echo $row["NomCategoria"];?></td>
+                <td><?php echo $row["cantidad"];?></td>
+                <td><?php echo $row["FechaVencimiento"];?></td>
+                <td><?php echo $row["Valorlibra"];?></td>
+                <td><?php echo $row["Saldo"];?></td>
                 <td><i class="fa fa-pencil-square-o bg-success p-2 text-white rounded btn " data-toggle="tooltip" title="Editar" aria-hidden="true"></i></td>
-                <?php
+              </tr>
+              <?php
                 } mysqli_free_result($resultado);
                 ?>
-              </tr>
             </tbody>
           </table>
         </div>
       </div>
+  <?php
+    $producto_pollo = "SELECT * FROM producto WHERE NomCategoria = 'Pollo' ";
+  ?>
       <hr>
       <div class="card text-center col-sm-12 col-md-10 col-lg-10 col-xl-10">
         <div class="card-header">
@@ -180,90 +179,43 @@
           <table class="table table-striped table-bordered">
             <thead>
               <tr>
-                <th scope="col">N°</th>
-                <th scope="col">IdProducto</th>
-                <th scope="col">Nombre</th>
-                <th scope="col">FechVencimiento</th>
-                <th scope="col">Categoría</th>
-                <th scope="col">ValorPorLibra</th>
-                
+                <th scope="col">Id Producto</th>
+                <th scope="col">Fecha Registro</th>
+                <th scope="col">Nombre Producto</th>
+                <th scope="col">Nombre Categoria</th>
+                <th scope="col">cantidad</th>
+                <th scope="col">Fecha Vencimiento</th>
+                <th scope="col">Valor libra</th>
+                <th scope="col">Saldo</th>
               </tr>
             </thead>
       
             <tbody>
+              <?php
+                $resultado = mysqli_query($conexion, $producto_pollo);
+                while($row = mysqli_fetch_assoc($resultado)){
+              ?>
               <tr>
-                <th scope="row">1</th>
-                <td>8796</td>
-                <td>Muslos de pollo</td>
-                <td>01/05/2023</td>
-                <td>Pollo</td>
-                <td>$5.000</td>
-                <td><i class="fa fa-pencil-square-o bg-success p-2 text-white rounded btn" data-toggle="tooltip" title="Editar" aria-hidden="true"></i></td>
+                <td><?php echo $row["IdProducto"];?></td>
+                <td><?php echo $row["FechaRegistro"];?></td>
+                <td><?php echo $row["NomProducto"];?></td>
+                <td><?php echo $row["NomCategoria"];?></td>
+                <td><?php echo $row["cantidad"];?></td>
+                <td><?php echo $row["FechaVencimiento"];?></td>
+                <td><?php echo $row["Valorlibra"];?></td>
+                <td><?php echo $row["Saldo"];?></td>
+                <td><i class="fa fa-pencil-square-o bg-success p-2 text-white rounded btn " data-toggle="tooltip" title="Editar" aria-hidden="true"></i></td>
               </tr>
-      
-              <tr>
-                <th scope="row">2</th>
-                <td>5983</td>
-                <td>Alas</td>
-                <td>02/05/2023</td>
-                <td>Pollo</td>
-                <td>$7.000</td>
-                <td><i class="fa fa-pencil-square-o bg-success p-2 text-white rounded btn" data-toggle="tooltip" title="Editar" aria-hidden="true"></i></td>
-              </tr>
-      
-              <tr>
-                <th scope="row">3</th>
-                <td>7036</td>
-                <td>Pechuga</td>
-                <td>03/05/2023</td>
-                <td>Pollo</td>
-                <td>$10.000</td>
-                <td><i class="fa fa-pencil-square-o bg-success p-2 text-white rounded btn" data-toggle="tooltip" title="Editar" aria-hidden="true"></i></td>
-              </tr>
-      
-              <tr>
-                <th scope="row">4</th>          
-                <td>8426</td>
-                <td>Patas de pollo</td>
-                <td>04/05/2023</td>
-                <td>Pollo</td>
-                <td>$3.000</td>
-                <td><i class="fa fa-pencil-square-o bg-success p-2 text-white rounded btn" data-toggle="tooltip" title="Editar" aria-hidden="true"></i></td>
-              </tr>
-              
-              <tr>
-                <th scope="row">5</th>
-                <td>7586</td>
-                <td>Espinazo</td>
-                <td>05/05/2023</td>
-                <td>Pollo</td>
-                <td>$10.000</td>
-                <td><i class="fa fa-pencil-square-o bg-success p-2 text-white rounded btn" data-toggle="tooltip" title="Editar" aria-hidden="true"></i></td>
-              </tr>
-              
-              <tr>
-                <th scope="row">6</th>
-                <td>5836</td>
-                <td>Rabadilla</td>
-                <td>06/05/2023</td>
-                <td>Pollo</td>
-                <td>$12.000</td>
-                <td><i class="fa fa-pencil-square-o bg-success p-2 text-white rounded btn" data-toggle="tooltip" title="Editar" aria-hidden="true"></i></td>
-              </tr>
-              
-              <tr>
-                <th scope="row">7</th>
-                <td>6983</td>
-                <td>Pescuezo</td>
-                <td>07/05/2023</td>
-                <td>Pollo</td>
-                <td>$5.000</td>
-                <td><i class="fa fa-pencil-square-o bg-success p-2 text-white rounded btn" data-toggle="tooltip" title="Editar" aria-hidden="true"></i></td>
-              </tr>
+              <?php
+                } mysqli_free_result($resultado);
+                ?>
             </tbody>
           </table>
         </div>
       </div>
+  <?php
+    $producto_cerdo = "SELECT * FROM producto WHERE NomCategoria = 'Cerdo' ";
+  ?>
       <hr>
       <div class="card text-center col-sm-12 col-md-10 col-lg-10 col-xl-10">
         <div class="card-header">
@@ -278,101 +230,43 @@
           <table class="table table-striped table-bordered">
             <thead>
               <tr>
-                <th scope="col">N°</th>
-                <th scope="col">IdProducto</th>
-                <th scope="col">Nombre</th>
-                <th scope="col">FechVencimiento</th>
-                <th scope="col">Categoría</th>
-                <th scope="col">ValorPorLibra</th>
-                
-                
+              <th scope="col">Id Producto</th>
+                <th scope="col">Fecha Registro</th>
+                <th scope="col">Nombre Producto</th>
+                <th scope="col">Nombre Categoria</th>
+                <th scope="col">cantidad</th>
+                <th scope="col">Fecha Vencimiento</th>
+                <th scope="col">Valor libra</th>
+                <th scope="col">Saldo</th>
               </tr>
             </thead>
       
             <tbody>
+            <?php
+                $resultado = mysqli_query($conexion, $producto_cerdo);
+                while($row = mysqli_fetch_assoc($resultado)){
+              ?>
               <tr>
-                <th scope="row">1</th>
-                <td>3939</td>
-                <td>Chuleta de lomo </td>
-                <td>08/06/2023</td>
-                <td>Cerdo</td>
-                <td>$11.000</td>
-                <td><i class="fa fa-pencil-square-o bg-success p-2 text-white rounded btn" data-toggle="tooltip" title="Editar" aria-hidden="true"></i></td>
+                <td><?php echo $row["IdProducto"];?></td>
+                <td><?php echo $row["FechaRegistro"];?></td>
+                <td><?php echo $row["NomProducto"];?></td>
+                <td><?php echo $row["NomCategoria"];?></td>
+                <td><?php echo $row["cantidad"];?></td>
+                <td><?php echo $row["FechaVencimiento"];?></td>
+                <td><?php echo $row["Valorlibra"];?></td>
+                <td><?php echo $row["Saldo"];?></td>
+                <td><i class="fa fa-pencil-square-o bg-success p-2 text-white rounded btn " data-toggle="tooltip" title="Editar" aria-hidden="true"></i></td>
               </tr>
-      
-              <tr>
-                <th scope="row">2</th>
-                <td>9949</td>
-                <td>Cinta de lomo </td>
-                <td>09/06/2023</td>
-                <td>Cerdo</td>
-                <td>$9.000</td>
-                <td><i class="fa fa-pencil-square-o bg-success p-2 text-white rounded btn" data-toggle="tooltip" title="Editar" aria-hidden="true"></i></td>
-              </tr>
-      
-              <tr>
-                <th scope="row">3</th>
-                <td>9844</td>
-                <td>Manitas de cerdo</td>
-                <td>10/06/2023</td>
-                <td>Cerdo</td>
-                <td>$7.000</td>
-                <td><i class="fa fa-pencil-square-o bg-success p-2 text-white rounded btn" data-toggle="tooltip" title="Editar" aria-hidden="true"></i></td>
-              </tr>
-      
-              <tr>
-                <th scope="row">4</th>          
-                <td>9898</td>
-                <td>Costillas Carnosas</td>
-                <td>11/06/2023</td>
-                <td>Cerdo</td>
-                <td>$13.000</td>
-                <td><i class="fa fa-pencil-square-o bg-success p-2 text-white rounded btn" data-toggle="tooltip" title="Editar" aria-hidden="true"></i></td>
-              </tr>
-              
-              <tr>
-                <th scope="row">5</th>
-                <td>3569</td>
-                <td>Paleta de cerdo</td>
-                <td>11/06/2023</td>
-                <td>Cerdo</td>
-                <td>$11.000</td>
-                <td><i class="fa fa-pencil-square-o bg-success p-2 text-white rounded btn" data-toggle="tooltip" title="Editar" aria-hidden="true"></i></td>
-              </tr>
-                   
-              <tr>
-                <th scope="row">6</th>
-                <td>1489</td>
-                <td>Aguja de cerdo</td>
-                <td>12/06/2023</td>
-                <td>Cerdo</td>
-                <td>$12.000</td>
-                <td><i class="fa fa-pencil-square-o bg-success p-2 text-white rounded btn" data-toggle="tooltip" title="Editar" aria-hidden="true"></i></td>
-              </tr>
-                   
-              <tr>
-                <th scope="row">7</th>
-                <td>7598</td>
-                <td>Papada de cerdo</td>
-                <td>13/06/2023</td>
-                <td>Cerdo</td>
-                <td>$5.000</td>
-                <td><i class="fa fa-pencil-square-o bg-success p-2 text-white rounded btn" data-toggle="tooltip" title="Editar" aria-hidden="true"></i></td>
-              </tr>
-                   
-              <tr>
-                <th scope="row">8</th>
-                <td>2569</td>
-                <td>Panceta de cerdo</td>
-                <td>14/06/2023</td>
-                <td>Cerdo</td>
-                <td>$8.000</td>
-                <td><i class="fa fa-pencil-square-o bg-success p-2 text-white rounded btn" data-toggle="tooltip" title="Editar" aria-hidden="true"></i></td>
-              </tr>
+              <?php
+                } mysqli_free_result($resultado);
+                ?>
             </tbody>
           </table>
         </div>
       </div>
+  <?php
+    $producto_chorizo = "SELECT * FROM producto WHERE NomCategoria = 'Chorizo' ";
+  ?>
       <hr>
       
       <div class="card text-center col-sm-12 col-md-10 col-lg-10 col-xl-10">
@@ -388,58 +282,36 @@
           <table class="table table-striped table-bordered">
             <thead>
               <tr>
-                <th scope="col">N°</th>
-                <th scope="col">IdProducto</th>
-                <th scope="col">Nombre</th>
-                <th scope="col">FechVencimiento</th>
-                <th scope="col">Categoría</th>
-                <th scope="col">ValorPorLibra</th>
-                
-                
+              <th scope="col">Id Producto</th>
+                <th scope="col">Fecha Registro</th>
+                <th scope="col">Nombre Producto</th>
+                <th scope="col">Nombre Categoria</th>
+                <th scope="col">cantidad</th>
+                <th scope="col">Fecha Vencimiento</th>
+                <th scope="col">Valor libra</th>
+                <th scope="col">Saldo</th>
               </tr>
             </thead>
       
             <tbody>
+            <?php
+                $resultado = mysqli_query($conexion, $producto_chorizo);
+                while($row = mysqli_fetch_assoc($resultado)){
+              ?>
               <tr>
-                <th scope="row">1</th>
-                <td>6723</td>
-                <td>Chorizo de leon </td>
-                <td>20/08/2023</td>
-                <td>Chorizo</td>
-                <td>$10.000</td>
-                <td><i class="fa fa-pencil-square-o bg-success p-2 text-white rounded btn" data-toggle="tooltip" title="Editar" aria-hidden="true"></i></td>
+                <td><?php echo $row["IdProducto"];?></td>
+                <td><?php echo $row["FechaRegistro"];?></td>
+                <td><?php echo $row["NomProducto"];?></td>
+                <td><?php echo $row["NomCategoria"];?></td>
+                <td><?php echo $row["cantidad"];?></td>
+                <td><?php echo $row["FechaVencimiento"];?></td>
+                <td><?php echo $row["Valorlibra"];?></td>
+                <td><?php echo $row["Saldo"];?></td>
+                <td><i class="fa fa-pencil-square-o bg-success p-2 text-white rounded btn " data-toggle="tooltip" title="Editar" aria-hidden="true"></i></td>
               </tr>
-      
-              <tr>
-                <th scope="row">2</th>
-                <td>1784</td>
-                <td>Chorizo Gallego</td>
-                <td>21/08/2023</td>
-                <td>Chorizo</td>
-                <td>$11.000</td>
-                <td><i class="fa fa-pencil-square-o bg-success p-2 text-white rounded btn" data-toggle="tooltip" title="Editar" aria-hidden="true"></i></td>
-              </tr>
-      
-              <tr>
-                <th scope="row">3</th>
-                <td>3658</td>
-                <td>Chorizo Extremeño</td>
-                <td>22/08/2023</td>
-                <td>Chorizo</td>
-                <td>$13.000</td>
-                <td><i class="fa fa-pencil-square-o bg-success p-2 text-white rounded btn" data-toggle="tooltip" title="Editar" aria-hidden="true"></i></td>
-              </tr>
-      
-              <tr>
-                <th scope="row">4</th>          
-                <td>5789</td>
-                <td>Chorizo de navarro </td>
-                <td>23/08/2023</td>
-                <td>Chorizo</td>
-                <td>$15.000</td>
-                <td><i class="fa fa-pencil-square-o bg-success p-2 text-white rounded btn" data-toggle="tooltip" title="Editar" aria-hidden="true"></i></td>
-              </tr>
-              </tr>
+              <?php
+                } mysqli_free_result($resultado);
+                ?>
             </tbody>
           </table>
         </div>

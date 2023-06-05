@@ -1,0 +1,113 @@
+body{
+    background: url(imagenes1/lines-left.svg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    background-size: 2000px;
+    background-repeat: no-repeat;
+}
+
+*{
+    font-family: "Lato" , sans-serif;
+    font-family: "Open Sans", sans-serif;
+    font-family: "PT Sans", sans-serif;
+    box-sizing: border-box;
+}
+
+form{
+    width: 600px;
+    border: 10px solid;
+    padding: 6rem;
+    background-color: #fff5;
+    border: 5px;
+    border-color: black;
+    box-shadow: 0 .4rem .8rem;
+    border-radius: 20px;
+    color: black;
+}
+
+h1{
+    text-align: center;
+    display: block;
+    border: 2px solid black;
+    width: 95%;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+}
+label{
+    color: black;
+    font-size: 18px;
+    padding: 10px;
+    font-weight: 300px;
+}
+input{
+    display: block;
+    border: 2px solid black;
+    width: 95%;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+}
+.btn{
+    display: flex;
+    float: right;
+    background-color: #f9da2afe;
+    padding: 10px;
+    color: black;
+    border-radius: 5px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+
+.btn:hover{
+    background-color: #faa73afe;
+    color: rgb(0, 0, 0);
+    text-align: center;
+}
+
+button{
+    float: right;
+    background: transparent;
+    padding: 10px;
+    color: black;
+    border-radius: 5px;
+    margin-top: 20px;
+    text-align: center;;
+}
+
+a{
+    float: right;
+    background: transparent;
+    padding: 1rem;
+    color: black;
+    border-radius: 5px;
+    margin: 20px 160px; 
+    text-align: center;
+    justify-content: center;
+}
+
+a:hover{
+    display: flex;
+    background-color: black;
+    color: rgb(0, 0, 0);
+    text-align: center;
+}
+
+.btnregistro{
+    display: block;
+    float: right;
+    background: transparent;
+    padding: 10px;
+    color: black;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+.btnregistro:hover{
+    background-color: black;
+    color: rgb(0, 0, 0);
+    text-align: center;
+}

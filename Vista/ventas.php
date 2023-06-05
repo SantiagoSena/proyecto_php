@@ -1,3 +1,7 @@
+<?php
+  include ("conexion.php");
+  $Venta = "SELECT * FROM venta";
+  ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -32,10 +36,6 @@
   <div class="row no-gutters ">
       <div class="col-md-2 bg-danger mt-0 pr-3 pt-4">
         <ul class="nav flex-column ml-3 mb-5">
-          <li class="nav-item">
-            <a class="nav-link active text-white" href="categorias.php"><i class="fa fa-bookmark mx-2" aria-hidden="true"></i>Categorias</a>
-            <hr class="bg-primary">
-          </li>
           <li class="nav-item">
               <a class="nav-link active text-white" href="productos.php"><i class="fa fa-shopping-basket mx-2" aria-hidden="true"></i>Productos</a>
               <hr class="bg-primary">
@@ -156,78 +156,41 @@
           <table class="table table-striped table-bordered">
             <thead>
               <tr>
-                <th scope="col">N°</th>
                 <th scope="col">Id Venta</th>
                 <th scope="col">Fecha Emisión</th>
                 <th scope="col">Id Pedido</th>
                 <th scope="col">Id Cliente</th>
                 <th scope="col">Id Producto</th>
-                <th scope="col">Productos</th>
+                <th scope="col">Producto</th>
+                <th scope="col">Cantidad</th>
+                <th scope="col">Valor Producto</th>
+                <th scope="col">SubTotal</th>
                 <th scope="col">Valor Total</th>
                 
               </tr>
             </thead>
 
             <tbody>
+            <?php
+                $resultado = mysqli_query($conexion, $Venta);
+                while($row = mysqli_fetch_assoc($resultado)){
+              ?>
               <tr>
-                <th scope="row">1</th>
-                <td>83741</td>
-                <td>01/02/2023</td>
-                <td>17394</td>
-                <td>106475</td>    
-                <td>7893</td>
-                <td><button type="button" class="btn btn-primary">Detalles</button></td>
-                <td>55.000</td>
-                <td><i class="fa fa-pencil-square-o bg-success p-2 text-white rounded btn" data-toggle="tooltip" title="Editar" aria-hidden="true"></i></td>
+                <td><?php echo $row["IdVenta"];?></td>
+                <td><?php echo $row["FechaEmision"];?></td>
+                <td><?php echo $row["IdPedido"];?></td>
+                <td><?php echo $row["IdCliente"];?></td>
+                <td><?php echo $row["IdProducto"];?></td>
+                <td><?php echo $row["Producto"];?></td>
+                <td><?php echo $row["Cantidad"];?></td>
+                <td><?php echo $row["ValorProducto"];?></td>
+                <td><?php echo $row["SubTotal"];?></td>
+                <td><?php echo $row["ValorTotal"];?></td>
+                <td><i class="fa fa-pencil-square-o bg-success p-2 text-white rounded btn " data-toggle="tooltip" title="Editar" aria-hidden="true"></i></td>
               </tr>
-
-              <tr>
-                <th scope="row">2</th>
-                <td>17593</td>
-                <td>16/02/2023</td>
-                <td>74539</td>
-                <td>162950</td>
-                <td>7036</td>
-                <td><button type="button" class="btn btn-primary">Detalles</button></td>
-                <td>42.000</td>
-                <td><i class="fa fa-pencil-square-o bg-success p-2 text-white rounded btn" data-toggle="tooltip" title="Editar" aria-hidden="true"></i></td>
-              </tr>
-
-              <tr>
-                <th scope="row">3</th>
-                <td>29504</td>
-                <td>20/03/2023</td>
-                <td>28405</td>
-                <td>104137</td>
-                <td>7586</td>
-                <td><button type="button" class="btn btn-primary">Detalles</button></td>
-                <td>44.000</td>
-                <td><i class="fa fa-pencil-square-o bg-success p-2 text-white rounded btn" data-toggle="tooltip" title="Editar" aria-hidden="true"></i></td>
-              </tr>
-
-              <tr>
-                <th scope="row">4</th>
-                <td>50273</td>
-                <td>24/03/2023</td>
-                <td>10365</td>
-                <td>165694</td>
-                <td>9844</td>
-                <td><button type="button" class="btn btn-primary">Detalles</button></td>
-                <td>60.000</td>
-                <td><i class="fa fa-pencil-square-o bg-success p-2 text-white rounded btn" data-toggle="tooltip" title="Editar" aria-hidden="true"></i></td>
-              </tr>
-
-              <tr>
-                <th scope="row">5</th>
-                <td>72017</td>
-                <td>16/02/2023</td>
-                <td>83649</td>
-                <td>130564</td>
-                <td>9898</td>
-                <td><button type="button" class="btn btn-primary">Detalles</button></td>
-                <td>50.000</td>
-                <td><i class="fa fa-pencil-square-o bg-success p-2 text-white rounded btn" data-toggle="tooltip" title="Editar" aria-hidden="true"></i></td>
-              </tr>   
+              <?php
+                } mysqli_free_result($resultado);
+                ?>
             </tbody>
           </table>
         </div>

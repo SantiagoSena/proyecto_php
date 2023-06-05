@@ -24,7 +24,7 @@
 <body>
   <nav class="navbar fixed-top" style="background-color: rgb(194, 16, 16);" data-bs-theme="dark" >
     <div class="container-fluid">
-      <a class="navbar-brand" href="index.html">
+      <a class="navbar-brand" href="index.php">
         <img src="imagenes/logo_empresa.png" alt="Logo" width="70" height="70" class="d-inline-block align-text-top"> ASAGO</a>
     </div>
   </nav>

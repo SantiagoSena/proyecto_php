@@ -39,17 +39,20 @@
                 <p class="card-text">iniciar sesión en tu Tienda Virtual</p>
                 <hr>
             </div>
-
-            <form class="was-validated g-3 mx-5" action="#">
+            <form class="was-validated g-3 mx-5" method="post" action="#">
+            <?php
+                include("conexion.php");
+                include("controlador.php");
+            ?>
                 <div class="col-12">
-                    <label class="form-label"> Cedula Ciudadanía</label>
-                    <input class="form-control" type="text" required>
+                    <label class="form-label">Cedula Ciudadanía</label>
+                    <input name="Usuario" class="form-control" type="number" required>
                 </div>
                 <br>
 
                 <div class="col-12">
-                    <label class="form-label"> Contraseña</label>
-                    <input class="form-control" type="password" required>
+                    <label class="form-label">Contraseña</label>
+                    <input name="Clave" class="form-control" type="password" required>
                 </div>
 
                 <div class="col-12 text-center">
@@ -59,11 +62,11 @@
                 <br>
 
                 <div class="d-grid gap-2 col-12 mx-auto">
-                    <button class="btn btn-danger "type="submit">Iniciar sesión</button>
-                    <a class="btn btn-outline-danger" href="registro.html" aria-hidden="true">Registrarse</a>
+                    <input class="btn btn-danger "type="submit" value = "Iniciar Sesión">
+                    <a class="btn btn-outline-danger" href="registro.php" aria-hidden="true">Registrarse</a>
                     <br>  
                 </div>
-            </form>            
+            </form>
         </div>
     </div>
     

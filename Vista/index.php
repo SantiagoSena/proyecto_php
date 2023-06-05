@@ -33,7 +33,7 @@
               <li><a class="dropdown-item" href="llamanos.php">Llamada</a></li>
               <li><a class="dropdown-item" href="whatsapp.php">Whatsapp</a></li>
           </ul>
-          <a class="fa fa-user-circle fa-lg me-2 text-white btn" style="background-color: rgb(230, 72, 72);" href="ingresar.php" data-toggle="tooltip" title="Ingresar" aria-hidden="true"></a>
+          <a class="fa fa-user-circle fa-lg me-2 text-white btn" style="background-color: rgb(230, 72, 72);" href="ingresar2.php" data-toggle="tooltip" title="Ingresar" aria-hidden="true"></a>
           <a class="fa fa-truck fa-lg me-2 text-white btn" style="background-color: rgb(230, 72, 72);" href="domicilios.php" data-toggle="tooltip" title="Domicilios" aria-hidden="true"></a>
         </div>
         </h5>
@@ -48,7 +48,7 @@
         <div class="offcanvas-body" style="background-color: white" > 
           <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
             <li class="nav-item">
-              <a class="fa fa-shopping-bag fa-lg text-black me-2 btn"  href="categorias.php" aria-hidden="true"> Inventario</a>
+              <a class="fa fa-shopping-bag fa-lg text-black me-2 btn"  href="productos.php" aria-hidden="true"> Inventario</a>
               <hr>
             </li>
             

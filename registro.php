@@ -88,8 +88,8 @@
                 </div>
 
                 <div class="col-6">
-                    <label class="form-label"> Confirmar Correo </label>
-                    <input name="correo2" class="form-control" type="email"  placeholder="name@example.com" required>
+                    <label class="form-label" type="hidden"> </label>
+                    <input name="correo2" class="form-control" type="hidden"  placeholder="name@example.com" required>
                 </div>
 
                 <div class="col-6">

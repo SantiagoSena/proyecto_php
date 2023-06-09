@@ -47,7 +47,7 @@
           <div class="dropdown">
               <button class="dropbtn"><i class="uil uil-angle-down"></i></button>
               <div class="dropdown-content">
-              <a href="ingresar.php">Iniciar Sesión</a>
+              <a href="ingresar2.php">Iniciar Sesión</a>
               <a href="registro.php">Registrarse</a>
               <hr>
               <a href="#">Mi cuenta</a>

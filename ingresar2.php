@@ -10,23 +10,29 @@
     <title>Inicio de sesion</title>
 </head>
 <body>
+    <div class="login-box">
+        <img src="imagenes/logo_empresa.png" class="avatar" alt="Avatar Image">
     <form method="post" action="">
         <h1>INICIAR SESION</h1>
-        <?php
-        include("conexion.php");
-        include("controlador2.php");
-        ?>
         <hr>
+        <div class="text">
+            <span>Ingresa tus datos para</span>
+        </div>    
+        <span class="bold">iniciar sesión en tu Tienda Virtual</span>  
+
         <i class="fa-solid fa-user"></i>
-        <label >Identificacion</label>
-        <input type="text" name="Usuario" placeholder="Numero de identificación">
+        <label >Cédula de ciudadanía</label>
+        <input type="text" name="Usuario" placeholder="Ej: 1234567890">
 
         <i class="fa-solid fa-unlock"></i>
-        <label >Clave</label>
-        <input type="password" name="Clave" placeholder="Clave">
-        <hr>
-        <input name="btningresar" class="btn" type="submit" value="Iniciar Sesion">
-        <a name="btnregistro" class="btn" value="Registrar" href="registro.php">Registrar</a>
+        <label >Constraseña</label>
+        <input type="password" name="Clave" placeholder="Contraseña">
+        <div class="btn-2">
+            <a href="">¿Olvidaste tu Contraseña?</a>
+        </div>
+        <input name="btningresar" class="btn" type="submit" value="Iniciar Sesión">
+        <a class="btnregistro" value="Registrar" href="registro.php">Registrarse</a>
+        
     </form>
     
 </body> 

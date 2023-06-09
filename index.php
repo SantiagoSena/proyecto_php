@@ -276,13 +276,44 @@
     </div>
   </div>
   <br>
-  <footer>
-    <div class="col-md-12 col-lg-12 col-sm-12 col-xl-12" style="background-color: rgb(194, 16, 16); width: 100%; position: relative;" data-bs-theme="dark">
-      <h6> Contactos</h6>
-      <h6>Tel: 3146576578</h6>
-      <h6> Tel: 3137853647</h6>
-      <h6>Correo: Asago@gmail.com</h6>
-    </div>
+  <footer class="pie-pagina">
+    <div class="grupo-1">
+      <div class="box">
+          <figure>
+          <div class="image">
+            <img src="/imagenes/logo_asago1.png">
+          </div>
+         
+          <div class="contacto">
+            <h2>CONTACTOS</h2>
+            <p>Tel: 3146576578 </p>
+            <p>Tel: 3137853647</p>
+            <p>Correo: Asago@gmail.com </p>
+          </div>
+            </figure>
+      </div>
+            
+            
+            <div class="box">
+              <h2>SOBRE NOSOTROS</h2>
+                <p>Nos dedicamos a la comercializacion de Pollo, Carne y Queso, cortamos la carne a tu gusto y empacamos al vacío como tu lo quieras, Productos de calidad y terneza.
+Escríbenos ahora y olvidate de llegar a separar tus porciones, nosotros lo hacemos por ti.</p>
+               
+            </div>
+            <div class="box">
+                <h2>SIGUENOS</h2>
+                <div class="red-social">
+                    <a href="https://web.facebook.com/people/Asago-House/100066880955276/?mibextid=ZbWKwL" class="fa fa-facebook"></a>
+                    <a href="https://instagram.com/asagohouse?igshid=NTc4MTIwNjQ2YQ==" class="fa fa-instagram"></a>
+                    <a href="https://api.whatsapp.com/send?phone=573155766563&text=Hola+%F0%9F%91%8B+mi+nombre+es....&fbclid=PAAaaNmZtE0e80RfgMRKYlxMClDAYO5ippe5QsdSUW7br-Be3CNwa0b0ctr2E" class="fa fa-whatsapp"></a>
+                    <a href="https://www.youtube.com/@AsagoHouse/featured" class="fa fa-youtube"></a>
+                </div>
+              </div>
+        </div>
+      
+        <div class="grupo-2">
+            <small>&copy;  2023 <b>- GAES 5</b> - Todos los Derechos Reservados.</small>
+        </div>
     </footer>
 
 </body>

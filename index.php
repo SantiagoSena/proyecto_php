@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,7 +10,7 @@
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
-    <link rel="stylesheet" href="/Css/index.css">
+    <link rel="stylesheet" href="Css/index.css">
     <title>Pagina Asago</title>
   
 </head>
@@ -94,10 +96,6 @@
     </div>
   </nav>  
   <br>
-
- 
-   
-    
         <div class="carousel slide" id="carouselExampleAutoplaying" data-bs-ride="carousel">
           <div class="carousel-inner">
             <div class="carousel-item active">

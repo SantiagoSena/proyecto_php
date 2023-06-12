@@ -32,22 +32,6 @@ header{
     color: white;
 }
 
-.nav-items i{
-    margin-left: 5px;
-    font-size: 25px;
-    position: absolute;
-}
-
-.nav-items input{
-    display: flex;
-    width: 30rem;
-    padding: 7px;
-    border-radius: 30px;
-    border: none;
-    font-size: 17px;
-    display: inline-block;
-}
-
 .login p{
     display: inline-block;
     color: white;
@@ -108,12 +92,11 @@ header{
     justify-content: space-between;
 }
 
-
 .tittle{
-    font-size: 30px;
-    font-weight: 500;
     margin-top: 40px;
     text-align: center;
+    font-size: 30px;
+    font-weight: 500;
     color: rgb(194, 16, 16);
 }
 

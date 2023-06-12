@@ -21,13 +21,6 @@
       <h2>Asago S.A.S</h2>
     </div>
 
-    <nav>
-      <div class="nav-items">
-        <i class="uil uil-search"></i>
-        <input type="text" placeholder="    Busca aquí...">
-      </div>
-    </nav>
-
     <div class="login">
       <p>Iniciar Sesión</p>
       <div class="dropdown">
@@ -153,8 +146,6 @@
       <small>&copy;  2023 <b>- GAES 5</b> - Todos los Derechos Reservados.</small>
     </div>
   </footer>
-
-
 
 </body>
 </html>

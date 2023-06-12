@@ -90,21 +90,21 @@ session_start();
         <img src="/imagenes/pollo.jpg" alt="" class="img-item">
         <span class="titulo-item">Pollo</span>
         <span class="card-text">Aqui encontraras todo tipo de productos de Pollo a tu gusto.</span>
-        <button class="card-button"><a href="productos_pollo3.php">Ir a Categoria</a></button>
+        <button class="card-button"><a href="productos_pollo2.php">Ir a Categoria</a></button>
       </div>
 
       <div class="item">
         <img src="/imagenes/cerdo.jpg" alt="" class="img-item">
         <span class="titulo-item">Cerdo</span>
         <span class="card-text">Aqui encontraras todo tipo de productos de Cerdo a tu gusto.</span>
-        <button class="card-button"><a href="productos_cerdo4.php">Ir a Categoria</a></button>
+        <button class="card-button"><a href="productos_cerdo2.php">Ir a Categoria</a></button>
       </div>
 
       <div class="item">
         <img src="/imagenes/chorizo.jpg" alt="" class="img-item">
         <span class="titulo-item">Chorizo</span>
         <span class="card-text">Aqui encontraras todo tipo de productos de Chorizo a tu gusto.</span>
-        <button class="card-button"><a href="productos_chorizo5.php">Ir a Categoria</a></button>
+        <button class="card-button"><a href="productos_chorizo2.php">Ir a Categoria</a></button>
       </div>
     </div>
   </section>

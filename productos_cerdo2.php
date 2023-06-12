@@ -1,5 +1,7 @@
-<?php
- session_start();
+<?php 
+
+session_start();
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -12,12 +14,12 @@
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="/Css/productos.css">
-    <title>Productos Carne</title>
-  
+    <title>Productos Cerdo</title>
+
 </head>
 
 <body>
-
+  
   <header>
     <div class="logo">
       <img src="/imagenes/logo_asago1.png" alt="">
@@ -25,11 +27,11 @@
     </div>
 
     <div class="login">
-    <p><?php echo $_SESSION["nombre"] . " " . $_SESSION["apellido"]?></p>
+      <p><?php echo $_SESSION["nombre"] . " " . $_SESSION["apellido"]?></p>
       <div class="dropdown">
         <button class="dropbtn"><i class="uil uil-angle-down"></i></button>
         <div class="dropdown-content">
-        <a href="index.php">Cerrar sesion</a>
+        <a href="index.php">Iniciar Sesión</a>
       </div> 
     </div> 
           
@@ -37,75 +39,75 @@
       <i class="uil uil-shopping-cart"></i>
     </div>
   </header>
-  
+
   <div class="tittle">
-    <span>Productos de Carne</span>
+    <span>Productos de Cerdo</span>
   </div>
 
   <section class="contenedor">
     <div class="contenedor-items">
       <div class="item">
-        <img  src="/imagenes/jamon.webp" alt="" class="img-item">
-        <span class="titulo-item">Jamón</span>
-        <span class="card-text">Precio Libra $5.000</span>
-        <span class="card-text">Cod: 5146</span>
-        <button class="card-button"><a href="productos_carne.php">Agregar al Carrito</a></button>
+        <img  src="/imagenes/chuletas_de_lomo.jpg" alt="" class="img-item">
+        <span class="titulo-item">Chuleta de Lomo</span>
+        <span class="card-text">Precio Libra $11.000</span>
+        <span class="card-text">Cod: 3939</span>
+        <button class="card-button"><a href="#">Agregar al Carrito</a></button>
       </div>
 
       <div class="item"> 
-        <img src="/imagenes/filetes_de_ternera.png" alt="" class="img-item">
-        <span class="titulo-item">Filetes de Ternera</span>
-        <span class="card-text">Precio Libra $10.000</span>
-        <span class="card-text">Cod: 7895</span>
-        <button class="card-button"><a href="productos_pollo.php">Agregar al Carrito</a></button>
+        <img src="/imagenes/cinta_de_lomo.jpg" alt="" class="img-item">
+        <span class="titulo-item">Cinta de Lomo</span>
+        <span class="card-text">Precio Libra $9.000</span>
+        <span class="card-text">Cod: 9949</span>
+        <button class="card-button"><a href="#">Agregar al Carrito</a></button>
       </div>
 
       <div class="item">
-        <img src="/imagenes/lomo_de_ternera.jpg" alt="" class="img-item">
-        <span class="titulo-item">Lomo de Ternera</span>
+        <img src="/imagenes/manitas_de_cerdo.jpg" alt="" class="img-item">
+        <span class="titulo-item">Manitas de Cerdo</span>
+        <span class="card-text">Precio Libra $7.000</span>
+        <span class="card-text">Cod: 9844</span>
+        <button class="card-button"><a href="#">Agregar al Carrito</a></button>
+      </div>
+
+      <div class="item">
+        <img src="/imagenes/costillas_carnosas_de_cerdo.jpg" alt="" class="img-item">
+        <span class="titulo-item">Costillas Carnosas</span>
+        <span class="card-text">Precio Libra $13.000</span>
+        <span class="card-text">Cod: 9898</span>
+        <button class="card-button"><a href="#">Agregar al Carrito</a></button>
+      </div>
+
+      <div class="item">
+        <img src="/imagenes/paleta_de_cerdo.jpg" alt="" class="img-item">
+        <span class="titulo-item">Paleta de Cerdo</span>
+        <span class="card-text">Precio Libra $11.000</span>
+        <span class="card-text">Cod: 3569</span>
+        <button class="card-button"><a href="#">Agregar al Carrito</a></button>
+      </div>
+
+      <div class="item">
+        <img src="/imagenes/aguja_de_cerdo.jpg" alt="" class="img-item">
+        <span class="titulo-item">Aguja de Cerdo</span>
         <span class="card-text">Precio Libra $12.000</span>
-        <span class="card-text">Cod: 3648</span>
-        <button class="card-button"><a href="productos_cerdo.php">Agregar al Carrito</a></button>
+        <span class="card-text">Cod: 1489</span>
+        <button class="card-button"><a href="#">Agregar al Carrito</a></button>
       </div>
 
       <div class="item">
-        <img src="/imagenes/chuleta_de_ternera.jpg" alt="" class="img-item">
-        <span class="titulo-item">Chuleta de Ternera</span>
-        <span class="card-text">Precio Libra $7.000</span>
-        <span class="card-text">Cod: 4357</span>
-        <button class="card-button"><a href="productos_chorizo.php">Agregar al Carrito</a></button>
+        <img src="/imagenes/papada_de_cerdo.jpg" alt="" class="img-item">
+        <span class="titulo-item">Papada de Cerdo</span>
+        <span class="card-text">Precio Libra $5.000</span>
+        <span class="card-text">Cod: 7598</span>
+        <button class="card-button"><a href="#">Agregar al Carrito</a></button>
       </div>
 
       <div class="item">
-        <img src="/imagenes/pecho_de_res_2.jpg" alt="" class="img-item">
-        <span class="titulo-item">Pecho de Res</span>
-        <span class="card-text">Precio Libra $10.000</span>
-        <span class="card-text">Cod: 7893</span>
-        <button class="card-button"><a href="productos_chorizo.php">Agregar al Carrito</a></button>
-      </div>
-
-      <div class="item">
-        <img src="/imagenes/morrillo.jpg" alt="" class="img-item">
-        <span class="titulo-item">Morrillo</span>
-        <span class="card-text">Precio Libra $14.000</span>
-        <span class="card-text">Cod: 1513</span>
-        <button class="card-button"><a href="productos_chorizo.php">Agregar al Carrito</a></button>
-      </div>
-
-      <div class="item">
-        <img src="/imagenes/falda.png" alt="" class="img-item">
-        <span class="titulo-item">Falda</span>
-        <span class="card-text">Precio Libra $10.000</span>
-        <span class="card-text">Cod: 8423</span>
-        <button class="card-button"><a href="productos_chorizo.php">Agregar al Carrito</a></button>
-      </div>
-
-      <div class="item">
-        <img src="/imagenes/costillar_de_res.jpg" alt="" class="img-item">
-        <span class="titulo-item">Costilla de Res</span>
-        <span class="card-text">Precio Libra $7.000</span>
-        <span class="card-text">Cod: 2256</span>
-        <button class="card-button"><a href="productos_chorizo.php">Agregar al Carrito</a></button>
+        <img src="/imagenes/panceta_de_cerdo.jpg" alt="" class="img-item">
+        <span class="titulo-item">Panceta de Cerdo</span>
+        <span class="card-text">Precio Libra $8.000</span>
+        <span class="card-text">Cod: 2569</span>
+        <button class="card-button"><a href="#">Agregar al Carrito</a></button>
       </div>
     </div>
   </section>

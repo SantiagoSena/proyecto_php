@@ -48,7 +48,7 @@
         <span class="titulo-item">Jamón</span>
         <span class="card-text">Precio Libra $5.000</span>
         <span class="card-text">Cod: 5146</span>
-        <button class="card-button"><a href="productos_carne.php">Agregar al Carrito</a></button>
+        <button class="card-button"><a href="#">Agregar al Carrito</a></button>
       </div>
 
       <div class="item"> 
@@ -56,7 +56,7 @@
         <span class="titulo-item">Filetes de Ternera</span>
         <span class="card-text">Precio Libra $10.000</span>
         <span class="card-text">Cod: 7895</span>
-        <button class="card-button"><a href="productos_pollo.php">Agregar al Carrito</a></button>
+        <button class="card-button"><a href="#">Agregar al Carrito</a></button>
       </div>
 
       <div class="item">
@@ -64,7 +64,7 @@
         <span class="titulo-item">Lomo de Ternera</span>
         <span class="card-text">Precio Libra $12.000</span>
         <span class="card-text">Cod: 3648</span>
-        <button class="card-button"><a href="productos_cerdo.php">Agregar al Carrito</a></button>
+        <button class="card-button"><a href="#">Agregar al Carrito</a></button>
       </div>
 
       <div class="item">
@@ -72,7 +72,7 @@
         <span class="titulo-item">Chuleta de Ternera</span>
         <span class="card-text">Precio Libra $7.000</span>
         <span class="card-text">Cod: 4357</span>
-        <button class="card-button"><a href="productos_chorizo.php">Agregar al Carrito</a></button>
+        <button class="card-button"><a href="#">Agregar al Carrito</a></button>
       </div>
 
       <div class="item">
@@ -80,7 +80,7 @@
         <span class="titulo-item">Pecho de Res</span>
         <span class="card-text">Precio Libra $10.000</span>
         <span class="card-text">Cod: 7893</span>
-        <button class="card-button"><a href="productos_chorizo.php">Agregar al Carrito</a></button>
+        <button class="card-button"><a href="#">Agregar al Carrito</a></button>
       </div>
 
       <div class="item">
@@ -88,7 +88,7 @@
         <span class="titulo-item">Morrillo</span>
         <span class="card-text">Precio Libra $14.000</span>
         <span class="card-text">Cod: 1513</span>
-        <button class="card-button"><a href="productos_chorizo.php">Agregar al Carrito</a></button>
+        <button class="card-button"><a href="#">Agregar al Carrito</a></button>
       </div>
 
       <div class="item">
@@ -96,7 +96,7 @@
         <span class="titulo-item">Falda</span>
         <span class="card-text">Precio Libra $10.000</span>
         <span class="card-text">Cod: 8423</span>
-        <button class="card-button"><a href="productos_chorizo.php">Agregar al Carrito</a></button>
+        <button class="card-button"><a href="#">Agregar al Carrito</a></button>
       </div>
 
       <div class="item">
@@ -104,7 +104,7 @@
         <span class="titulo-item">Costilla de Res</span>
         <span class="card-text">Precio Libra $7.000</span>
         <span class="card-text">Cod: 2256</span>
-        <button class="card-button"><a href="productos_chorizo.php">Agregar al Carrito</a></button>
+        <button class="card-button"><a href="#">Agregar al Carrito</a></button>
       </div>
     </div>
   </section>

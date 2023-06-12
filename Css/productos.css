@@ -7,6 +7,7 @@
     font-family: 'Poppins', sans-serif;
 }
 
+
 header{
     display: flex;
     min-height: 70px;
@@ -29,22 +30,6 @@ header{
 
 .logo h2{
     color: white;
-}
-
-.nav-items i{
-    margin-left: 5px;
-    font-size: 25px;
-    position: absolute;
-}
-
-.nav-items input{
-    display: flex;
-    width: 30rem;
-    padding: 7px;
-    border-radius: 30px;
-    border: none;
-    font-size: 17px;
-    display: inline-block;
 }
 
 .login p{
@@ -106,15 +91,6 @@ header{
     font-size: 40px;
     justify-content: space-between;
 }
-  
-.carousel{
-	margin-top: 20px;
-}
-
-.carousel-item img{
-	width: 100%;
-	height: 28rem;
-}
 
 .tittle{
     margin-top: 40px;
@@ -129,6 +105,7 @@ header{
     justify-content: center;
     flex-wrap: wrap;
     transition: .3s;
+    margin-bottom: 50px;
 }
 
 .contenedor-items .item{
@@ -186,6 +163,7 @@ header{
     color: white;
     text-decoration: none;
 }
+
 
 .pie-pagina{
     width: 100%;

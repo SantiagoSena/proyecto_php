@@ -36,7 +36,7 @@
   </header>
 
   <div class="tittle">
-    <span>Productos de Pollo</span>
+    <span>Productos de Chorizo</span>
   </div>
 
   <section class="contenedor">

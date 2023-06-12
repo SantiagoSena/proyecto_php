@@ -15,14 +15,15 @@
 
   <header>
     <div class="logo">
-        <img src="/imagenes/logo_asago1.png" alt="">
-        <h2>Asago S.A.S</h2>
+      <img src="/imagenes/logo_asago1.png" alt="">
+      <h2>Asago S.A.S</h2>
     </div>
+
     <nav>
-        <div class="nav-items">
-            <i class="uil uil-search"></i>
-            <input type="text" placeholder="Busca aquí...">
-        </div>
+      <div class="nav-items">
+        <i class="uil uil-search"></i>
+        <input type="text" placeholder="Busca aquí...">
+      </div>
     </nav>
 
     <div class="login">

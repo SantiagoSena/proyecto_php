@@ -1,4 +1,6 @@
-
+<?php
+ session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,12 +25,11 @@
     </div>
 
     <div class="login">
-      <p>Iniciar Sesión</p>
+    <p><?php echo $_SESSION["nombre"] . " " . $_SESSION["apellido"]?></p>
       <div class="dropdown">
         <button class="dropbtn"><i class="uil uil-angle-down"></i></button>
         <div class="dropdown-content">
-        <a href="ingresar2.php">Iniciar Sesión</a>
-        <a href="registro.php">Registrarse</a>
+        <a href="productos_carne.php">Cerrar sesion</a>
       </div> 
     </div> 
           

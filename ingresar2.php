@@ -1,5 +1,5 @@
 <?php
-    include("controlador2.php");
+    include("conexion.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">

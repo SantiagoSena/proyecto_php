@@ -19,7 +19,7 @@
           <span class="navbar-toggler-icon"></span>
       </button>
 
-      <div class="main">
+  <div class="main">
         <div class="topbar">
           <div class="logo-image">
               <img src="/imagenes/logo_asago1.png" alt="">
@@ -51,7 +51,7 @@
               <a href="#">Mi cuenta</a>
           </div>            
         </div>
-      </div>
+      
 
       
       
@@ -272,6 +272,7 @@
         </div>
       </div>
     </div>
+  </div>
   </div>
   <br>
   <footer class="pie-pagina">

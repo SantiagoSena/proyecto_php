@@ -47,7 +47,7 @@
         <span class="titulo-item">Chuleta de Lomo</span>
         <span class="card-text">Precio Libra $11.000</span>
         <span class="card-text">Cod: 3939</span>
-        <button class="card-button"><a href="productos_carne.php">Agregar al Carrito</a></button>
+        <button class="card-button"><a href="#">Agregar al Carrito</a></button>
       </div>
 
       <div class="item"> 
@@ -55,7 +55,7 @@
         <span class="titulo-item">Cinta de Lomo</span>
         <span class="card-text">Precio Libra $9.000</span>
         <span class="card-text">Cod: 9949</span>
-        <button class="card-button"><a href="productos_pollo.php">Agregar al Carrito</a></button>
+        <button class="card-button"><a href="#">Agregar al Carrito</a></button>
       </div>
 
       <div class="item">
@@ -63,7 +63,7 @@
         <span class="titulo-item">Manitas de Cerdo</span>
         <span class="card-text">Precio Libra $7.000</span>
         <span class="card-text">Cod: 9844</span>
-        <button class="card-button"><a href="productos_cerdo.php">Agregar al Carrito</a></button>
+        <button class="card-button"><a href="#">Agregar al Carrito</a></button>
       </div>
 
       <div class="item">
@@ -71,7 +71,7 @@
         <span class="titulo-item">Costillas Carnosas</span>
         <span class="card-text">Precio Libra $13.000</span>
         <span class="card-text">Cod: 9898</span>
-        <button class="card-button"><a href="productos_chorizo.php">Agregar al Carrito</a></button>
+        <button class="card-button"><a href="#">Agregar al Carrito</a></button>
       </div>
 
       <div class="item">
@@ -79,7 +79,7 @@
         <span class="titulo-item">Paleta de Cerdo</span>
         <span class="card-text">Precio Libra $11.000</span>
         <span class="card-text">Cod: 3569</span>
-        <button class="card-button"><a href="productos_chorizo.php">Agregar al Carrito</a></button>
+        <button class="card-button"><a href="#">Agregar al Carrito</a></button>
       </div>
 
       <div class="item">
@@ -87,7 +87,7 @@
         <span class="titulo-item">Aguja de Cerdo</span>
         <span class="card-text">Precio Libra $12.000</span>
         <span class="card-text">Cod: 1489</span>
-        <button class="card-button"><a href="productos_chorizo.php">Agregar al Carrito</a></button>
+        <button class="card-button"><a href="#">Agregar al Carrito</a></button>
       </div>
 
       <div class="item">
@@ -95,7 +95,7 @@
         <span class="titulo-item">Papada de Cerdo</span>
         <span class="card-text">Precio Libra $5.000</span>
         <span class="card-text">Cod: 7598</span>
-        <button class="card-button"><a href="productos_chorizo.php">Agregar al Carrito</a></button>
+        <button class="card-button"><a href="#">Agregar al Carrito</a></button>
       </div>
 
       <div class="item">
@@ -103,7 +103,7 @@
         <span class="titulo-item">Panceta de Cerdo</span>
         <span class="card-text">Precio Libra $8.000</span>
         <span class="card-text">Cod: 2569</span>
-        <button class="card-button"><a href="productos_chorizo.php">Agregar al Carrito</a></button>
+        <button class="card-button"><a href="#">Agregar al Carrito</a></button>
       </div>
     </div>
   </section>
@@ -146,6 +146,6 @@
       <small>&copy;  2023 <b>- GAES 5</b> - Todos los Derechos Reservados.</small>
     </div>
   </footer>
-    
+
 </body>
 </html>

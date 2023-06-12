@@ -23,7 +23,7 @@
     <nav>
       <div class="nav-items">
         <i class="uil uil-search"></i>
-        <input type="text" placeholder="Busca aquí...">
+        <input type="text" placeholder="    Busca aquí...">
       </div>
     </nav>
 
@@ -80,28 +80,28 @@
         <img  src="/imagenes/carne.png" alt="" class="img-item">
         <span class="titulo-item">Carne</span>
         <span class="card-text">Aqui encontraras todo tipo de productos de Carne a tu gusto.</span>
-        <button class="card-button"><a href="">Ir a Categoria</a></button>
+        <button class="card-button"><a href="productos_carne.php">Ir a Categoria</a></button>
       </div>
 
       <div class="item"> 
         <img src="/imagenes/pollo.jpg" alt="" class="img-item">
         <span class="titulo-item">Pollo</span>
         <span class="card-text">Aqui encontraras todo tipo de productos de Pollo a tu gusto.</span>
-        <button class="card-button"><a href="">Ir a Categoria</a></button>
+        <button class="card-button"><a href="productos_pollo.php">Ir a Categoria</a></button>
       </div>
 
       <div class="item">
         <img src="/imagenes/cerdo.jpg" alt="" class="img-item">
         <span class="titulo-item">Cerdo</span>
         <span class="card-text">Aqui encontraras todo tipo de productos de Cerdo a tu gusto.</span>
-        <button class="card-button"><a href="">Ir a Categoria</a></button>
+        <button class="card-button"><a href="productos_cerdo.php">Ir a Categoria</a></button>
       </div>
 
       <div class="item">
         <img src="/imagenes/chorizo.jpg" alt="" class="img-item">
         <span class="titulo-item">Chorizo</span>
         <span class="card-text">Aqui encontraras todo tipo de productos de Chorizo a tu gusto.</span>
-        <button class="card-button"><a href="">Ir a Categoria</a></button>
+        <button class="card-button"><a href="productos_chorizo.php">Ir a Categoria</a></button>
       </div>
     </div>
   </section>

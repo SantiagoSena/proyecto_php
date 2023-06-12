@@ -4,22 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Productos Carne</title>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-    <style>
-      body {
-        margin: 0;
-        background-image: url(imagenes/fondo_blanco_pagina2.jpg);
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-        background-attachment: fixed;
-        justify-content: space-evenly;
-      }
-    </style>
+    <link rel="stylesheet" href="/Css/carnes.css">
+    <title>Productos Carne</title>
+  
 </head>
+
 <body>
   <nav class="navbar" style="background-color: rgb(194, 16, 16);" data-bs-theme="dark" >
       <div class="container-fluid">
@@ -78,172 +71,123 @@
         </div>
       </div>
     </nav>  
-  <div class="container">
-    <div class="row">
-      <div class="col-12">
-        <p><h1 class="text-center mt-5">Productos de Carne</h1></p>
+
+
+
+
+  
+  <div class="tittle">
+    <span>Productos de Carne</span>
+  </div>
+
+  <section class="contenedor">
+    <div class="contenedor-items">
+      <div class="item">
+        <img  src="/imagenes/jamon.webp" alt="" class="img-item">
+        <span class="titulo-item">Jamón</span>
+        <span class="card-text">Precio Libra $5.000</span>
+        <span class="card-text">Cod: 5146</span>
+        <button class="card-button"><a href="productos_carne.php">Agregar al Carrito</a></button>
       </div>
+
+      <div class="item"> 
+        <img src="/imagenes/filetes_de_ternera.png" alt="" class="img-item">
+        <span class="titulo-item">Filetes de Ternera</span>
+        <span class="card-text">Precio Libra $10.000</span>
+        <span class="card-text">Cod: 7895</span>
+        <button class="card-button"><a href="productos_pollo.php">Agregar al Carrito</a></button>
+      </div>
+
+      <div class="item">
+        <img src="/imagenes/lomo_de_ternera.jpg" alt="" class="img-item">
+        <span class="titulo-item">Lomo de Ternera</span>
+        <span class="card-text">Precio Libra $12.000</span>
+        <span class="card-text">Cod: 3648</span>
+        <button class="card-button"><a href="productos_cerdo.php">Agregar al Carrito</a></button>
+      </div>
+
+      <div class="item">
+        <img src="/imagenes/chuleta_de_ternera.jpg" alt="" class="img-item">
+        <span class="titulo-item">Chuleta de Ternera</span>
+        <span class="card-text">Precio Libra $7.000</span>
+        <span class="card-text">Cod: 4357</span>
+        <button class="card-button"><a href="productos_chorizo.php">Agregar al Carrito</a></button>
+      </div>
+
+      <div class="item">
+        <img src="/imagenes/pecho_de_res_2.jpg" alt="" class="img-item">
+        <span class="titulo-item">Pecho de Res</span>
+        <span class="card-text">Precio Libra $10.000</span>
+        <span class="card-text">Cod: 7893</span>
+        <button class="card-button"><a href="productos_chorizo.php">Agregar al Carrito</a></button>
+      </div>
+
+      <div class="item">
+        <img src="/imagenes/morrillo.jpg" alt="" class="img-item">
+        <span class="titulo-item">Morrillo</span>
+        <span class="card-text">Precio Libra $14.000</span>
+        <span class="card-text">Cod: 1513</span>
+        <button class="card-button"><a href="productos_chorizo.php">Agregar al Carrito</a></button>
+      </div>
+
+      <div class="item">
+        <img src="/imagenes/falda.png" alt="" class="img-item">
+        <span class="titulo-item">Falda</span>
+        <span class="card-text">Precio Libra $10.000</span>
+        <span class="card-text">Cod: 8423</span>
+        <button class="card-button"><a href="productos_chorizo.php">Agregar al Carrito</a></button>
+      </div>
+
+      <div class="item">
+        <img src="/imagenes/costillar_de_res.jpg" alt="" class="img-item">
+        <span class="titulo-item">Costilla de Res</span>
+        <span class="card-text">Precio Libra $7.000</span>
+        <span class="card-text">Cod: 2256</span>
+        <button class="card-button"><a href="productos_chorizo.php">Agregar al Carrito</a></button>
+      </div>
+    </div>
+  </section>
+
+  <footer class="pie-pagina">
+    <div class="grupo-1">
+      <div class="box">
+        <figure>
+          <div class="image">
+            <img src="/imagenes/logo_asago1.png">
+          </div>
       
-      <div class="col-3 g-3">    
-        <div class="card" style="width: 17rem;">
-          <div class="card-body">
-            <img src="imagenes/jamon.webp" class="card-img-top" alt="ProductoCarne"  width="500" height="200" >
-            <h5 class="card-title mt-4">Jamón</h5>
-            <p class="card-text">Precio por libra $5.000</p>
-            <p class="card-text"><i>Cod.5146</i></p>
-            <i class="fa fa-star text-danger" aria-hidden="true"></i>
-            <i class="fa fa-star text-danger" aria-hidden="true"></i>
-            <i class="fa fa-star text-danger" aria-hidden="true"></i>
-            <i class="fa fa-star text-danger" aria-hidden="true"></i>
-            <i class="fa fa-star" aria-hidden="true"></i>
-            <div class="d-grid gap-2">
-              <br>
-              <a class="btn btn-danger" href="#" aria-hidden="true">Agregar</a>
-            </div>
+          <div class="contacto">
+            <h2>CONTACTOS</h2>
+            <p>Tel: 3146576578 </p>
+            <p>Tel: 3137853647</p>
+            <p>Correo: Asago@gmail.com </p>
           </div>
-        </div>
+        </figure>
+      </div>
+            
+      <div class="box">
+        <h2>SOBRE NOSOTROS</h2>
+        <p>Nos dedicamos a la comercializacion de Pollo, Carne y Queso, cortamos la carne a tu gusto y empacamos al vacío como tu lo quieras, Productos de calidad y terneza.
+        Escríbenos ahora y olvidate de llegar a separar tus porciones, nosotros lo hacemos por ti.</p>
       </div>
 
-      <div class="col-3 g-3">
-        <div class="card" style="width: 17rem;">
-          <div class="card-body">
-            <img src="imagenes/filetes_de_ternera.png" class="card-img-top" alt="ProductoCarne"  width="500" height="200">
-            <h5 class="card-title mt-4">Filetes de Ternera</h5>
-            <p class="card-text">Precio por libra $10.000</p>
-            <p class="card-text"><i>Cod.7895</i></p>
-            <i class="fa fa-star text-danger" aria-hidden="true"></i>
-            <i class="fa fa-star text-danger" aria-hidden="true"></i>
-            <i class="fa fa-star text-danger" aria-hidden="true"></i>
-            <i class="fa fa-star" aria-hidden="true"></i>
-            <i class="fa fa-star" aria-hidden="true"></i>
-            <div class="d-grid gap-2">
-              <br>
-              <a class="btn btn-danger" href="#" aria-hidden="true">Agregar</a>
-            </div>
-          </div>
-        </div>
-      </div>  
-
-      <div class="col-3 g-3">
-        <div class="card" style="width: 17rem;">
-          <div class="card-body">
-            <img src="imagenes/lomo_de_ternera.jpg" class="card-img-top" alt="ProductoCarne"  width="500" height="200">
-            <h5 class="card-title mt-4">Lomo de Ternera</h5>
-            <p class="card-text">Precio por libra $12.000</p>
-            <p class="card-text"><i>Cod.3648</i></p>
-            <i class="fa fa-star text-danger" aria-hidden="true"></i>
-            <i class="fa fa-star text-danger" aria-hidden="true"></i>
-            <i class="fa fa-star text-danger" aria-hidden="true"></i>
-            <i class="fa fa-star text-danger" aria-hidden="true"></i>
-            <i class="fa fa-star text-danger" aria-hidden="true"></i>
-            <div class="d-grid gap-2">
-              <br>
-              <a class="btn btn-danger" href="#" aria-hidden="true">Agregar</a>
-            </div>
-          </div>
+      <div class="box">
+        <h2>SIGUENOS</h2>
+        <div class="red-social">
+          <a href="https://web.facebook.com/people/Asago-House/100066880955276/?mibextid=ZbWKwL" class="fa fa-facebook"></a>
+          <a href="https://instagram.com/asagohouse?igshid=NTc4MTIwNjQ2YQ==" class="fa fa-instagram"></a>
+          <a href="https://api.whatsapp.com/send?phone=573155766563&text=Hola+%F0%9F%91%8B+mi+nombre+es....&fbclid=PAAaaNmZtE0e80RfgMRKYlxMClDAYO5ippe5QsdSUW7br-Be3CNwa0b0ctr2E" class="fa fa-whatsapp"></a>
+          <a href="https://www.youtube.com/@AsagoHouse/featured" class="fa fa-youtube"></a>
         </div>
       </div>
+    </div>
+    
+    <div class="grupo-2">
+      <small>&copy;  2023 <b>- GAES 5</b> - Todos los Derechos Reservados.</small>
+    </div>
+  </footer>
 
-      <div class="col-3 g-3">
-        <div class="card" style="width: 17rem;">
-          <div class="card-body">
-            <img src="imagenes/chuleta_de_ternera.jpg" class="card-img-top" alt="ProductoCarne"  width="500" height="200">
-            <h5 class="card-title mt-4">Chuleta de Ternera</h5>
-            <p class="card-text">Precio por libra $7.000</p>
-            <p class="card-text"><i>Cod.4357</i></p>
-            <i class="fa fa-star text-danger" aria-hidden="true"></i>
-            <i class="fa fa-star text-danger" aria-hidden="true"></i>
-            <i class="fa fa-star text-danger" aria-hidden="true"></i>
-            <i class="fa fa-star text-danger" aria-hidden="true"></i>
-            <i class="fa fa-star" aria-hidden="true"></i>
-            <div class="d-grid gap-2">
-              <br>
-              <a class="btn btn-danger" href="#" aria-hidden="true">Agregar</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-3 g-3">
-        <div class="card" style="width: 17rem;">
-          <div class="card-body">
-            <img src="imagenes/pecho_de_res_2.jpg" class="card-img-top" alt="ProductoCarne"  width="500" height="200">
-            <h5 class="card-title mt-4">Pecho de res</h5>
-            <p class="card-text">Precio por libra $10.000</p>
-            <p class="card-text"><i>Cod.7893</i></p>
-            <i class="fa fa-star text-danger" aria-hidden="true"></i>
-            <i class="fa fa-star text-danger" aria-hidden="true"></i>
-            <i class="fa fa-star text-danger" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i>
-            <i class="fa fa-star" aria-hidden="true"></i>
-            <i class="fa fa-star" aria-hidden="true"></i>
-            <div class="d-grid gap-2">
-              <br>
-              <a class="btn btn-danger" href="#" aria-hidden="true">Agregar</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-3 g-3">
-        <div class="card" style="width: 17rem;">
-          <div class="card-body">
-            <img src="imagenes/morrillo.jpg" class="card-img-top" alt="ProductoCarne"  width="500" height="200">
-            <h5 class="card-title mt-4">Morrillo</h5>
-            <p class="card-text">Precio por libra $14.000</p>
-            <p class="card-text"><i>Cod.1513</i></p>
-            <i class="fa fa-star text-danger" aria-hidden="true"></i>
-            <i class="fa fa-star text-danger" aria-hidden="true"></i>
-            <i class="fa fa-star text-danger" aria-hidden="true"></i>
-            <i class="fa fa-star text-danger" aria-hidden="true"></i>
-            <i class="fa fa-star" aria-hidden="true"></i>
-            <div class="d-grid gap-2">
-              <br>
-              <a class="btn btn-danger" href="#" aria-hidden="true">Agregar</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-3 g-3">
-        <div class="card" style="width: 17rem;">
-          <div class="card-body">
-            <img src="imagenes/falda.png" class="card-img-top" alt="ProductoCarne"  width="500" height="200">
-            <h5 class="card-title mt-4">Falda</h5>
-            <p class="card-text">Precio por libra $10.000</p>
-            <p class="card-text"><i>Cod.8423</i></p>
-            <i class="fa fa-star text-danger" aria-hidden="true"></i>
-            <i class="fa fa-star text-danger" aria-hidden="true"></i>
-            <i class="fa fa-star text-danger" aria-hidden="true"></i>
-            <i class="fa fa-star" aria-hidden="true"></i>
-            <i class="fa fa-star" aria-hidden="true"></i>
-            <div class="d-grid gap-2">
-              <br>
-              <a class="btn btn-danger" href="#" aria-hidden="true">Agregar</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-3 g-3">
-        <div class="card" style="width: 17rem;">
-          <div class="card-body">
-            <img src="imagenes/costillar_de_res.jpg" class="card-img-top" alt="ProductoCarne"  width="500" height="200">
-            <h5 class="card-title mt-4">Costillar de res</h5>
-            <p class="card-text">Precio por libra $7.000</p>
-            <p class="card-text"><i>Cod.2256</i></p>
-            <i class="fa fa-star text-danger" aria-hidden="true"></i>
-            <i class="fa fa-star text-danger" aria-hidden="true"></i>
-            <i class="fa fa-star text-danger" aria-hidden="true"></i>
-            <i class="fa fa-star text-danger" aria-hidden="true"></i>
-            <i class="fa fa-star" aria-hidden="true"></i>
-            <div class="d-grid gap-2">
-              <br>
-              <a class="btn btn-danger" href="#" aria-hidden="true">Agregar</a>
-            </div>
-          </div>
-        </div>
-      </div>
 
 
 </body>
-    </html>
+</html>

@@ -17,7 +17,7 @@
 
   <header>
     <div class="logo">
-      <img src="/imagenes/logo_asago1.png" alt="">
+      <a href="index.php"><img src="/imagenes/logo_asago1.png" alt=""></a>
       <h2>Asago S.A.S</h2>
     </div>
 

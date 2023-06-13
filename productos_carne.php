@@ -38,7 +38,7 @@
   </header>
   
   <div class="tittle">
-    <span>Productos de Carne</span>
+    <span>Productos de Ternera</span>
   </div>
 
   <section class="contenedor">
@@ -52,8 +52,8 @@
       </div>
 
       <div class="item"> 
-        <img src="/imagenes/filetes_de_ternera.png" alt="" class="img-item">
-        <span class="titulo-item">Filetes de Ternera</span>
+        <img src="/imagenes/Filetes de espaldilla de Ternera Angus 500 g.jpg" alt="" class="img-item">
+        <span class="titulo-item">Filetes</span>
         <span class="card-text">Precio Libra $10.000</span>
         <span class="card-text">Cod: 7895</span>
         <button class="card-button"><a href="#">Agregar al Carrito</a></button>
@@ -61,7 +61,7 @@
 
       <div class="item">
         <img src="/imagenes/lomo_de_ternera.jpg" alt="" class="img-item">
-        <span class="titulo-item">Lomo de Ternera</span>
+        <span class="titulo-item">Lomo</span>
         <span class="card-text">Precio Libra $12.000</span>
         <span class="card-text">Cod: 3648</span>
         <button class="card-button"><a href="#">Agregar al Carrito</a></button>
@@ -69,15 +69,15 @@
 
       <div class="item">
         <img src="/imagenes/chuleta_de_ternera.jpg" alt="" class="img-item">
-        <span class="titulo-item">Chuleta de Ternera</span>
+        <span class="titulo-item">Chuleta</span>
         <span class="card-text">Precio Libra $7.000</span>
         <span class="card-text">Cod: 4357</span>
         <button class="card-button"><a href="#">Agregar al Carrito</a></button>
       </div>
 
       <div class="item">
-        <img src="/imagenes/pecho_de_res_2.jpg" alt="" class="img-item">
-        <span class="titulo-item">Pecho de Res</span>
+        <img src="/imagenes/pecho_res.jpg" alt="" class="img-item">
+        <span class="titulo-item">Pecho</span>
         <span class="card-text">Precio Libra $10.000</span>
         <span class="card-text">Cod: 7893</span>
         <button class="card-button"><a href="#">Agregar al Carrito</a></button>
@@ -92,7 +92,7 @@
       </div>
 
       <div class="item">
-        <img src="/imagenes/falda.png" alt="" class="img-item">
+        <img src="/imagenes/falda_res.jpg" alt="" class="img-item">
         <span class="titulo-item">Falda</span>
         <span class="card-text">Precio Libra $10.000</span>
         <span class="card-text">Cod: 8423</span>
@@ -100,8 +100,8 @@
       </div>
 
       <div class="item">
-        <img src="/imagenes/costillar_de_res.jpg" alt="" class="img-item">
-        <span class="titulo-item">Costilla de Res</span>
+        <img src="/imagenes/costilla_res.jpg" alt="" class="img-item">
+        <span class="titulo-item">Costilla</span>
         <span class="card-text">Precio Libra $7.000</span>
         <span class="card-text">Cod: 2256</span>
         <button class="card-button"><a href="#">Agregar al Carrito</a></button>

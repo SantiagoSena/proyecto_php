@@ -78,7 +78,7 @@
   <section class="contenedor">
     <div class="contenedor-items">
       <div class="item">
-        <img  src="/imagenes/carne.png" alt="" class="img-item">
+        <img  src="/imagenes/carnes.jpeg" alt="" class="img-item">
         <span class="titulo-item">Carne</span>
         <span class="card-text">Aqui encontraras todo tipo de productos de Carne a tu gusto.</span>
         <button class="card-button"><a href="productos_carne.php">Ir a Categoria</a></button>

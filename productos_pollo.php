@@ -43,15 +43,23 @@
   <section class="contenedor">
     <div class="contenedor-items">
       <div class="item">
-        <img  src="/imagenes/muslo_de_pollo.jpg" alt="" class="img-item">
-        <span class="titulo-item">Muslos de Pollo</span>
+        <img  src="/imagenes/muslos_pollo.jpeg" alt="" class="img-item">
+        <span class="titulo-item">Muslos</span>
         <span class="card-text">Precio Libra $5.000</span>
         <span class="card-text">Cod: 8796</span>
         <button class="card-button"><a href="#">Agregar al Carrito</a></button>
       </div>
 
+      <div class="item">
+        <img  src="/imagenes/piernas_pollo.jpeg" alt="" class="img-item">
+        <span class="titulo-item">Piernas</span>
+        <span class="card-text">Precio Libra $????</span>
+        <span class="card-text">Cod: ????</span>
+        <button class="card-button"><a href="#">Agregar al Carrito</a></button>
+      </div>
+
       <div class="item"> 
-        <img src="/imagenes/alas_de_pollo.jpg" alt="" class="img-item">
+        <img src="/imagenes/alas_pollo.jpeg" alt="" class="img-item">
         <span class="titulo-item">Alas</span>
         <span class="card-text">Precio Libra $7.000</span>
         <span class="card-text">Cod: 5983</span>
@@ -59,7 +67,7 @@
       </div>
 
       <div class="item">
-        <img src="/imagenes/pechuga_de_pollo.jpg" alt="" class="img-item">
+        <img src="/imagenes/pechuga_pollo.jpeg" alt="" class="img-item">
         <span class="titulo-item">Pechuga</span>
         <span class="card-text">Precio Libra $10.000</span>
         <span class="card-text">Cod: 7036</span>
@@ -68,9 +76,25 @@
 
       <div class="item">
         <img src="/imagenes/patas_de_pollo.jpg" alt="" class="img-item">
-        <span class="titulo-item">Patas de Pollo</span>
+        <span class="titulo-item">Patas</span>
         <span class="card-text">Precio Libra $3.000</span>
         <span class="card-text">Cod: 8426</span>
+        <button class="card-button"><a href="#">Agregar al Carrito</a></button>
+      </div>
+
+      <div class="item">
+        <img src="/imagenes/corazones_pollo.jpeg" alt="" class="img-item">
+        <span class="titulo-item">Corazones</span>
+        <span class="card-text">Precio Libra $????</span>
+        <span class="card-text">Cod: ????</span>
+        <button class="card-button"><a href="#">Agregar al Carrito</a></button>
+      </div>
+
+      <div class="item">
+        <img src="/imagenes/mollejas_pollo.jpeg" alt="" class="img-item">
+        <span class="titulo-item">Mollejas</span>
+        <span class="card-text">Precio Libra $????</span>
+        <span class="card-text">Cod: ????</span>
         <button class="card-button"><a href="#">Agregar al Carrito</a></button>
       </div>
 

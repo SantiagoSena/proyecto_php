@@ -59,7 +59,7 @@
                 </div>
 
                 <div class="col-6">
-                    <label for="" class="form-label">Fecha de Nacimiento: </label>
+                    <label for="" class="form-label">Fecha de Nacimiento:</label>
                     <input name="edad"type="date" class="form-control"required>
                 </div>
 

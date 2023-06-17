@@ -75,6 +75,68 @@
           Agregar Producto
         </button>
       </div>
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5 " id="exampleModalLabel">Nuevo Producto</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <form class="was-validated row g-3 mx-5" method="post">
+              <div class="modal-body">
+                <div class="col-12" style="text-align:left">
+                  <label class="form-label">ID Producto</label>
+                  <input name="id_producto" class="form-control" type="number" required>
+              </div>
+              <br>
+              <div class="col-12" style="text-align:left">
+                <label class="form-label">Fecha Registro</label>
+                <input name="fecha_registro" class="form-control" type="date" required>
+              </div>
+              <br>
+              <div class="col-12" style="text-align:left">
+                <label class="form-label" >Nombre Producto</label>
+                <input name="nombre_producto" class="form-control" type="text" required>
+              </div>
+              <br>
+              <div class="col-12" style="text-align:left">
+                <label class="form-label">Fecha Vencimiento</label>
+                <input name="fecha_vencimiento" class="form-control" type="date" required>
+              </div>
+              <br>
+              <!--<div class="col-12" style="text-align:left">
+                    <label class="form-label">Categoria</label>
+                    <select name="categoria" class="form-select" >
+                        <option value="">Seleccione una categoria</option>
+                        <option value="Carnicos">Carnicos</option>
+                        <option value="Pollo">Pollo</option>
+                        <option value="Cerdo">Cerdo</option>
+                        <option value="Chorizo">Chorizo</option>
+                    </select>
+                </div>-->
+              <br>
+              <div class="col-12" style="text-align:left">
+                <label class="form-label">Cantidad</label>
+                <input name="cantidad" class="form-control" type="number" required>
+              </div>
+              <br>
+              <div class="col-12" style="text-align:left">
+                <label class="form-label">Valor por libra</label>
+                <input name="valor_libra" class="form-control" type="number" required>
+              </div>
+              <br>
+              <div class="col-12" style="text-align:left">
+                <label class="form-label">Saldo</label>
+                <input name="saldo_producto" class="form-control" type="number" required>
+              </div>
+              </div>
+              <div class="modal-footer">
+                <input class="btn btn-danger" type="submit" value="Agregar" style="background-color: rgb(230, 72, 72);">
+              </div>
+              </form>
+            </div>
+          </div>
+        </div>
       <br>
       <div class="card text-center col-sm-12 col-md-10 col-lg-10 col-xl-10">
         <div class="card-header">
@@ -83,47 +145,6 @@
               <h4><i class="fa fa-people me-2" aria-hidden="true"></i>Carne</h4>
             </li>
           </ul>
-        </div>
-        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h1 class="modal-title fs-5 " id="exampleModalLabel">Nuevo Producto</h1>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-              </div>
-              <form class="was-validated row g-3 mx-5" action="#">
-              <div class="modal-body">
-                <div class="col-12" style="text-align:left">
-                  <label class="form-label">IdProducto</label>
-                  <input class="form-control" type="text" required>
-              </div>
-              <br>
-              <div class="col-12" style="text-align:left">
-                <label class="form-label" >Nombre</label>
-                <input class="form-control" type="text" required>
-              </div>
-              <br>
-              <div class="col-12" style="text-align:left">
-                <label class="form-label">FechaVencimiento</label>
-                <input class="form-control" type="date" required>
-              </div>
-              <br>
-              <div class="col-12" style="text-align:left">
-                <label class="form-label">Categoria</label>
-                <input class="form-control" type="text" required>
-              </div>
-              <br>
-              <div class="col-12" style="text-align:left">
-                <label class="form-label">ValorPorLibra</label>
-                <input class="form-control" type="text" required>
-              </div>
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-danger" data-bs-dismiss="modal" style="background-color: rgb(230, 72, 72);">Cerrar</button>
-                <button type="submit" class="btn btn-danger" style="background-color: rgb(230, 72, 72);">Agregar</button>
-              </div>
-            </div>
-          </div>
         </div>
         <div class="card-body">
           <table class="table table-striped table-bordered">

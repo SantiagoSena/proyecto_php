@@ -13,7 +13,7 @@ $contraseña = $_POST['contraseña'];
 
 //Actualizar los datos
 
-$insertar = "INSERT INTO usuarios(IdUsuario, nombres, apellidos, FechaNacimiento, Direccion, Telefono,  Email, contrasena, Rol) VALUES ('$identificacion', '$nombres' , '$apellidos' , '$edad', '$direccion' , '$celular' , '$correo' , '$contraseña' , '')";
+$insertar = "INSERT INTO usuarios(IdUsuario, nombres, apellidos, FechaNacimiento, Direccion, Telefono,  Email, contrasena, Rol) VALUES ('$identificacion', '$nombres' , '$apellidos' , '$edad', '$direccion' , '$celular' , '$correo' , '$contraseña')";
 $resultado = mysqli_query($conexion, $insertar);
 
 if ($resultado){

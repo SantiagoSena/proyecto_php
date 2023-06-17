@@ -1,4 +1,15 @@
+<?php
+require_once 'config/validate_session.php';
+require_once 'config/validate_roles.php';
 
+    if(!isset($_SESSION['rol'])){
+        header('Location: ingresar.php');
+    }else{
+        if($_SESSION['rol'] != 971){
+            header('Location: ingresar.php');
+        }
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

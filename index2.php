@@ -1,6 +1,13 @@
 <?php
-
-session_start();
+require_once 'config/validate_session.php';
+require_once 'config/validate_roles.php';
+if(!isset($_SESSION['rol'])){
+    header('Location: ingresar.php');
+}else{
+    if($_SESSION['rol'] != 354){
+        header('Location: ingresar.php');
+    }
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -32,11 +39,10 @@ session_start();
     </nav>
 
     <div class="login">
-      <p><?php echo $_SESSION["nombre"] . " " . $_SESSION["apellido"]?></p>
       <div class="dropdown">
         <button class="dropbtn"><i class="uil uil-angle-down"></i></button>
         <div class="dropdown-content">
-        <a href="index.php">Cerrar Sesion</a>
+        <?php include 'session_paragraph.php';?>
       </div> 
     </div> 
           

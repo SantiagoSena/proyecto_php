@@ -31,13 +31,6 @@ if(!isset($_SESSION['rol'])){
       <h2>Asago S.A.S</h2>
     </div>
 
-    <nav>
-      <div class="nav-items">
-        <i class="uil uil-search"></i>
-        <input type="text" placeholder="    Busca aquí...">
-      </div>
-    </nav>
-
     <div class="login">
       <div class="dropdown">
         <button class="dropbtn"><i class="uil uil-angle-down"></i></button>
@@ -86,7 +79,7 @@ if(!isset($_SESSION['rol'])){
   <section class="contenedor">
     <div class="contenedor-items">
       <div class="item">
-        <img  src="/imagenes/carne.png" alt="" class="img-item">
+        <img  src="/imagenes/carnes.jpeg" alt="" class="img-item">
         <span class="titulo-item">Carne</span>
         <span class="card-text">Aqui encontraras todo tipo de productos de Carne a tu gusto.</span>
         <button class="card-button"><a href="productos_carne2.php">Ir a Categoria</a></button>

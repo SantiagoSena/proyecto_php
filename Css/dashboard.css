@@ -128,57 +128,6 @@ i{
     align-items: center;
 }
 
-.toggle{
-    position: relative;
-    width: 60px;
-    height: 60px;
-    display: flex;
-    margin-left: -40px;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-}
-
-.toggle i{
-    font-size: 30px;
-}
-
-.search{
-    position: relative;
-    width: 400px;
-    margin: 0 28rem;
-
-}
-
-.search label{
-    position: relative;
-    width: 100%;
-}
-
-.search label input{
-    width: 100%;
-    height: 40px;
-    border-radius: 40px;
-    padding: 5px 20px;
-    padding-left: -15px;
-    outline: none;
-    border: 1px solid  #7a7a7d;
-}
-
-.search i{
-    position: absolute;
-    top: 0;
-    margin-left: 22rem;
-    font-size: 26px;
-}
-
-.user img{
-    left: 14rem;
-    width: 50px;
-    border-radius: 50%;
-    margin-left: -20px;
-}
-
 .menu{
     margin-right: -20px;
 }

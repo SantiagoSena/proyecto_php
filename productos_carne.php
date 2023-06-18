@@ -53,7 +53,7 @@
 
       <div class="item"> 
         <img src="/imagenes/Filetes de espaldilla de Ternera Angus 500 g.jpg" alt="" class="img-item">
-        <span class="titulo-item">Filetes</span>
+        <span class="titulo-item">Filete</span>
         <span class="card-text">Precio Libra $10.000</span>
         <span class="card-text">Cod: 7895</span>
         <button class="card-button"><a href="#">Agregar al Carrito</a></button>

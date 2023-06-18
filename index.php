@@ -21,13 +21,6 @@
       <h2>Asago S.A.S</h2>
     </div>
 
-    <nav>
-      <div class="nav-items">
-        <i class="uil uil-search"></i>
-        <input type="text" placeholder="    Busca aquí...">
-      </div>
-    </nav>
-
     <div class="login">
       <p>Iniciar Sesión</p>
       <div class="dropdown">

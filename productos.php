@@ -104,7 +104,7 @@
                 <input name="fecha_vencimiento" class="form-control" type="date" required>
               </div>
               <br>
-              <!--<div class="col-12" style="text-align:left">
+              <div class="col-12" style="text-align:left">
                     <label class="form-label">Categoria</label>
                     <select name="categoria" class="form-select" >
                         <option value="">Seleccione una categoria</option>
@@ -113,7 +113,7 @@
                         <option value="Cerdo">Cerdo</option>
                         <option value="Chorizo">Chorizo</option>
                     </select>
-                </div>-->
+                </div>
               <br>
               <div class="col-12" style="text-align:left">
                 <label class="form-label">Cantidad</label>

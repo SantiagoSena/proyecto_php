@@ -24,11 +24,11 @@
         </div>    
         <span class="bold">iniciar sesión en tu Tienda Virtual</span>  
         <i class="fa-solid fa-user"></i>
-        <label >Cédula de ciudadanía</label>
+        <label>Cédula de ciudadanía</label>
         <input type="text" name="Usuario" placeholder="Ej: 1234567890">
 
         <i class="fa-solid fa-unlock"></i>
-        <label >Constraseña</label>
+        <label>Constraseña</label>
         <input type="password" name="Clave" placeholder="Contraseña">
         <div class="btn-2">
             <a href="">¿Olvidaste tu Contraseña?</a>

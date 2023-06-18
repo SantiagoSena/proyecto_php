@@ -83,21 +83,6 @@ require_once 'config/validate_roles.php';
 
     <div class="main">
         <div class="topbar">
-            <div class="toggle">
-                <i class="uil uil-bars"></i>
-            </div>
-
-            <div class="search">
-                <label>
-                    <input type="text" placeholder="Busca aquí...">
-                    <i class="uil uil-search"></i>
-                </label>
-            </div>
-
-            <div class="user">
-                <img src="/imagenes/avatar.PNG" alt="">
-            </div>
-
             <div class="dropdown">
                 <button class="dropbtn"><i class="uil uil-angle-down"></i></button>
                 <div class="dropdown-content">

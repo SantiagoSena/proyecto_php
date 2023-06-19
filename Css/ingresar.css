@@ -8,134 +8,117 @@
 }
 
 body{
-    background: url(imagenes1/lines-left.svg);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    flex-direction: column;
-    background-size: 2000px;
-    background-repeat: no-repeat;
+    overflow: hidden;
+    background: none;
 }
 
-.login-box img{
-    position: absolute;
-    height: 120px;
-    top: 10px;
-    border-radius: 50%;
-    left: calc(50% - 80px);
+.container-item{
+    max-width: 440px;
+    padding: 0 20px;
+    margin: 150px auto;
 }
 
-form{
-    width: 600px;
-    height: 780px;
-    border: 10px solid;
-    padding: 3rem;
-    margin-top: 15rem;
-    background-color: #fff5;
+.container{
+    width: 100%;
     border: 5px;
-    border-color: black;
-    box-shadow: 0 .4rem .8rem;
     border-radius: 20px;
-    color: black;
+    box-shadow: 0 .4rem .8rem;
+    background: white;
 }
 
-h1{
-    width: 90%;
-    font-size: 35px;
-    display: block;
+.container .tittle{
+    font-size: 30px;
+    padding: 18px;
+    font-weight: 500;
     text-align: center;
+    border-bottom: rgb(194, 16, 16) solid 1px;
 }
 
-.text{
-    font-size: 20px;
-    width: 65%;
-    display: block;
-    align-items: center;
-    justify-content: center;
+.container .text{
+    font-size: 18px;
     text-align: center;
-    margin-left: 70px;
+    margin-top: 13px;
 }
 
-.bold{
-    display: block;
-    padding: 10px;
-    font-size: 21px;
-    text-align: center;  
-    margin-bottom: 10px;
+.container .text .bold{
     font-weight: bold;
     color: rgb(194, 16, 16);
 }
 
-label{
+.container form{
+    padding: 20px 20px 25px 20px;
+}
+
+.container form .row{
+    margin-bottom: 15px;
+}
+
+form .row .flex{
+    display: flex;
+    align-items: center;
+}
+
+form .row label{
+    padding: 8px;
     color: black;
     font-size: 18px;
-    padding: 10px;
     font-weight: 300px;
 }
 
-input{
-    display: block;
-    border: 1px solid black;
+form .row input{
     width: 95%;
+    margin: 8px;
     padding: 10px;
-    margin: 10px;
     border-radius: 10px;
+    border: 1px solid black;
 }
 
-.btn{
-    display: flex;
-    float: right;
-    background-color: rgb(194, 16, 16);
-    padding: 12px;
-    color: white;
-    border-radius: 25px;
-    margin-top: 20px;
-    align-items: center;
-    justify-content: center;
+.row .pass{
+    margin-top: 12px;
+    text-align: center;
+    
+}
+
+.row .pass a{
     font-weight: bold;
+    color: rgb(194, 16, 16); 
 }
 
-.btn:hover{
-    background-color:  rgb(230, 72, 72);
-    color: rgb(0, 0, 0);
+.row .btn{
+    padding: 10px;
     color: white;
-}
-
-.btnregistro{
-    display: block;
-    width: 95%;
-    padding: 12px;
-    margin: 10px;
-    border-radius: 25px;
-    display: flex;
-    float: right;
-    border:  rgb(194, 16, 16) solid 1.5px;
-    color:  rgb(194, 16, 16);
+    border: none;
     font-weight: bold;
     margin-top: 10px;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
+    border-radius: 25px;
+    background-color: rgb(194, 16, 16);
 }
 
-.btnregistro:hover{
-    background-color: rgb(230, 72, 72);
+.row .btn:hover{
+    background-color:  rgb(230, 72, 72);
     color: white;
-    border:  white solid;
 }
 
-
-.btn-2 a{
+.row .btnregistro{
     width: 95%;
-    display: flex;
-    float: right;
-    align-items: center;
-    justify-content: center;
-    padding: 7px;
-    margin: 10px;
-    font-size: 18px;
+    padding: 10px;
+    margin-left: 10px;
     font-weight: bold;
+    text-align: center;
+    border-radius: 25px;
+    text-decoration: none;
     color: rgb(194, 16, 16);
+    border: rgb(194, 16, 16) solid 1.5px;
 }
- 
+
+.row .btnregistro:hover{
+    color: white;
+    border: white;
+    background-color: rgb(230, 72, 72);
+}
+
+@media screen and (max-height:742px) {
+    .container-item{
+        margin: 40px auto;        
+    }
+}

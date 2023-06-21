@@ -1,7 +1,13 @@
-<?php 
-
-session_start();
-
+<?php
+require_once 'config/validate_session.php';
+require_once 'config/validate_roles.php';
+if(!isset($_SESSION['rol'])){
+    header('Location: ingresar.php');
+}else{
+    if($_SESSION['rol'] != 354 && $_SESSION['rol'] != 214){
+        header('Location: ingresar.php');
+    }
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -13,7 +19,7 @@ session_start();
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" href="/Css/productos.css">
+    <link rel="stylesheet" href="Css/productos.css">
     <title>Productos Cerdo</title>
 
 </head>
@@ -22,16 +28,16 @@ session_start();
   
   <header>
     <div class="logo">
-      <a href="index.php"><img src="/imagenes/logo_asago1.png" alt=""></a>
+      <a href="index.php"><img src="imagenes/logo_asago1.png" alt=""></a>
       <h2>Asago S.A.S</h2>
     </div>
 
     <div class="login">
-      <p><?php echo $_SESSION["nombre"] . " " . $_SESSION["apellido"]?></p>
+    <p><?php echo $_SESSION['user']?></p>
       <div class="dropdown">
         <button class="dropbtn"><i class="uil uil-angle-down"></i></button>
         <div class="dropdown-content">
-        <a href="index.php">Iniciar Sesión</a>
+        <a href="config/logout.php">Cerrar sesion</a>
       </div> 
     </div> 
           
@@ -47,7 +53,7 @@ session_start();
   <section class="contenedor">
     <div class="contenedor-items">
       <div class="item">
-        <img  src="/imagenes/chuletas_de_lomo.jpg" alt="" class="img-item">
+        <img  src="imagenes/chuletas_de_lomo.jpg" alt="" class="img-item">
         <span class="titulo-item">Chuleta de Lomo</span>
         <span class="card-text">Precio Libra $11.000</span>
         <span class="card-text">Cod: 3939</span>
@@ -55,7 +61,7 @@ session_start();
       </div>
 
       <div class="item"> 
-        <img src="/imagenes/cinta_de_lomo.jpg" alt="" class="img-item">
+        <img src="imagenes/cinta_de_lomo.jpg" alt="" class="img-item">
         <span class="titulo-item">Cinta de Lomo</span>
         <span class="card-text">Precio Libra $9.000</span>
         <span class="card-text">Cod: 9949</span>
@@ -63,7 +69,7 @@ session_start();
       </div>
 
       <div class="item">
-        <img src="/imagenes/manitas_de_cerdo.jpg" alt="" class="img-item">
+        <img src="imagenes/manitas_de_cerdo.jpg" alt="" class="img-item">
         <span class="titulo-item">Manitas de Cerdo</span>
         <span class="card-text">Precio Libra $7.000</span>
         <span class="card-text">Cod: 9844</span>
@@ -71,7 +77,7 @@ session_start();
       </div>
 
       <div class="item">
-        <img src="/imagenes/costillas_carnosas_de_cerdo.jpg" alt="" class="img-item">
+        <img src="imagenes/costillas_carnosas_de_cerdo.jpg" alt="" class="img-item">
         <span class="titulo-item">Costillas Carnosas</span>
         <span class="card-text">Precio Libra $13.000</span>
         <span class="card-text">Cod: 9898</span>
@@ -79,7 +85,7 @@ session_start();
       </div>
 
       <div class="item">
-        <img src="/imagenes/paleta_de_cerdo.jpg" alt="" class="img-item">
+        <img src="imagenes/paleta_de_cerdo.jpg" alt="" class="img-item">
         <span class="titulo-item">Paleta de Cerdo</span>
         <span class="card-text">Precio Libra $11.000</span>
         <span class="card-text">Cod: 3569</span>
@@ -87,7 +93,7 @@ session_start();
       </div>
 
       <div class="item">
-        <img src="/imagenes/aguja_de_cerdo.jpg" alt="" class="img-item">
+        <img src="imagenes/aguja_de_cerdo.jpg" alt="" class="img-item">
         <span class="titulo-item">Aguja de Cerdo</span>
         <span class="card-text">Precio Libra $12.000</span>
         <span class="card-text">Cod: 1489</span>
@@ -95,7 +101,7 @@ session_start();
       </div>
 
       <div class="item">
-        <img src="/imagenes/papada_de_cerdo.jpg" alt="" class="img-item">
+        <img src="imagenes/papada_de_cerdo.jpg" alt="" class="img-item">
         <span class="titulo-item">Papada de Cerdo</span>
         <span class="card-text">Precio Libra $5.000</span>
         <span class="card-text">Cod: 7598</span>
@@ -103,7 +109,7 @@ session_start();
       </div>
 
       <div class="item">
-        <img src="/imagenes/panceta_de_cerdo.jpg" alt="" class="img-item">
+        <img src="imagenes/panceta_de_cerdo.jpg" alt="" class="img-item">
         <span class="titulo-item">Panceta de Cerdo</span>
         <span class="card-text">Precio Libra $8.000</span>
         <span class="card-text">Cod: 2569</span>
@@ -117,7 +123,7 @@ session_start();
       <div class="box">
         <figure>
           <div class="image">
-            <img src="/imagenes/logo_asago1.png">
+            <img src="imagenes/logo_asago1.png">
           </div>
       
           <div class="contacto">

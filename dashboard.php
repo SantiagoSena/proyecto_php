@@ -16,7 +16,7 @@ require_once 'config/validate_roles.php';
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/Css/dashboard.css">
+    <link rel="stylesheet" href="Css/dashboard.css">
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
     <title>Dashboard</title>
 </head>
@@ -24,7 +24,7 @@ require_once 'config/validate_roles.php';
     <nav>
         <div class="logo-name">
             <div class="logo-image">
-                <img src="/imagenes/logo_empresa.png" alt="">
+                <img src="imagenes/logo_empresa.png" alt="">
             </div>
             <span class="logo_name"> Asago S.A.S</span>
         </div>
@@ -84,9 +84,10 @@ require_once 'config/validate_roles.php';
     <div class="main">
         <div class="topbar">
             <div class="dropdown">
+                <?php echo "BIENVENIDO" . " " . $_SESSION['user'];?>
                 <button class="dropbtn"><i class="uil uil-angle-down"></i></button>
                 <div class="dropdown-content">
-                <a href="#">Opción 1</a>
+                <a href="config/logout.php">Cerrar Sesion</a>
                 <a href="#">Opción 2</a>
                 <a href="#">Opción 3</a>
                 </div>

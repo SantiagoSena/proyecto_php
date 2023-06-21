@@ -4,7 +4,7 @@ require_once 'config/validate_roles.php';
 if(!isset($_SESSION['rol'])){
     header('Location: ingresar.php');
 }else{
-    if($_SESSION['rol'] != 354){
+    if($_SESSION['rol'] != 354 && $_SESSION['rol'] != 214){
         header('Location: ingresar.php');
     }
 }
@@ -19,7 +19,7 @@ if(!isset($_SESSION['rol'])){
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-  <link rel="stylesheet" href="/Css/index.css">
+  <link rel="stylesheet" href="Css/index.css">
   <title>Pagina Asago</title>
 </head>
 
@@ -27,15 +27,16 @@ if(!isset($_SESSION['rol'])){
 
   <header>
     <div class="logo">
-      <img src="/imagenes/logo_asago1.png" alt="">
+      <img src="imagenes/logo_asago1.png" alt="">
       <h2>Asago S.A.S</h2>
     </div>
 
     <div class="login">
+      <p><?php echo $_SESSION['user']?></p>
       <div class="dropdown">
         <button class="dropbtn"><i class="uil uil-angle-down"></i></button>
         <div class="dropdown-content">
-        <?php include 'session_paragraph.php';?>
+        <a href="config/logout.php">Cerrar Sesion</a>
       </div> 
     </div> 
           
@@ -47,15 +48,15 @@ if(!isset($_SESSION['rol'])){
   <div class="carousel slide" id="carouselExampleAutoplaying" data-bs-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img src="/imagenes/producto_5.jpg" alt="Promocion1">
+            <img src="imagenes/producto_5.jpg" alt="Promocion1">
           </div>
 
           <div class="carousel-item">
-            <img src="/imagenes/carnicos.jpeg" alt="Promocion2">
+            <img src="imagenes/carnicos.jpeg" alt="Promocion2">
           </div>
 
           <div class="carousel-item">
-            <img src="/imagenes/productos4.jpg"  alt="Promocion3">
+            <img src="imagenes/productos4.jpg"  alt="Promocion3">
           </div>
         </div>
 
@@ -79,28 +80,28 @@ if(!isset($_SESSION['rol'])){
   <section class="contenedor">
     <div class="contenedor-items">
       <div class="item">
-        <img  src="/imagenes/carnes.jpeg" alt="" class="img-item">
+        <img  src="imagenes/carnes.jpeg" alt="" class="img-item">
         <span class="titulo-item">Carne</span>
         <span class="card-text">Aqui encontraras todo tipo de productos de Carne a tu gusto.</span>
         <button class="card-button"><a href="productos_carne2.php">Ir a Categoria</a></button>
       </div>
 
       <div class="item"> 
-        <img src="/imagenes/pollo.jpg" alt="" class="img-item">
+        <img src="imagenes/pollo.jpg" alt="" class="img-item">
         <span class="titulo-item">Pollo</span>
         <span class="card-text">Aqui encontraras todo tipo de productos de Pollo a tu gusto.</span>
         <button class="card-button"><a href="productos_pollo2.php">Ir a Categoria</a></button>
       </div>
 
       <div class="item">
-        <img src="/imagenes/cerdo.jpg" alt="" class="img-item">
+        <img src="imagenes/cerdo.jpg" alt="" class="img-item">
         <span class="titulo-item">Cerdo</span>
         <span class="card-text">Aqui encontraras todo tipo de productos de Cerdo a tu gusto.</span>
         <button class="card-button"><a href="productos_cerdo2.php">Ir a Categoria</a></button>
       </div>
 
       <div class="item">
-        <img src="/imagenes/chorizo.jpg" alt="" class="img-item">
+        <img src="imagenes/chorizo.jpg" alt="" class="img-item">
         <span class="titulo-item">Chorizo</span>
         <span class="card-text">Aqui encontraras todo tipo de productos de Chorizo a tu gusto.</span>
         <button class="card-button"><a href="productos_chorizo2.php">Ir a Categoria</a></button>
@@ -113,7 +114,7 @@ if(!isset($_SESSION['rol'])){
       <div class="box">
         <figure>
           <div class="image">
-            <img src="/imagenes/logo_asago1.png">
+            <img src="imagenes/logo_asago1.png">
           </div>
       
           <div class="contacto">

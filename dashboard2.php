@@ -63,64 +63,58 @@
     <div class="container">
         <div class="tittle">
             <i class="uil uil-tachometer-fast-alt"></i>
-            <h1>Estadisticas Diarias</h1>
+            <h1>Estadísticas Diarias</h1>
         </div>
     </div>
 
     <section class="contenedor">
     <div class="contenedor-items">
       <div class="item">
-        <span class="titulo-item">Usuarios</span>
-        <span class="card-text">100</span>
-
         <div class="iconBx">
             <i class="uil uil-users-alt"></i>
         </div>
+        <span class="titulo-item">Usuarios</span>
+        <span class="card-text">100</span>        
       </div>
 
       <div class="item"> 
-        <span class="titulo-item">Productos</span>
-        <span class="card-text">200</span>
-
         <div class="iconBx">
             <i class="uil uil-shopping-bag"></i>
         </div>
+        <span class="titulo-item">Productos</span>
+        <span class="card-text">200</span>
       </div>
 
       <div class="item">
-        <span class="titulo-item">Ventas</span>
-        <span class="card-text">80</span>
-
         <div class="iconBx">
             <i class="uil uil-bill"></i>
         </div>
+        <span class="titulo-item">Ventas</span>
+        <span class="card-text">80</span>
       </div>
 
       <div class="item">
-        <span class="titulo-item">Pedidos</span>
-        <span class="card-text">60</span>
-
         <div class="iconBx">
             <i class="uil uil-truck"></i>
         </div>
+        <span class="titulo-item">Pedidos</span>
+        <span class="card-text">60</span>
       </div>
 
       <div class="item">
-        <span class="titulo-item">Compras</span>
-        <span class="card-text">50</span>
-
         <div class="iconBx">
             <i class="uil uil-store"></i>
         </div>
+        <span class="titulo-item">Compras</span>
+        <span class="card-text">50</span>
       </div>
 
       <div class="item">
-        <span class="titulo-item">Proveedores</span>
-        <span class="card-text">10</span>
-
         <div class="iconBx">
             <i class="uil uil-user"></i>
         </div>
+        <span class="titulo-item">Proveedores</span>
+        <span class="card-text">10</span>
       </div>
 
     </div>

@@ -28,7 +28,7 @@ if(!isset($_SESSION['rol'])){
 
   <header>
     <div class="logo">
-      <img src="/imagenes/logo_asago1.png" alt="">
+      <img src="imagenes/logo_asago1.png" alt="">
       <h2>Asago S.A.S</h2>
     </div>
 

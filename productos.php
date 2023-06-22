@@ -82,7 +82,7 @@
                 <h1 class="modal-title fs-5 " id="exampleModalLabel">Nuevo Producto</h1>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
-              <form class="was-validated row g-3 mx-5" method="post">
+              <form action="insertar_producto.php" class="was-validated row g-3 mx-5" method="post">
               <div class="modal-body">
                 <div class="col-12" style="text-align:left">
                   <label class="form-label">ID Producto</label>
@@ -139,6 +139,9 @@
         </div>
       <br>
       <div class="card text-center col-sm-12 col-md-10 col-lg-10 col-xl-10">
+      </div>
+      <br>
+      <div class="card text-center col-sm-12 col-md-10 col-lg-10 col-xl-10">
         <div class="card-header">
           <ul class="nav nav-pills card-header-pills">
             <li class="nav-item">
@@ -175,7 +178,7 @@
                 <td><?php echo $row["FechaVencimiento"];?></td>
                 <td><?php echo $row["Valorlibra"];?></td>
                 <td><?php echo $row["Saldo"];?></td>
-                <td><i class="fa fa-pencil-square-o bg-success p-2 text-white rounded btn " data-toggle="tooltip" title="Editar" aria-hidden="true"></i></td>
+                <td><a href="actualizar.php?id_producto=<?php echo $row["IdProducto"];?>" class="fa fa-pencil-square-o bg-success p-2 text-white rounded btn " data-toggle="tooltip" title="Editar" aria-hidden="true"></a></td>
               </tr>
               <?php
                 } mysqli_free_result($resultado);
@@ -225,7 +228,7 @@
                 <td><?php echo $row["FechaVencimiento"];?></td>
                 <td><?php echo $row["Valorlibra"];?></td>
                 <td><?php echo $row["Saldo"];?></td>
-                <td><i class="fa fa-pencil-square-o bg-success p-2 text-white rounded btn " data-toggle="tooltip" title="Editar" aria-hidden="true"></i></td>
+                <td><a href="actualizar.php?id_producto=<?php echo $row["IdProducto"];?>" class="fa fa-pencil-square-o bg-success p-2 text-white rounded btn " data-toggle="tooltip" title="Editar" aria-hidden="true"></a></td>
               </tr>
               <?php
                 } mysqli_free_result($resultado);
@@ -276,7 +279,7 @@
                 <td><?php echo $row["FechaVencimiento"];?></td>
                 <td><?php echo $row["Valorlibra"];?></td>
                 <td><?php echo $row["Saldo"];?></td>
-                <td><i class="fa fa-pencil-square-o bg-success p-2 text-white rounded btn " data-toggle="tooltip" title="Editar" aria-hidden="true"></i></td>
+                <td><a href="actualizar.php?id_producto=<?php echo $row["IdProducto"];?>" class="fa fa-pencil-square-o bg-success p-2 text-white rounded btn " data-toggle="tooltip" title="Editar" aria-hidden="true"></a></td>
               </tr>
               <?php
                 } mysqli_free_result($resultado);
@@ -328,7 +331,7 @@
                 <td><?php echo $row["FechaVencimiento"];?></td>
                 <td><?php echo $row["Valorlibra"];?></td>
                 <td><?php echo $row["Saldo"];?></td>
-                <td><i class="fa fa-pencil-square-o bg-success p-2 text-white rounded btn " data-toggle="tooltip" title="Editar" aria-hidden="true"></i></td>
+                <td><a href="actualizar.php?id_producto=<?php echo $row["IdProducto"];?>" class="fa fa-pencil-square-o bg-success p-2 text-white rounded btn " data-toggle="tooltip" title="Editar" aria-hidden="true"></a></td>
               </tr>
               <?php
                 } mysqli_free_result($resultado);

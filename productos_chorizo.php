@@ -8,7 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" href="/Css/productos.css">
+    <link rel="stylesheet" href="Css/productos.css">
     <title>Productos Chorizo</title>
 
 </head>
@@ -16,7 +16,7 @@
 
   <header>
     <div class="logo">
-      <a href="index.php"><img src="/imagenes/logo_asago1.png" alt=""></a>
+      <a href="index.php"><img src="imagenes/logo_asago1.png" alt=""></a>
       <h2>Asago S.A.S</h2>
     </div>
 
@@ -25,8 +25,8 @@
       <div class="dropdown">
         <button class="dropbtn"><i class="uil uil-angle-down"></i></button>
         <div class="dropdown-content">
-        <a href="ingresar2.php">Iniciar Sesión</a>
-        <a href="registro.php">Registrarse</a>
+        <a href="ingresar.php">Iniciar Sesión</a>
+        <a href="registro2.php">Registrarse</a>
       </div> 
     </div> 
           
@@ -42,7 +42,7 @@
   <section class="contenedor">
     <div class="contenedor-items">
       <div class="item">
-        <img  src="/imagenes/chorizo_de_leon.jpg" alt="" class="img-item">
+        <img  src="imagenes/chorizo_de_leon.jpg" alt="" class="img-item">
         <span class="titulo-item">Chorizo de León</span>
         <span class="card-text">Vienen 6 por $10.000</span>
         <span class="card-text">Cod: 6723</span>
@@ -50,7 +50,7 @@
       </div>
 
       <div class="item"> 
-        <img src="/imagenes/chorizo_gallego.jpg" alt="" class="img-item">
+        <img src="imagenes/chorizo_gallego.jpg" alt="" class="img-item">
         <span class="titulo-item">Chorizo Gallego</span>
         <span class="card-text">Vienen 6 por $11.000</span>
         <span class="card-text">Cod: 1784</span>
@@ -58,7 +58,7 @@
       </div>
 
       <div class="item">
-        <img src="/imagenes/chorizo_extremeño.jpg" alt="" class="img-item">
+        <img src="imagenes/chorizo_extremeño.jpg" alt="" class="img-item">
         <span class="titulo-item">Chorizo Extremeño</span>
         <span class="card-text">Vienen 6 por $13.000</span>
         <span class="card-text">Cod: 3658</span>
@@ -66,7 +66,7 @@
       </div>
 
       <div class="item">
-        <img src="/imagenes/chorizo_de_navarra.jpg" alt="" class="img-item">
+        <img src="imagenes/chorizo_de_navarra.jpg" alt="" class="img-item">
         <span class="titulo-item">Chorizo Navarra</span>
         <span class="card-text">Vienen 6 por $15.000</span>
         <span class="card-text">Cod: 5789</span>
@@ -79,7 +79,7 @@
       <div class="box">
         <figure>
           <div class="image">
-            <img src="/imagenes/logo_asago1.png">
+            <img src="imagenes/logo_asago1.png">
           </div>
       
           <div class="contacto">

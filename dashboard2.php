@@ -1,3 +1,14 @@
+<?php
+require_once 'config/validate_session.php';
+require_once 'config/validate_roles.php';
+if(!isset($_SESSION['rol'])){
+    header('Location: ingresar.php');
+}else{
+    if($_SESSION['rol'] != 971 ){
+        header('Location: ingresar.php');
+    }
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -53,7 +64,7 @@
                 <span class="nav-item">Proveedores</span>
             </a></li>
 
-            <li class="logout"><a href="index.php">
+            <li class="logout"><a href="config/logout.php">
                 <i class="icon uil uil-sign-out-alt"></i>
                 <span class="nav-item">Cerrar Sesión</span>
             </a></li>
@@ -64,9 +75,12 @@
         <div class="tittle">
             <i class="uil uil-tachometer-fast-alt"></i>
             <h1>Estadisticas Diarias</h1>
+            <div class="usuario">
+            <?php echo "BIENVENIDO" . " " . $_SESSION['user'];?>
+            </div>
         </div>
     </div>
-
+    
     <section class="contenedor">
     <div class="contenedor-items">
       <div class="item">

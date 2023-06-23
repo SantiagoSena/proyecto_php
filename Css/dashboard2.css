@@ -79,7 +79,7 @@ a{
 }
 
 nav:hover{
-    width: 280px;
+    width: 240px;
     transition: all 0.5s ease;
 }
 
@@ -105,8 +105,12 @@ nav:hover{
 }
 
 .tittle i{
-    margin-right: 30px;
+    margin-right: 50px;
     font-size: 50px;
+}
+
+.usuario{ 
+    margin-left: 20rem; 
 }
 
 .contenedor-items{
@@ -164,19 +168,10 @@ nav:hover{
 }
 
 
-@media screen and (max-width:630px){
-    header{
+@media screen and (max-width:1000px){
+    body{
+        display: block;
         flex-direction: column;
-    }
 
-    nav{
-        padding: 10px 0;
-    }
-
-    .pie-pagina .grupo-1{
-        width: 90%;
-        grid-template-columns: repeat(1, 1fr);
-        grid-gap:30px;
-        padding: 35px 0px;
-    }
+}
 }

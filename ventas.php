@@ -90,65 +90,65 @@
                 <h1 class="modal-title fs-5 " id="exampleModalLabel">Nueva Venta</h1>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
-              <form class="was-validated row g-3 mx-5">
+              <form action="insertar_venta.php" class="was-validated row g-3 mx-5" method="post">
               <div class="modal-body">
                 <h5 class="card-tittle"> Ingresa los datos para</h5>
                 <p class="card-text">Agregar una nueva Venta</p>
                 <hr>
                 <div class="col-12" style="text-align:left">
                   <label class="form-label">Id Venta</label>
-                  <input class="form-control" type="text" required>
+                  <input name="id_venta" class="form-control" type="number" required>
                 </div>
                 <br>
                 <div class="col-12" style="text-align:left">
                   <label class="form-label">Fecha Emisión</label>
-                  <input class="form-control" type="date" required>
+                  <input name="fecha_emision" class="form-control" type="date" required>
                 </div>
                 <br>
                 <div class="col-12" style="text-align:left">
                   <label class="form-label">Id Pedido</label>
-                  <input class="form-control" type="text" required>
+                  <input name="id_pedido" class="form-control" type="number" required>
                 </div>
                 <br>
                 <div class="col-12" style="text-align:left">
                   <label class="form-label">Id Cliente</label>
-                  <input class="form-control" type="text" required>
+                  <input name="id_cliente" class="form-control" type="number" required>
                 </div>
                 <br>
                 <div class="col-12" style="text-align:left">
                   <label class="form-label">Id Producto</label>
-                  <input class="form-control" type="text" required>
+                  <input name="id_producto" class="form-control" type="number" required>
                 </div>
                 <br>
                 <div class="col-12" style="text-align:left">
-                  <label class="form-label">Productos</label>
-                  <input class="form-control" type="text" required>
+                  <label class="form-label">Producto</label>
+                  <input name="producto" class="form-control" type="text" required>
                 </div>
                 <br>
                 <div class="col-12" style="text-align:left">
                   <label class="form-label">Cantidad</label>
-                  <input class="form-control" type="text" required>
+                  <input name="cantidad" class="form-control" type="number" required>
                 </div>
                 <br>
                 <div class="col-12" style="text-align:left">
                   <label class="form-label">Valor Producto</label>
-                  <input class="form-control" type="text" required>
+                  <input name="valor_producto" class="form-control" type="number" required>
                 </div>
                 <br>
                 <div class="col-12" style="text-align:left">
                   <label class="form-label">Valor SubTotal</label>
-                  <input class="form-control" type="text" required>
+                  <input name="valor_subtotal" class="form-control" type="number" required>
                 </div>
                 <br>
                 <div class="col-12" style="text-align:left">
                   <label class="form-label">Valor Total</label>
-                  <input class="form-control" type="text" required>
+                  <input name="valor_total" class="form-control" type="number" required>
                 </div>
                 </div>
               <div class="modal-footer">
-                <button type="submit" class="btn btn-danger" style="background-color: rgb(230, 72, 72);">Agregar</button>
-                <button type="button" class="btn btn-danger" data-bs-dismiss="modal" style="background-color: rgb(194, 16, 16);">Cerrar</button>
+              <input class="btn btn-danger" type="submit" value="Agregar" style="background-color: rgb(230, 72, 72);">
               </div>
+              </form>
             </div>
           </div>
         </div>
@@ -186,7 +186,6 @@
                 <td><?php echo $row["ValorProducto"];?></td>
                 <td><?php echo $row["SubTotal"];?></td>
                 <td><?php echo $row["ValorTotal"];?></td>
-                <td><i class="fa fa-pencil-square-o bg-success p-2 text-white rounded btn " data-toggle="tooltip" title="Editar" aria-hidden="true"></i></td>
               </tr>
               <?php
                 } mysqli_free_result($resultado);

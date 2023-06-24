@@ -71,7 +71,7 @@
     </div>
 
     <div class="col-md-10 p-5 pt-5">
-      <h3><i class="fa fa-cart-plus me-2" aria-hidden="true"></i> Listado Pedidos</h3>
+      <h3><i class="fa fa-cart-plus me-2" aria-hidden="true"></i>Listado Pedidos</h3>
       <hr>
       <div class="d-grid gab-3 d-md-flex mt-2 mx-3 justify-content-md-start">
         <button type="button" class="btn btn-danger text-white " data-bs-toggle="modal" data-bs-target="#exampleModal" style="background-color: rgb(230, 72, 72) ; ">
@@ -94,46 +94,46 @@
                 <h1 class="modal-title fs-5 " id="exampleModalLabel">Nuevo Pedido</h1>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
-              <form class="was-validated row g-3 mx-5">
-              <div class="modal-body">
-                <h5 class="card-tittle"> Ingresa los datos para</h5>
-                <p class="card-text">Agregar un nuevo Pedido</p>
-                <hr>
-                <div class="col-12" style="text-align:left">
-                  <label class="form-label">Id Pedido</label>
-                  <input class="form-control" type="text" required>
+              <form action="insertar_pedido.php" class="was-validated row g-3 mx-5" method="post">
+                <div class="modal-body">
+                  <h5 class="card-tittle"> Ingresa los datos para</h5>
+                  <p class="card-text">Agregar un nuevo Pedido</p>
+                  <hr>
+                  <div class="col-12" style="text-align:left">
+                    <label class="form-label">Id Pedido</label>
+                    <input name="id_pedido" class="form-control" type="number" required>
+                  </div>
+                  <br>
+                  <div class="col-12" style="text-align:left">
+                    <label class="form-label">Id Cliente</label>
+                    <input name="id_cliente" class="form-control" type="number" required>
+                  </div>
+                  <br>
+                  <div class="col-12" style="text-align:left">
+                    <label class="form-label">Fecha Emisión</label>
+                    <input name="fecha_emision" class="form-control" type="date" required>
+                  </div>
+                  <br>
+                  <div class="col-12" style="text-align:left">
+                    <label class="form-label">Estado Pedido</label>
+                      <select name="estado" class="form-select" >
+                        <option value="">Seleccione un estado</option>
+                        <option value="alistamiento">En Alistamiento</option>
+                        <option value="enviado">Enviado</option>
+                        <option value="entregado">Entregado</option>
+                        <option value="anulado">Anulado</option>
+                      </select>
+                  </div>
+                  <br>
+                  <div class="col-12" style="text-align:left">
+                    <label class="form-label">Valor Total</label>
+                    <input name="valor_total" class="form-control" type="number" required>
+                  </div>
+                  </div>
+                <div class="modal-footer">
+                  <input class="btn btn-danger" type="submit" value="Agregar" style="background-color: rgb(230, 72, 72);">
                 </div>
-                <br>
-                <div class="col-12" style="text-align:left">
-                  <label class="form-label">Id Cliente</label>
-                  <input class="form-control" type="text" required>
-                </div>
-                <br>
-                <div class="col-12" style="text-align:left">
-                  <label class="form-label">Fecha Emisión</label>
-                  <input class="form-control" type="date" required>
-                </div>
-                <br>
-                <div class="col-12" style="text-align:left">
-                  <label class="form-label">Estado Pedido</label>
-                    <select class="form-select" >
-                      <option value="">Seleccione un estado</option>
-                      <option value="alistamiento">En Alistamiento</option>
-                      <option value="enviado">Enviado</option>
-                      <option value="entregado">Entregado</option>
-                      <option value="anulado">Anulado</option>
-                    </select>
-                </div>
-                <br>
-                <div class="col-12" style="text-align:left">
-                  <label class="form-label">Valor Total</label>
-                  <input class="form-control" type="text" required>
-                </div>
-                </div>
-              <div class="modal-footer">
-                <button type="submit" class="btn btn-danger" style="background-color: rgb(230, 72, 72);">Agregar</button>
-                <button type="button" class="btn btn-danger" data-bs-dismiss="modal" style="background-color: rgb(194, 16, 16);">Cerrar</button>
-              </div>
+              </form>
             </div>
           </div>
         </div>
@@ -146,10 +146,8 @@
                 <th scope="col">Fecha Emisión</th>
                 <th scope="col">Estado Pedido</th>
                 <th scope="col">Valor Total</th>
-                
               </tr>
             </thead>
-
             <tbody>
             <?php
                 $resultado = mysqli_query($conexion, $pedido);
@@ -161,7 +159,7 @@
                 <td><?php echo $row["FechaEmision"];?></td>
                 <td><?php echo $row["Estado"];?></td>
                 <td><?php echo $row["ValorTotal"];?></td>
-                <td><i class="fa fa-pencil-square-o bg-success p-2 text-white rounded btn " data-toggle="tooltip" title="Editar" aria-hidden="true"></i></td>
+                <td><a href="actualizar_pedido.php?id_pedido=<?php echo $row["IdPedido"];?>" class="fa fa-pencil-square-o bg-success p-2 text-white rounded btn " data-toggle="tooltip" title="Editar" aria-hidden="true"></a></td>
               </tr>
               <?php
                 } mysqli_free_result($resultado);
@@ -172,6 +170,5 @@
       </div>
     </div>
   </div>      
-
 </body>
 </html>

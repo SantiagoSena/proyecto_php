@@ -9,6 +9,7 @@ if(!isset($_SESSION['rol'])){
     }
 }
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

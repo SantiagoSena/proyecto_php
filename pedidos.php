@@ -118,10 +118,10 @@
                     <label class="form-label">Estado Pedido</label>
                       <select name="estado" class="form-select" >
                         <option value="">Seleccione un estado</option>
-                        <option value="alistamiento">En Alistamiento</option>
-                        <option value="enviado">Enviado</option>
-                        <option value="entregado">Entregado</option>
-                        <option value="anulado">Anulado</option>
+                        <option class="alistamiento" value="alistamiento">En Alistamiento</option>
+                        <option class="enviado" value="enviado">Enviado</option>
+                        <option class="entregado" value="entregado">Entregado</option>
+                        <option class="anulado" value="anulado">Anulado</option>
                       </select>
                   </div>
                   <br>

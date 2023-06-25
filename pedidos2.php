@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
     <link rel="stylesheet" href="Css/productos2.css">
-    <title>Ventas</title>
+    <title>Pedidos</title>
 </head>
 
 <body>
@@ -28,22 +28,22 @@
                     <span class="nav-item">Dashboard</span>
                 </a></li>
 
-                <li><a href="usuarios.php">
+                <li><a href="usuarios2.php">
                     <i class="fas uil uil-users-alt"></i>
                     <span class="nav-item">Usuarios</span>
                 </a></li>
 
-                <li><a href="productos.php">
+                <li><a href="productos2.php">
                     <i class="fas uil uil-shopping-bag"></i>
                     <span class="nav-item">Productos</span>
                 </a></li>
 
-                <li><a href="ventas.php">
+                <li><a href="ventas2.php">
                     <i class="fas uil uil-bill"></i>
                     <span class="nav-item">Ventas</span>
                 </a></li>
 
-                <li><a href="pedidos.php">
+                <li><a href="pedidos2.php">
                     <i class="fas uil uil-truck"></i>
                     <span class="nav-item">Pedidos</span>
                 </a></li>
@@ -68,25 +68,30 @@
 
         <section class="main">
             <div class="main-top">
-                <i class="fas uil uil-bill"></i>
-                <h1>Listado Ventas</h1>
+                <i class="fas uil uil-truck"></i>
+                <h1>Listado Pedidos</h1>
             </div>
             
             <div class="boton-modal">
-                <label for="btn-modal">Agregar Venta</label>
+                <label for="btn-modal">Agregar Pedido</label>
             </div>
 
             <input type="checkbox" id="btn-modal">
             <div class="container-modal">
                 <div class="content-modal">
                     <div class="tittle">
-                        <span>Registrar Venta</span>
+                        <span>Registrar Pedido</span>
                     </div>   
 
                     <form action="config/login.php" method="post">
                         <div class="row">
-                            <label>ID Venta</label>
-                            <input type="text" name="id_venta" required>
+                            <label>ID Pedido</label>
+                            <input type="number" name="id_pedido" required>
+                        </div>
+
+                        <div class="row">
+                            <label>Id Cliente</label>
+                            <input type="number" name="id_cliente" required>
                         </div>
 
                         <div class="row">
@@ -95,47 +100,23 @@
                         </div>
 
                         <div class="row">
-                            <label>Id Pedido</label>
-                            <input type="text" name="id_pedido" required>
+                            <label>Estado Pedido</label>
+                            <select name="estado" class="form-select" >
+                                <option value="">Seleccione una Estado</option>
+                                <option class="alistamiento" value="alistamiento">En Alistamiento</option>
+                                <option class="enviado" value="enviado">Enviado</option>
+                                <option class="entregado" value="entregado">Entegrado</option>
+                                <option class="anulado" value="anulado">Cancelado</option>
+                            </select>
                         </div>
 
-                        <div class="row">
-                            <label>Id Cliente</label>
-                            <input type="text" name="id_cliente" required>
-                        </div>
-
-                        <div class="row">
-                            <label>Id Producto</label>
-                            <input type="number" name="id_producto" required>
-                        </div>
-
-                        <div class="row">
-                            <label>Producto</label>
-                            <input type="text" name="producto" required>
-                        </div>
-
-                        <div class="row">
-                            <label>Cantidad</label>
-                            <input type="number" name="cantidad" required>
-                        </div>
-
-                        <div class="row">
-                            <label>Valor Producto</label>
-                            <input type="number" name="valor_producto" required>
-                        </div>
-
-                        <div class="row">
-                            <label>Valor SubTotal</label>
-                            <input type="number" name="valor_subtotal" required>
-                        </div>
-
-                        <div class="row">
+                        <div class="row block">
                             <label>Valor Total</label>
                             <input type="number" name="valor_total" required>
                         </div>
 
                         <div class="row block">
-                            <input class="btn" type="submit" value="Agregar Venta">
+                            <input class="btn" type="submit" value="Agregar Pedido">
                         </div>
                     </form>                    
                    
@@ -147,40 +128,32 @@
                 <div class="dashboard-list">
                     <table class="table">
                         <thead>
-                        <tr>
-                            <th>Id</th>
-                            <th>Fecha Emisión</th>
-                            <th>Id Pedido</th>
-                            <th>Id Cliente</th>
-                            <th>Id Producto</th>
-                            <th>Producto</th>
-                            <th>Cantidad</th>
-                            <th>Valor Producto</th>
-                            <th>SubTotal</th>
-                            <th>Valor Total</th>
-                        </tr>
+                            <tr>
+                                <th>Id Pedido</th>
+                                <th>Id Cliente</th>
+                                <th>Fecha Emisión</th>
+                                <th>Estado Pedido</th>
+                                <th>Valor Total</th>
+                                <th></th>
+                            </tr>
                         </thead>
 
                         <tbody>
                         <?php
-                            $resultado = mysqli_query($conexion, $Venta);
+                            $resultado = mysqli_query($conexion, $pedido);
                             while($row = mysqli_fetch_assoc($resultado)){
                         ?>
                         <tr>
-                            <td><?php echo $row["IdVenta"];?></td>
-                            <td><?php echo $row["FechaEmision"];?></td>
                             <td><?php echo $row["IdPedido"];?></td>
-                            <td><?php echo $row["IdCliente"];?></td>
-                            <td><?php echo $row["IdProducto"];?></td>
-                            <td><?php echo $row["Producto"];?></td>
-                            <td><?php echo $row["Cantidad"];?></td>
-                            <td><?php echo "$". $row["ValorProducto"];?></td>
-                            <td><?php echo "$". $row["SubTotal"];?></td>
+                            <td><?php echo $row["IdUsuario"];?></td>
+                            <td><?php echo $row["FechaEmision"];?></td>
+                            <td><?php echo $row["Estado"];?></td>
                             <td><?php echo "$". $row["ValorTotal"];?></td>
+                            <td><a href="actualizar_pedido.php?id_pedido=<?php echo $row["IdPedido"];?>"data-toggle="tooltip" title="Editar" aria-hidden="true"><i class="uil uil-edit"></i></a></td>
                         </tr>
                         <?php
                             } mysqli_free_result($resultado);
-                            ?>
+                        ?>
                         </tbody>
                     </table>
                 </div>

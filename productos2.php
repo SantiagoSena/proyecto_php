@@ -28,22 +28,22 @@
                     <span class="nav-item">Dashboard</span>
                 </a></li>
 
-                <li><a href="usuarios.php">
+                <li><a href="usuarios2.php">
                     <i class="fas uil uil-users-alt"></i>
                     <span class="nav-item">Usuarios</span>
                 </a></li>
 
-                <li><a href="productos.php">
+                <li><a href="productos2.php">
                     <i class="fas uil uil-shopping-bag"></i>
                     <span class="nav-item">Productos</span>
                 </a></li>
 
-                <li><a href="ventas.php">
+                <li><a href="ventas2.php">
                     <i class="fas uil uil-bill"></i>
                     <span class="nav-item">Ventas</span>
                 </a></li>
 
-                <li><a href="pedidos.php">
+                <li><a href="pedidos2.php">
                     <i class="fas uil uil-truck"></i>
                     <span class="nav-item">Pedidos</span>
                 </a></li>
@@ -85,7 +85,7 @@
                     <form action="config/login.php" method="post">
                         <div class="row">
                             <label>ID Producto</label>
-                            <input type="text" name="id_producto" required>
+                            <input type="number" name="id_producto" required>
                         </div>
 
                         <div class="row">
@@ -100,11 +100,6 @@
 
                         <div class="row">
                             <label>Categoria</label>
-                            <input type="text" name="categoria" required>
-                        </div>
-
-                        <div class="row">
-                            <label>Cantidad</label>
                             <select name="categoria" class="form-select" >
                                 <option value="">Seleccione una categoria</option>
                                 <option value="Carnicos">Carnicos</option>
@@ -112,6 +107,11 @@
                                 <option value="Cerdo">Cerdo</option>
                                 <option value="Chorizo">Chorizo</option>
                             </select>
+                        </div>
+
+                        <div class="row">
+                            <label>Cantidad</label>
+                            <input type="number" name="categoria" required>
                         </div>
 
                         <div class="row">

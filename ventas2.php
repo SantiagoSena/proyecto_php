@@ -28,22 +28,22 @@
                     <span class="nav-item">Dashboard</span>
                 </a></li>
 
-                <li><a href="usuarios.php">
+                <li><a href="usuarios2.php">
                     <i class="fas uil uil-users-alt"></i>
                     <span class="nav-item">Usuarios</span>
                 </a></li>
 
-                <li><a href="productos.php">
+                <li><a href="productos2.php">
                     <i class="fas uil uil-shopping-bag"></i>
                     <span class="nav-item">Productos</span>
                 </a></li>
 
-                <li><a href="ventas.php">
+                <li><a href="ventas2.php">
                     <i class="fas uil uil-bill"></i>
                     <span class="nav-item">Ventas</span>
                 </a></li>
 
-                <li><a href="pedidos.php">
+                <li><a href="pedidos2.php">
                     <i class="fas uil uil-truck"></i>
                     <span class="nav-item">Pedidos</span>
                 </a></li>
@@ -180,7 +180,7 @@
                         </tr>
                         <?php
                             } mysqli_free_result($resultado);
-                            ?>
+                        ?>
                         </tbody>
                     </table>
                 </div>

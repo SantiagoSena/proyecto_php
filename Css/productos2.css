@@ -243,9 +243,9 @@ table thead tbody td i:hover{
     background: #f3f3f3;
 }
 
-.table tbody tr.active{
+.table tbody td .entregado{
     font-weight: bold;
-    color: #4AD489;
+    background-color: aqua;
 }
 
 .table tbody tr:last-of-type{

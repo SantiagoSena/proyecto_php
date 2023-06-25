@@ -67,7 +67,6 @@
             <div class="main-top">
                 <i class="fas uil uil-shopping-bag"></i>
                 <h1>Listado Productos</h1>
-                <i class="fas fa-user-cog"></i>
             </div>
             
             <div class="boton-modal">
@@ -273,7 +272,7 @@
                             <th>Fecha Vencimiento</th>
                             <th>Valor libra</th>
                             <th>Saldo</th>
-                            <th>Editar</th>
+                            <th></th>
                         </tr>
                         </thead>
 

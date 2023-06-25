@@ -2,6 +2,7 @@
   include ("conexion.php");
   $producto = "SELECT * FROM producto WHERE NomCategoria = 'Carnicos'";
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,6 +13,8 @@
     <link rel="stylesheet" href="Css/productos2.css">
     <title>Productos</title>
 </head>
+
+<body>
     <div class="container">
         <nav>
             <ul>
@@ -62,7 +65,6 @@
             </ul>
         </nav>
 
-
         <section class="main">
             <div class="main-top">
                 <i class="fas uil uil-shopping-bag"></i>
@@ -83,41 +85,47 @@
                     <form action="config/login.php" method="post">
                         <div class="row">
                             <label>ID Producto</label>
-                            <input type="text" name="Usuario" required>
+                            <input type="text" name="id_producto" required>
                         </div>
 
                         <div class="row">
                             <label>Fecha Registro</label>
-                            <input type="date" name="Clave" required>
+                            <input type="date" name="fecha_registro" required>
                         </div>
 
                         <div class="row">
                             <label>Nombre</label>
-                            <input type="text" name="Usuario" required>
+                            <input type="text" name="nombre_producto" required>
                         </div>
 
                         <div class="row">
                             <label>Categoria</label>
-                            <input type="text" name="Usuario" required>
+                            <input type="text" name="categoria" required>
                         </div>
 
                         <div class="row">
                             <label>Cantidad</label>
-                            <input type="number" name="Usuario" required>
+                            <select name="categoria" class="form-select" >
+                                <option value="">Seleccione una categoria</option>
+                                <option value="Carnicos">Carnicos</option>
+                                <option value="Pollo">Pollo</option>
+                                <option value="Cerdo">Cerdo</option>
+                                <option value="Chorizo">Chorizo</option>
+                            </select>
                         </div>
 
                         <div class="row">
                             <label>Fecha Vencimiento</label>
-                            <input type="date" name="Clave" required>
+                            <input type="date" name="fecha_vencimiento" required>
                         </div>
 
                         <div class="row block">
                             <label>Valor Libra</label>
-                            <input type="number" name="Usuario" required>
+                            <input type="number" name="valor_libra" required>
                         </div>
 
                         <div class="row block">
-                            <input name="btningresar" class="btn" type="submit" value="Agregar Producto">
+                            <input class="btn" type="submit" value="Agregar Producto">
                         </div>
                     </form>                    
                    
@@ -156,8 +164,8 @@
                                 <td><?php echo $row["NomCategoria"];?></td>
                                 <td><?php echo $row["cantidad"];?></td>
                                 <td><?php echo $row["FechaVencimiento"];?></td>
-                                <td><?php echo $row["Valorlibra"];?></td>
-                                <td><?php echo $row["Saldo"];?></td>
+                                <td><?php echo "$". $row["Valorlibra"];?></td>
+                                <td><?php echo "$". $row["Saldo"];?></td>
                                 <td><a href="actualizar_producto.php?id_producto=<?php echo $row["IdProducto"];?>"data-toggle="tooltip" title="Editar" aria-hidden="true"><i class="uil uil-edit"></i></a></td>
                             </tr>
                             <?php
@@ -200,8 +208,8 @@
                                 <td><?php echo $row["NomCategoria"];?></td>
                                 <td><?php echo $row["cantidad"];?></td>
                                 <td><?php echo $row["FechaVencimiento"];?></td>
-                                <td><?php echo $row["Valorlibra"];?></td>
-                                <td><?php echo $row["Saldo"];?></td>
+                                <td><?php echo "$". $row["Valorlibra"];?></td>
+                                <td><?php echo "$". $row["Saldo"];?></td>
                                 <td><a href="actualizar_producto.php?id_producto=<?php echo $row["IdProducto"];?>" data-toggle="tooltip" title="Editar" aria-hidden="true"><i class="uil uil-edit"></i></a></td>
                             </tr>
                             <?php
@@ -244,8 +252,8 @@
                                 <td><?php echo $row["NomCategoria"];?></td>
                                 <td><?php echo $row["cantidad"];?></td>
                                 <td><?php echo $row["FechaVencimiento"];?></td>
-                                <td><?php echo $row["Valorlibra"];?></td>
-                                <td><?php echo $row["Saldo"];?></td>
+                                <td><?php echo "$". $row["Valorlibra"];?></td>
+                                <td><?php echo "$". $row["Saldo"];?></td>
                                 <td><a href="actualizar_producto.php?id_producto=<?php echo $row["IdProducto"];?>" data-toggle="tooltip" title="Editar" aria-hidden="true"><i class="uil uil-edit"></i></a></td>
                             </tr>
                             <?php
@@ -288,8 +296,8 @@
                                 <td><?php echo $row["NomCategoria"];?></td>
                                 <td><?php echo $row["cantidad"];?></td>
                                 <td><?php echo $row["FechaVencimiento"];?></td>
-                                <td><?php echo $row["Valorlibra"];?></td>
-                                <td><?php echo $row["Saldo"];?></td>
+                                <td><?php echo "$". $row["Valorlibra"];?></td>
+                                <td><?php echo "$". $row["Saldo"];?></td>
                                 <td><a href="actualizar_producto.php?id_producto=<?php echo $row["IdProducto"];?>" data-toggle="tooltip" title="Editar" aria-hidden="true"><i class="uil uil-edit"></i></a></td>
                             </tr>
                             <?php

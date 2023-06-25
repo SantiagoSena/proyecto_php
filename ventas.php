@@ -171,7 +171,7 @@
             </thead>
 
             <tbody>
-            <?php
+              <?php
                 $resultado = mysqli_query($conexion, $Venta);
                 while($row = mysqli_fetch_assoc($resultado)){
               ?>

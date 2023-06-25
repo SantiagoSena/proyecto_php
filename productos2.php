@@ -1,3 +1,7 @@
+<?php
+  include ("conexion.php");
+  $producto = "SELECT * FROM producto WHERE NomCategoria = 'Carnicos'";
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -162,15 +166,6 @@
                             } mysqli_free_result($resultado);
                             ?>
 
-                            <tr>
-                                <td>04</td>
-                                <td>Sara David</td>
-                                <td>Design</td>
-                                <td>03-24-22</td>
-                                <td>8:00AM</td>
-                                <td>3:00PM</td>
-                                <td><button>View</button></td>
-                            </tr>
                         </tbody>
                     </table>
                 </div>

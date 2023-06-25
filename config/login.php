@@ -23,7 +23,6 @@
     session_start();
     $_SESSION['user'] = $usuario;
     $_SESSION['rol'] = $row['rol'];
-
     switch($_SESSION['rol']){
         case 971:
             header('location: ../dashboard2.php');

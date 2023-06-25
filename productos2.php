@@ -117,9 +117,7 @@
                             <input name="btningresar" class="btn" type="submit" value="Agregar Producto">
                         </div>
                     </form>                    
-                    <div class="btn-cerrar">
-                        <label for="btn-modal">Cerrar</label>
-                    </div>
+                   
                     <label for="btn-modal" class="cerrar-modal"></label>
                 </div>
             </div>

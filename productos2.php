@@ -161,11 +161,141 @@
                                 <td><?php echo $row["Saldo"];?></td>
                                 <td><a href="actualizar_producto.php?id_producto=<?php echo $row["IdProducto"];?>"data-toggle="tooltip" title="Editar" aria-hidden="true"><i class="uil uil-edit"></i></a></td>
                             </tr>
-
                             <?php
                             } mysqli_free_result($resultado);
                             ?>
+                        </tbody>
+                    </table>
+                </div>
 
+                <?php
+                $producto_pollo = "SELECT * FROM producto WHERE NomCategoria = 'Pollo' ";
+                ?>
+
+                <div class="dashboard-list">
+                    <h1>Pollo</h1>
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>Fecha Registro</th>
+                            <th>Nombre</th>
+                            <th>Categoria</th>
+                            <th>cantidad</th>
+                            <th>Fecha Vencimiento</th>
+                            <th>Valor libra</th>
+                            <th>Saldo</th>
+                            <th></th>
+                        </tr>
+                        </thead>
+
+                        <tbody>
+                            <?php
+                                $resultado = mysqli_query($conexion, $producto_pollo);
+                                while($row = mysqli_fetch_assoc($resultado)){
+                            ?>
+                            <tr>
+                                <td><?php echo $row["IdProducto"];?></td>
+                                <td><?php echo $row["FechaRegistro"];?></td>
+                                <td><?php echo $row["NomProducto"];?></td>
+                                <td><?php echo $row["NomCategoria"];?></td>
+                                <td><?php echo $row["cantidad"];?></td>
+                                <td><?php echo $row["FechaVencimiento"];?></td>
+                                <td><?php echo $row["Valorlibra"];?></td>
+                                <td><?php echo $row["Saldo"];?></td>
+                                <td><a href="actualizar_producto.php?id_producto=<?php echo $row["IdProducto"];?>" data-toggle="tooltip" title="Editar" aria-hidden="true"><i class="uil uil-edit"></i></a></td>
+                            </tr>
+                            <?php
+                            } mysqli_free_result($resultado);
+                            ?>
+                        </tbody>
+                    </table>
+                </div>
+
+                <?php
+                    $producto_cerdo = "SELECT * FROM producto WHERE NomCategoria = 'Cerdo' ";
+                ?>
+
+                <div class="dashboard-list">
+                    <h1>Cerdo</h1>
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>Fecha Registro</th>
+                            <th>Nombre</th>
+                            <th>Categoria</th>
+                            <th>cantidad</th>
+                            <th>Fecha Vencimiento</th>
+                            <th>Valor libra</th>
+                            <th>Saldo</th>
+                            <th></th>
+                        </tr>
+                        </thead>
+
+                        <tbody>
+                            <?php
+                                $resultado = mysqli_query($conexion, $producto_cerdo);
+                                while($row = mysqli_fetch_assoc($resultado)){
+                            ?>
+                            <tr>
+                                <td><?php echo $row["IdProducto"];?></td>
+                                <td><?php echo $row["FechaRegistro"];?></td>
+                                <td><?php echo $row["NomProducto"];?></td>
+                                <td><?php echo $row["NomCategoria"];?></td>
+                                <td><?php echo $row["cantidad"];?></td>
+                                <td><?php echo $row["FechaVencimiento"];?></td>
+                                <td><?php echo $row["Valorlibra"];?></td>
+                                <td><?php echo $row["Saldo"];?></td>
+                                <td><a href="actualizar_producto.php?id_producto=<?php echo $row["IdProducto"];?>" data-toggle="tooltip" title="Editar" aria-hidden="true"><i class="uil uil-edit"></i></a></td>
+                            </tr>
+                            <?php
+                                } mysqli_free_result($resultado);
+                            ?>
+                        </tbody>
+                    </table>
+                </div>
+
+                <?php
+                    $producto_chorizo = "SELECT * FROM producto WHERE NomCategoria = 'Chorizo' ";
+                ?>
+
+                <div class="dashboard-list">
+                    <h1>Chorizo</h1>
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>Fecha Registro</th>
+                            <th>Nombre</th>
+                            <th>Categoria</th>
+                            <th>cantidad</th>
+                            <th>Fecha Vencimiento</th>
+                            <th>Valor libra</th>
+                            <th>Saldo</th>
+                            <th>Editar</th>
+                        </tr>
+                        </thead>
+
+                        <tbody>
+                            <?php
+                                $resultado = mysqli_query($conexion, $producto_chorizo);
+                                while($row = mysqli_fetch_assoc($resultado)){
+                            ?>
+                            <tr>
+                                <td><?php echo $row["IdProducto"];?></td>
+                                <td><?php echo $row["FechaRegistro"];?></td>
+                                <td><?php echo $row["NomProducto"];?></td>
+                                <td><?php echo $row["NomCategoria"];?></td>
+                                <td><?php echo $row["cantidad"];?></td>
+                                <td><?php echo $row["FechaVencimiento"];?></td>
+                                <td><?php echo $row["Valorlibra"];?></td>
+                                <td><?php echo $row["Saldo"];?></td>
+                                <td><a href="actualizar_producto.php?id_producto=<?php echo $row["IdProducto"];?>" data-toggle="tooltip" title="Editar" aria-hidden="true"><i class="uil uil-edit"></i></a></td>
+                            </tr>
+                            <?php
+                                } mysqli_free_result($resultado);
+                            ?>
                         </tbody>
                     </table>
                 </div>

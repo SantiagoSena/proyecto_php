@@ -53,7 +53,7 @@
                     <span class="nav-item">Compras</span>
                 </a></li>
 
-                <li><a href="compras.php">
+                <li><a href="proveedores.php">
                     <i class="fas uil uil-user"></i>
                     <span class="nav-item">Proveedores</span>
                 </a></li>

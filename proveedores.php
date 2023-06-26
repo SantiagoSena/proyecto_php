@@ -43,70 +43,70 @@
         <img src="imagenes/logo_luxe.png" alt="" class="img-item">
         <span class="titulo-item">Carnicos De Luxe</span>
         <span class="card-text">Esta empresa nos brinda carne de Res asi mismo una pequeña variedad de chorizo.</span>
-        <button class="card-button"><a href="productos_luxe.php">Ver Productos</a></button>
+        <button class="card-button"><a href="empresa_luxe.php">Ver Productos</a></button>
       </div>
 
       <div class="item"> 
         <img src="imagenes/logo_fama.png" alt="" class="img-item">
         <span class="titulo-item">Carnicos Fama</span>
         <span class="card-text">Esta empresa nos brinda carne de Res asi mismo una pequeña variedad de chorizo.</span>
-        <button class="card-button"><a href="productos_carnicos_fama.php">Ver Productos</a></button>
+        <button class="card-button"><a href="empresa_fama.php">Ver Productos</a></button>
       </div>
 
       <div class="item">
         <img src="imagenes/logo_versalles.png" alt="" class="img-item">
         <span class="titulo-item">Carnicos Versalles</span>
         <span class="card-text">Esta empresa nos brinda una gran variedad de carne de Res en diferentes cortes.</span>
-        <button class="card-button"><a href="productos_carnicos_versalles.php">Ver Productos</a></button>
+        <button class="card-button"><a href="empresa_versalles.php">Ver Productos</a></button>
       </div>
 
       <div class="item">
         <img src="imagenes/logo_gran_campo.jpg" alt="" class="img-item">
         <span class="titulo-item">El Gran Campo</span>
         <span class="card-text">Esta empresa nos brinda carne de Res asi mismo una pequeña variedad de Pollo.</span>
-        <button class="card-button"><a href="productos_el_gran_campo.php">Ver Productos</a></button>
+        <button class="card-button"><a href="empresa_gran_campo.php">Ver Productos</a></button>
       </div>
 
       <div class="item">
         <img src="imagenes/logo_la_cumbre.png" alt="" class="img-item">
         <span class="titulo-item">La Cumbre</span>
         <span class="card-text">Esta empresa nos brinda una gran variedad de pollo.</span>
-        <button class="card-button"><a href="productos_la_cumbre.php">Ver Productos</a></button>
+        <button class="card-button"><a href="empresa_cumbre.php">Ver Productos</a></button>
       </div>
 
       <div class="item">
         <img src="imagenes/logo_carnicos_del_campo.webp" alt="" class="img-item">
         <span class="titulo-item">Carnicos El Campo</span>
         <span class="card-text">Esta empresa nos brinda una gran variedad de Pollo.</span>
-        <button class="card-button"><a href="productos_carnicos_del_campo.php">Ver Productos</a></button>
+        <button class="card-button"><a href="empresa_campo.php">Ver Productos</a></button>
       </div>
 
       <div class="item">
         <img src="imagenes/logo_carnicos_torino.jpg" alt="" class="img-item">
         <span class="titulo-item">Carnicos Torino</span>
         <span class="card-text">Esta empresa nos brinda una gran variedad de Cerdo en diferentes cortes.</span>
-        <button class="card-button"><a href="productos_carnicos_torino.php">Ver Productos</a></button>
+        <button class="card-button"><a href="empresa_torino.php">Ver Productos</a></button>
       </div>
 
       <div class="item">
         <img src="imagenes/logo_monaco.png" alt="" class="img-item">
         <span class="titulo-item">Carnicos Monaco</span>
         <span class="card-text">Esta empresa nos brinda una gran variedad de Cerdo en diferentes cortes.</span>
-        <button class="card-button"><a href="productos_carnicos_monaco.php">Ver Productos</a></button>
+        <button class="card-button"><a href="empresa_monaco.php">Ver Productos</a></button>
       </div>
 
       <div class="item">
         <img src="imagenes/logo_la_especial.webp" alt="" class="img-item">
         <span class="titulo-item">Carnes La Especial</span>
         <span class="card-text">Esta empresa nos brinda una gran variedad de Cerdo en diferentes cortes.</span>
-        <button class="card-button"><a href="productos_carnicos_la_especial.php">Ver Productos</a></button>
+        <button class="card-button"><a href="empresa_especial.php">Ver Productos</a></button>
       </div>
 
       <div class="item">
         <img src="imagenes/logo_prime.png" alt="" class="img-item">
         <span class="titulo-item">Carnicos Prime</span>
         <span class="card-text">Esta empresa nos brinda Chorizo así mismo una pequeña variedad de Cerdo.</span>
-        <button class="card-button"><a href="productos_carnicos_prime.php">Ver Productos</a></button>
+        <button class="card-button"><a href="empresa_prime.php">Ver Productos</a></button>
       </div>
     </div>
   </section>

@@ -24,8 +24,6 @@ $numeroCompra = $numeroCompra->fetch_assoc();
 
 $numeroProducto = $conexion->query("SELECT COUNT(*) FROM producto");
 $numeroProducto = $numeroProducto->fetch_assoc();
-
-
 ?>
 
 <!DOCTYPE html>

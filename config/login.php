@@ -6,7 +6,7 @@
     if(isset($_SESSION['rol'])){
         switch($_SESSION['rol']){
             case 971:
-                header('Location: ../dashboard.php');
+                header('Location: ../dashboard2.php');
                 break;
             case 214:
                 header('Location: ../index2.php');
@@ -23,10 +23,9 @@
     session_start();
     $_SESSION['user'] = $usuario;
     $_SESSION['rol'] = $row['rol'];
-
     switch($_SESSION['rol']){
         case 971:
-            header('location: ../dashboard.php');
+            header('location: ../dashboard2.php');
             break;
         case 214:
             header('Location: ../index2.php');

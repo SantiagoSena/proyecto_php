@@ -104,6 +104,7 @@
                 <input name="fecha_vencimiento" class="form-control" type="date" required>
               </div>
               <br>
+              
               <div class="col-12" style="text-align:left">
                     <label class="form-label">Categoria</label>
                     <select name="categoria" class="form-select" >
@@ -178,7 +179,7 @@
                 <td><?php echo $row["FechaVencimiento"];?></td>
                 <td><?php echo $row["Valorlibra"];?></td>
                 <td><?php echo $row["Saldo"];?></td>
-                <td><a href="actualizar.php?id_producto=<?php echo $row["IdProducto"];?>" class="fa fa-pencil-square-o bg-success p-2 text-white rounded btn " data-toggle="tooltip" title="Editar" aria-hidden="true"></a></td>
+                <td><a href="actualizar_producto.php?id_producto=<?php echo $row["IdProducto"];?>" class="fa fa-pencil-square-o bg-success p-2 text-white rounded btn " data-toggle="tooltip" title="Editar" aria-hidden="true"></a></td>
               </tr>
               <?php
                 } mysqli_free_result($resultado);
@@ -228,7 +229,7 @@
                 <td><?php echo $row["FechaVencimiento"];?></td>
                 <td><?php echo $row["Valorlibra"];?></td>
                 <td><?php echo $row["Saldo"];?></td>
-                <td><a href="actualizar.php?id_producto=<?php echo $row["IdProducto"];?>" class="fa fa-pencil-square-o bg-success p-2 text-white rounded btn " data-toggle="tooltip" title="Editar" aria-hidden="true"></a></td>
+                <td><a href="actualizar_producto.php?id_producto=<?php echo $row["IdProducto"];?>" class="fa fa-pencil-square-o bg-success p-2 text-white rounded btn " data-toggle="tooltip" title="Editar" aria-hidden="true"></a></td>
               </tr>
               <?php
                 } mysqli_free_result($resultado);
@@ -279,7 +280,7 @@
                 <td><?php echo $row["FechaVencimiento"];?></td>
                 <td><?php echo $row["Valorlibra"];?></td>
                 <td><?php echo $row["Saldo"];?></td>
-                <td><a href="actualizar.php?id_producto=<?php echo $row["IdProducto"];?>" class="fa fa-pencil-square-o bg-success p-2 text-white rounded btn " data-toggle="tooltip" title="Editar" aria-hidden="true"></a></td>
+                <td><a href="actualizar_producto.php?id_producto=<?php echo $row["IdProducto"];?>" class="fa fa-pencil-square-o bg-success p-2 text-white rounded btn " data-toggle="tooltip" title="Editar" aria-hidden="true"></a></td>
               </tr>
               <?php
                 } mysqli_free_result($resultado);
@@ -331,7 +332,7 @@
                 <td><?php echo $row["FechaVencimiento"];?></td>
                 <td><?php echo $row["Valorlibra"];?></td>
                 <td><?php echo $row["Saldo"];?></td>
-                <td><a href="actualizar.php?id_producto=<?php echo $row["IdProducto"];?>" class="fa fa-pencil-square-o bg-success p-2 text-white rounded btn " data-toggle="tooltip" title="Editar" aria-hidden="true"></a></td>
+                <td><a href="actualizar_producto.php?id_producto=<?php echo $row["IdProducto"];?>" class="fa fa-pencil-square-o bg-success p-2 text-white rounded btn " data-toggle="tooltip" title="Editar" aria-hidden="true"></a></td>
               </tr>
               <?php
                 } mysqli_free_result($resultado);

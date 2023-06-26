@@ -63,6 +63,7 @@
         <a class="nav-link text-white" href="calificaciones.php"><i class="fa fa-star mx-2" aria-hidden="true"></i>Atención Cliente</a>
         <hr class="bg-primary">
       </li>
+      
     </ul>
   </div>
 
@@ -100,7 +101,6 @@
                 $resultado = mysqli_query($conexion, $Usuario_cliente);
                 while($row = mysqli_fetch_assoc($resultado)){
               ?>
-              <tr>
                 <td><?php echo $row["IdUsuario"];?></td>
                 <td><?php echo $row["Rol"];?></td>
                 <td><?php echo $row["Estado"];?></td>
@@ -111,7 +111,7 @@
                 <td><?php echo $row["Telefono"];?></td>
                 <td><?php echo $row["Email"];?></td>
                 <td><?php echo $row["Contrasena"];?></td>
-                <td><i class="fa fa-pencil-square-o bg-success p-2 text-white rounded btn " data-toggle="tooltip" title="Editar" aria-hidden="true"></i></td>
+                
               </tr>
               <?php
                 } mysqli_free_result($resultado);
@@ -167,7 +167,7 @@
                 <td><?php echo $row["Telefono"];?></td>
                 <td><?php echo $row["Email"];?></td>
                 <td><?php echo $row["Contrasena"];?></td>
-                <td><i class="fa fa-pencil-square-o bg-success p-2 text-white rounded btn " data-toggle="tooltip" title="Editar" aria-hidden="true"></i></td>
+                
               </tr>
               <?php
                 } mysqli_free_result($resultado);
@@ -221,7 +221,7 @@
                 <td><?php echo $row["Telefono"];?></td>
                 <td><?php echo $row["Email"];?></td>
                 <td><?php echo $row["Contrasena"];?></td>
-                <td><i class="fa fa-pencil-square-o bg-success p-2 text-white rounded btn " data-toggle="tooltip" title="Editar" aria-hidden="true"></i></td>
+                
               </tr>
               <?php
                 } mysqli_free_result($resultado);
@@ -276,7 +276,7 @@
                 <td><?php echo $row["Telefono"];?></td>
                 <td><?php echo $row["Email"];?></td>
                 <td><?php echo $row["Contrasena"];?></td>
-                <td><i class="fa fa-pencil-square-o bg-success p-2 text-white rounded btn " data-toggle="tooltip" title="Editar" aria-hidden="true"></i></td>
+                
               </tr>
               <?php
                 } mysqli_free_result($resultado);
@@ -331,7 +331,7 @@
                 <td><?php echo $row["Telefono"];?></td>
                 <td><?php echo $row["Email"];?></td>
                 <td><?php echo $row["Contrasena"];?></td>
-                <td><i class="fa fa-pencil-square-o bg-success p-2 text-white rounded btn " data-toggle="tooltip" title="Editar" aria-hidden="true"></i></td>
+                
               </tr>
               <?php
                 } mysqli_free_result($resultado);

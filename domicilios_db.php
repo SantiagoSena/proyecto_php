@@ -96,35 +96,39 @@
                   <h1 class="modal-title fs-5 " id="exampleModalLabel">Nuevo Domicilio</h1>
                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <form class="was-validated row g-3 mx-5" action="#">
+                <form class="was-validated row g-3 mx-5" action="insertar_domicilio.php" method="post">
                 <div class="modal-body">
                   <div class="col-12" style="text-align:left">
                     <label class="form-label">IdDomicilio</label>
-                    <input class="form-control" type="number" required>
+                    <input name="id_domicilio" class="form-control" type="number" required>
                 </div>
                 <br>
                 <div class="col-12" style="text-align:left">
-                  <label class="form-label" >Nombre Cliente</label>
-                  <input class="form-control" type="text" required>
+                  <label class="form-label" >Fecha Emision</label>
+                  <input name="fecha_emision" class="form-control" type="date" required>
                 </div>
                 <br>
                 <div class="col-12" style="text-align:left">
-                  <label class="form-label">IdCliente</label>
-                  <input class="form-control" type="number" required>
+                  <label class="form-label">Id Cliente</label>
+                  <input name="id_cliente" class="form-control" type="number" required>
                 </div>
                 <br>
                 <div class="col-12" style="text-align:left">
-                  <label class="form-label">Telefono</label>
-                  <input class="form-control" type="number" required>
+                  <label class="form-label">Hora Entrega</label>
+                  <input name="hora_entrega" class="form-control" type="time" required>
                 </div>
                 <br>
                 <div class="col-12" style="text-align:left">
-                  <label class="form-label">Direccion</label>
-                  <input class="form-control" type="text" required>
+                  <label class="form-label">Id Venta</label>
+                  <input name="id_venta" class="form-control" type="number" required>
+                </div>
+                <br>
+                <div class="col-12" style="text-align:left">
+                  <label class="form-label">Descripción Domicilio</label>
+                  <input name="desc_domicilio" class="form-control" type="text" required>
                 </div>
                 </div>
                 <div class="modal-footer">
-                  <button type="button" class="btn btn-danger" data-bs-dismiss="modal" style="background-color: rgb(230, 72, 72);">Cerrar</button>
                   <button type="submit" class="btn btn-danger" style="background-color: rgb(230, 72, 72);">Agregar</button>
                 </div>
               </div>
@@ -156,7 +160,7 @@
                 <td><?php echo $row["HoraEntrega"];?></td>
                 <td><?php echo $row["IdVenta"];?></td>
                 <td><?php echo $row["DescDomicilio"];?></td>
-                <td><i class="fa fa-pencil-square-o bg-success p-2 text-white rounded btn " data-toggle="tooltip" title="Editar" aria-hidden="true"></i></td>
+                <td><a href="actualizar_domicilio.php?id_domicilio=<?php echo $row["IdDomicilio"];?>" class="fa fa-pencil-square-o bg-success p-2 text-white rounded btn " data-toggle="tooltip" title="Editar" aria-hidden="true"></a></td>
               </tr>
               <?php
                 } mysqli_free_result($resultado);

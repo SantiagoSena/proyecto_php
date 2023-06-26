@@ -32,7 +32,7 @@ if(!isset($_SESSION['rol'])){
     </div>
 
     <div class="login">
-      <p><?php echo $_SESSION['user']?></p>
+      <p><?php echo "Bienvenido" ." ". $_SESSION["user"];?></p>
       <div class="dropdown">
         <button class="dropbtn"><i class="uil uil-angle-down"></i></button>
         <div class="dropdown-content">

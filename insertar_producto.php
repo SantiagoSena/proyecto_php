@@ -14,6 +14,7 @@ $saldo = $_POST['saldo_producto'];
 //Actualizar los datos
 
 $insertar_producto = "INSERT INTO producto(IdProducto, FechaRegistro, NomProducto, NomCategoria, cantidad, FechaVencimiento, Valorlibra, Saldo) VALUES ('$id_producto', '$fecha_registro', '$nombre_producto', '$categoria', '$cantidad', '$fecha_vencimiento', '$valor_libra', '$saldo')";
+
 $resultado = mysqli_query($conexion, $insertar_producto);
 
 if ($resultado) {

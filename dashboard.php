@@ -1,181 +1,136 @@
 <?php
 require_once 'config/validate_session.php';
 require_once 'config/validate_roles.php';
-
-    if(!isset($_SESSION['rol'])){
+if(!isset($_SESSION['rol'])){
+    header('Location: ingresar.php');
+}else{
+    if($_SESSION['rol'] != 971 ){
         header('Location: ingresar.php');
-    }else{
-        if($_SESSION['rol'] != 971){
-            header('Location: ingresar.php');
-        }
     }
+}
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Css/dashboard.css">
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+    <link rel="stylesheet" href="Css/dashboard.css">
     <title>Dashboard</title>
 </head>
+
 <body>
-    <nav>
-        <div class="logo-name">
-            <div class="logo-image">
-                <img src="imagenes/logo_empresa.png" alt="">
+    <div class="container">
+        <nav>
+            <ul>
+                <li><a href="index.php" class="logo">
+                    <img src="imagenes/logo_asago1.png">
+                    <span class="nav-item">Asago S.A.S</span>
+                </a></li>
+
+                <li><a href="dashboard2.php">
+                    <i class="fas uil uil-estate"></i>
+                    <span class="nav-item">Dashboard</span>
+                </a></li>
+
+                <li><a href="usuarios2.php">
+                    <i class="fas uil uil-users-alt"></i>
+                    <span class="nav-item">Usuarios</span>
+                </a></li>
+
+                <li><a href="productos2.php">
+                    <i class="fas uil uil-shopping-bag"></i>
+                    <span class="nav-item">Productos</span>
+                </a></li>
+
+                <li><a href="ventas2.php">
+                    <i class="fas uil uil-bill"></i>
+                    <span class="nav-item">Ventas</span>
+                </a></li>
+
+                <li><a href="pedidos2.php">
+                    <i class="fas uil uil-truck"></i>
+                    <span class="nav-item">Pedidos</span>
+                </a></li>
+                
+                <li><a href="compras.php">
+                    <i class="fas uil uil-store"></i>
+                    <span class="nav-item">Compras</span>
+                </a></li>
+
+                <li><a href="proveedores.php">
+                    <i class="fas uil uil-user"></i>
+                    <span class="nav-item">Proveedores</span>
+                </a></li>
+
+                <li><a href="#" class="logout">
+                    <i class="fas uil uil-sign-out-alt"></i>
+                    <span class="nav-item">Cerrar Sesión</span>
+                </a></li>
+            </ul>
+        </nav>
+
+        <section class="main">
+            <div class="main-top">
+                <i class="fas uil uil-dashboard"></i>
+                <h1>Estadisticas Diarias</h1>
             </div>
-            <span class="logo_name"> Asago S.A.S</span>
-        </div>
 
-        <div class="menu-items">
-            <div class="navigation">
-                <ul> 
-                    <li><a href="">
-                        <i class="uil uil-estate"></i>
-                        <span class="link-name">Inicio</span>
-                    </a></li>
+            <section class="contenedor">
+                <div class="contenedor-items">
+                    <div class="item">
+                        <div class="iconBx">
+                            <i class="uil uil-users-alt"></i>
+                        </div>
+                        <span class="titulo-item">Usuarios</span>
+                        <span class="card-text">100</span>        
+                    </div>
 
-                    <li><a href="usuarios.php">
-                        <i class="uil uil-users-alt"></i>
-                        <span class="link-name">Usuarios</span>
-                    </a></li>
+                    <div class="item"> 
+                        <div class="iconBx">
+                            <i class="uil uil-shopping-bag"></i>
+                        </div>
+                        <span class="titulo-item">Productos</span>
+                        <span class="card-text">200</span>
+                    </div>
 
-                    <li><a href="productos.php">
-                        <i class="uil uil-shopping-bag"></i>
-                        <span class="link-name">Productos</span>
-                    </a></li>
+                    <div class="item">
+                        <div class="iconBx">
+                            <i class="uil uil-bill"></i>
+                        </div>
+                        <span class="titulo-item">Ventas</span>
+                        <span class="card-text">80</span>
+                    </div>
 
-                    <li><a href="ventas.php">
-                        <i class="uil uil-bill"></i>
-                        <span class="link-name">Ventas</span>
-                    </a></li>
+                    <div class="item">
+                        <div class="iconBx">
+                            <i class="uil uil-truck"></i>
+                        </div>
+                        <span class="titulo-item">Pedidos</span>
+                        <span class="card-text">60</span>
+                    </div>
 
-                    <li><a href="pedidos.php">
-                        <i class="uil uil-truck"></i>
-                        <span class="link-name">Pedidos</span>
-                    </a></li>
+                    <div class="item">
+                        <div class="iconBx">
+                            <i class="uil uil-store"></i>
+                        </div>
+                        <span class="titulo-item">Compras</span>
+                        <span class="card-text">50</span>
+                    </div>
 
-                    <li><a href="compras.php">
-                        <i class="uil uil-store"></i>
-                        <span class="link-name">Compras</span>
-                    </a></li>
-
-                    <li><a href="compras.php">
-                        <i class="uil uil-user"></i>
-                        <span class="link-name">Proveedores</span>
-                    </a></li>
-
-                    <li><a href="calificaciones.php">
-                        <i class="uil uil-book-reader"></i>
-                        <span class="link-name">Atención al Cliente</span>
-                    </a></li>
-
-                    <li class="close-seccion"><a href="index.php">
-                        <i class="uil uil-sign-out-alt"></i>
-                        <span class="link-name">Cerrar Sesión</span>
-                    </a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-    <div class="main">
-        <div class="topbar">
-            <div class="dropdown">
-                <?php echo "BIENVENIDO" . " " . $_SESSION['user'];?>
-                <button class="dropbtn"><i class="uil uil-angle-down"></i></button>
-                <div class="dropdown-content">
-                <a href="config/logout.php">Cerrar Sesion</a>
-                <a href="#">Opción 2</a>
-                <a href="#">Opción 3</a>
+                    <div class="item">
+                        <div class="iconBx">
+                            <i class="uil uil-user"></i>
+                        </div>
+                        <span class="titulo-item">Proveedores</span>
+                        <span class="card-text">10</span>
+                    </div>
                 </div>
-            </div>            
-        </div>
+            </section>
+        </section>
     </div>
-
-    <div class="title">
-        <i class="uil uil-tachometer-fast-alt"></i>
-        <h1></i>Estadisticas Diarias</h1>
-    </div>
-
-    <div class="cardBox">
-        <div class="card">
-            <div>
-                <div class="text">Usuarios</div>
-                <div class="number">100</div>
-            </div>
-            <div class="iconBx">
-                <i class="uil uil-users-alt"></i>
-            </div>
-        </div>
-
-        <div class="card">
-            <div>
-                <div class="text">Productos</div>
-                <div class="number">200</div>
-            </div>
-            <div class="iconBx">
-                <i class="uil uil-shopping-bag"></i>
-            </div>
-        </div>
-
-        <div class="card">
-            <div>
-                <div class="text">Ventas</div>
-                <div class="number">80</div>
-            </div>
-            <div class="iconBx">
-                <i class="uil uil-bill"></i>
-            </div>
-        </div>
-
-        <div class="card">
-            <div>
-                <div class="text">Pedidos</div>
-                <div class="number">60</div>
-            </div>
-                <div class="iconBx">
-                <i class="uil uil-truck"></i>
-            </div>
-        </div>
-    </div>
-
-        <div class="cardBox">
-            <div class="card">
-                <div>
-                    <span class="text">Compras</span>
-                    <div class="number">50</div>
-                </div>
-                <div class="iconBx">
-                    <i class="uil uil-store"></i>
-                </div>
-            </div>
-
-            <div class="card">
-                <div>
-                    <div class="text">Proveedores</div>
-                    <div class="number">10</div>
-                </div>
-                    <div class="iconBx">
-                    <i class="uil uil-user"></i>
-                </div>
-            </div>
-
-            <div class="card">
-                <div>
-                    <div class="text">Comentarios</div>
-                    <div class="number">56</div>
-                </div>
-                <div class="iconBx">
-                    <i class="uil uil-comments"></i>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-       
+    
 </body>
 </html>

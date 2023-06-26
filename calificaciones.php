@@ -91,7 +91,7 @@
                 <td><?php echo $row["IdCliente"];?></td>
                 <td><?php echo $row["PQRS"];?></td>
                 <td><?php echo $row["Calificacion"];?></td>
-                <td><i class="fa fa-pencil-square-o bg-success p-2 text-white rounded btn " data-toggle="tooltip" title="Editar" aria-hidden="true"></i></td>
+                
               </tr>
               <?php
                 } mysqli_free_result($resultado);

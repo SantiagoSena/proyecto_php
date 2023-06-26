@@ -24,7 +24,7 @@ require_once 'config/validate_roles.php';
       <img src="imagenes/logo_asago1.png" alt="">
       <h2>Asago S.A.S</h2>
     </div>
-
+    
     <div class="login">
       <p><?php echo "Bienvenido" ." ". $_COOKIE['usuario'];?></p>
       <div class="dropdown">
@@ -37,8 +37,10 @@ require_once 'config/validate_roles.php';
     <div class="carrito">
       <i class="uil uil-shopping-cart"></i>
     </div>
-  </header>
+    
 
+  </header>
+      
   <div class="carousel slide" id="carouselExampleAutoplaying" data-bs-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item active">

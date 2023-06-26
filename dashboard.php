@@ -5,7 +5,7 @@ include ("conexion.php");
 if(!isset($_SESSION['rol'])){
     header('Location: ingresar.php');
 }else{
-    if($_SESSION['rol'] != 971 && $_SESSION['rol']!=214){
+    if($_SESSION['rol'] != 971 && $_SESSION['rol']!=214 && $_SESSION['rol'] != 578){
         header('Location: ingresar.php');
     }
 }
@@ -48,12 +48,12 @@ $numeroProducto = $numeroProducto->fetch_assoc();
                     <span class="nav-item">Asago S.A.S</span>
                 </a></li>
 
-                <li><a href="dashboard2.php">
+                <li><a href="dashboard.php">
                     <i class="fas uil uil-estate"></i>
                     <span class="nav-item">Dashboard</span>
                 </a></li>
 
-                <li><a href="usuarios2.php">
+                <li><a href="usuarios.php">
                     <i class="fas uil uil-users-alt"></i>
                     <span class="nav-item">Usuarios</span>
                 </a></li>
@@ -63,12 +63,12 @@ $numeroProducto = $numeroProducto->fetch_assoc();
                     <span class="nav-item">Productos</span>
                 </a></li>
 
-                <li><a href="ventas2.php">
+                <li><a href="ventas.php">
                     <i class="fas uil uil-bill"></i>
                     <span class="nav-item">Ventas</span>
                 </a></li>
 
-                <li><a href="pedidos2.php">
+                <li><a href="pedidos.php">
                     <i class="fas uil uil-truck"></i>
                     <span class="nav-item">Pedidos</span>
                 </a></li>
@@ -94,7 +94,7 @@ $numeroProducto = $numeroProducto->fetch_assoc();
             <div class="main-top">
                 <i class="fas uil uil-dashboard"></i>
                 <h1>Estadisticas Diarias</h1>
-                <p> <?php echo "Bienvenido" ." ". $_COOKIE['usuario'];?></p>
+                <p><?php echo "Bienvenido" ." ". $_COOKIE['usuario'];?></p>
             </div>
 
             <section class="contenedor">

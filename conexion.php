@@ -1,6 +1,6 @@
 <?php
 
-$conexion = mysqli_connect("localhost", "root", "", "sasg");
+$conexion = mysqli_connect("localhost", "root", "", "asago");
 
 if (!$conexion) {
     die("Error de conexión: " . mysqli_connect_error());

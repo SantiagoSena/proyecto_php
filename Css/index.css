@@ -44,6 +44,7 @@ header{
 .dropdown {
     position: relative;
     display: inline-block;
+    
 }
 
 .dropbtn {
@@ -88,11 +89,9 @@ header{
     margin-left: 10px;
 }
 
-.carrito i{
-    padding: 10px;
-    margin-left: 10px;
+.carrito{
+    padding-left: 35px;
     font-size: 40px;
-    justify-content: space-between;
 }
 
 .carousel{

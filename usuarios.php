@@ -18,7 +18,7 @@
     <div class="container">
         <nav>
             <ul>
-                <li><a href="index.php" class="logo">
+                <li><a href="index2.php" class="logo">
                     <img src="imagenes/logo_asago1.png">
                     <span class="nav-item">Asago S.A.S</span>
                 </a></li>
@@ -58,7 +58,7 @@
                     <span class="nav-item">Proveedores</span>
                 </a></li>
 
-                <li><a href="#" class="logout">
+                <li><a href="config/logout.php" class="logout">
                     <i class="fas uil uil-sign-out-alt"></i>
                     <span class="nav-item">Cerrar Sesión</span>
                 </a></li>
@@ -73,6 +73,82 @@
                 <p><?php echo "Bienvenido" ." ". $_COOKIE['usuario'];?></p>
             </div>
 
+            <div class="boton-modal">
+                <label for="btn-modal">Registrar Usuario</label>
+            </div>
+
+            <input type="checkbox" id="btn-modal">
+            <div class="container-modal">
+                <div class="content-modal">
+                    <div class="tittle">
+                        <span>Registrar Usuario</span>
+                    </div>   
+
+                    <form action="" method="post">
+                        <div class="row">
+                            <label>Id</label>
+                            <input type="number" name="id_usuario" required>
+                        </div>
+
+                        <div class="row">
+                            <label>Rol</label>
+                            <select name="rol" class="form-select" >
+                                <option value="">Seleccione un Rol</option>
+                                <option value="201">Domiciliario</option>
+                                <option value="214">Vendedor</option>
+                                <option value="578">Administrador</option>
+                            </select>
+                        </div>
+
+                        <div class="row">
+                            <label>Estado</label>
+                            c
+                        </div>
+
+                        <div class="row">
+                            <label>Nombre</label>
+                            <input type="text" name="nombre" required>
+                        </div>
+
+                        <div class="row">
+                            <label>Apellido</label>
+                            <input type="text" name="apellido" required>
+                        </div>
+
+                        <div class="row">
+                            <label>Fecha Nacimiento</label>
+                            <input type="date" name="fe####" required>
+                        </div>
+
+                        <div class="row">
+                            <label>Dirección</label>
+                            <input type="text" name="###" required>
+                        </div>
+
+                        <div class="row">
+                            <label>Teléfono</label>
+                            <input type="number" name="###" required>
+                        </div>
+                        
+                        <div class="row">
+                            <label>Email</label>
+                            <input type="text" name="###" required>
+                        </div>
+
+                        <div class="row">
+                            <label>Contraseña</label>
+                            <input type="password" name="###" required>
+                        </div>
+
+                        <div class="row block">
+                            <input class="btn" type="submit" value="Registrar Usuario">
+                        </div>
+                    </form>                    
+                   
+                    <label for="btn-modal" class="cerrar-modal"></label>
+                </div>
+            </div>
+
             <section class="dashboard">
                 <div class="dashboard-list">
                     <h1>Clientes</h1>
@@ -84,7 +160,7 @@
                                 <th>Estado</th>
                                 <th>Nombres</th>
                                 <th>Apellido</th>
-                                <th>Fecha de Nacimiento</th>
+                                <th>Fecha Nacimiento</th>
                                 <th>Direccion</th>
                                 <th>Telefono</th>
                                 <th>Email</th>

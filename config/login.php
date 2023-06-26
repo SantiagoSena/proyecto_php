@@ -17,6 +17,9 @@
             case 578:
                 header('Location: ../index2.php');
                 break;
+            case 201:
+                header('Location: ../index2.php');
+                break;
             default:
         }
     }
@@ -40,6 +43,9 @@
             header('Location: ../index2.php');
             break;
         case 578:
+            header('Location: ../index2.php');
+            break;
+        case 201:
             header('Location: ../index2.php');
             break;
         default:

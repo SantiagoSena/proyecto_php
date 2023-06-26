@@ -32,9 +32,6 @@
       </div> 
     </div> 
           
-    <div class="carrito">
-      <i class="uil uil-shopping-cart"></i>
-    </div>
   </header>
   
   <div class="tittle">

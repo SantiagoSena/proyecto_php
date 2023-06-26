@@ -30,10 +30,7 @@
         <a href="registro.php">Registrarse</a>
       </div> 
     </div> 
-          
-    <div class="carrito">
-      <i class="uil uil-shopping-cart"></i>
-    </div>
+        
   </header>
 
   <div class="carousel slide" id="carouselExampleAutoplaying" data-bs-ride="carousel">

@@ -14,7 +14,7 @@
   <div class="container">
     <nav>
       <ul>
-        <li><a href="index.php" class="logo">
+        <li><a href="index2.php" class="logo">
           <img src="imagenes/logo_asago1.png">
           <span class="nav-item">Asago S.A.S</span>
         </a></li>
@@ -54,7 +54,7 @@
           <span class="nav-item">Proveedores</span>
         </a></li>
 
-        <li><a href="#" class="logout">
+        <li><a href="config/logout.php" class="logout">
           <i class="fas uil uil-sign-out-alt"></i>
           <span class="nav-item">Cerrar Sesión</span>
         </a></li>

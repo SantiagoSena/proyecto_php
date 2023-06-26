@@ -1,4 +1,14 @@
 <?php
+require_once 'config/validate_session.php';
+require_once 'config/validate_roles.php';
+include ("conexion.php");
+if(!isset($_SESSION['rol'])){
+    header('Location: ingresar.php');
+}else{
+    if($_SESSION['rol'] != 971 && $_SESSION['rol']!=214 && $_SESSION['rol'] != 578 && $_SESSION['rol'] != 201){
+        header('Location: ingresar.php');
+    }
+}
     include ("conexion.php");
     $pedido = "SELECT * FROM pedido"
 ?>
@@ -18,50 +28,84 @@
     <div class="container">
         <nav>
             <ul>
-                <li><a href="index.php" class="logo">
-                    <img src="imagenes/logo_asago1.png">
-                    <span class="nav-item">Asago S.A.S</span>
-                </a></li>
+            <?php
+      if($_SESSION['rol'] != 971  && $_SESSION['rol'] != 578){
+        echo '
+            <li><a href="index2.php" class="logo">
+            <img src="imagenes/logo_asago1.png">
+            <span class="nav-item">Asago S.A.S</span>
+            </a></li>
 
-                <li><a href="dashboard.php">
-                    <i class="fas uil uil-estate"></i>
-                    <span class="nav-item">Dashboard</span>
-                </a></li>
+            <li><a href="productos.php">
+            <i class="fas uil uil-shopping-bag"></i>
+            <span class="nav-item">Productos</span>
+            </a></li>
+    
+            <li><a href="ventas.php">
+            <i class="fas uil uil-bill"></i>
+            <span class="nav-item">Ventas</span>
+            </a></li>
+            
+            <li><a href="pedidos.php">
+            <i class="fas uil uil-truck"></i>
+            <span class="nav-item">Pedidos</span>
+            </a></li>
+            
+            <li><a href="config/logout.php" class="logout">
+            <i class="fas uil uil-sign-out-alt"></i>
+            <span class="nav-item">Cerrar Sesión</span>
+            </a></li>';
+        
+      }
+      elseif ($_SESSION['rol'] != 214 && $_SESSION['rol'] != 201) {
+        echo '
 
-                <li><a href="usuarios.php">
-                    <i class="fas uil uil-users-alt"></i>
-                    <span class="nav-item">Usuarios</span>
-                </a></li>
+        <li><a href="index2.php" class="logo">
+            <img src="imagenes/logo_asago1.png">
+            <span class="nav-item">Asago S.A.S</span>
+        </a></li>
 
-                <li><a href="productos.php">
-                    <i class="fas uil uil-shopping-bag"></i>
-                    <span class="nav-item">Productos</span>
-                </a></li>
+        <li><a href="dashboard.php">
+            <i class="fas uil uil-estate"></i>
+            <span class="nav-item">Dashboard</span>
+        </a></li>
 
-                <li><a href="ventas.php">
-                    <i class="fas uil uil-bill"></i>
-                    <span class="nav-item">Ventas</span>
-                </a></li>
+        <li><a href="usuarios.php">
+            <i class="fas uil uil-users-alt"></i>
+            <span class="nav-item">Usuarios</span>
+        </a></li>
 
-                <li><a href="pedidos.php">
-                    <i class="fas uil uil-truck"></i>
-                    <span class="nav-item">Pedidos</span>
-                </a></li>
-                
-                <li><a href="compras.php">
-                    <i class="fas uil uil-store"></i>
-                    <span class="nav-item">Compras</span>
-                </a></li>
+        <li><a href="productos.php">
+            <i class="fas uil uil-shopping-bag"></i>
+            <span class="nav-item">Productos</span>
+        </a></li>
 
-                <li><a href="proveedores.php">
-                    <i class="fas uil uil-user"></i>
-                    <span class="nav-item">Proveedores</span>
-                </a></li>
+        <li><a href="ventas.php">
+            <i class="fas uil uil-bill"></i>
+            <span class="nav-item">Ventas</span>
+        </a></li>
 
-                <li><a href="#" class="logout">
-                    <i class="fas uil uil-sign-out-alt"></i>
-                    <span class="nav-item">Cerrar Sesión</span>
-                </a></li>
+        <li><a href="pedidos.php">
+            <i class="fas uil uil-truck"></i>
+            <span class="nav-item">Pedidos</span>
+        </a></li>
+        
+        <li><a href="compras.php">
+            <i class="fas uil uil-store"></i>
+            <span class="nav-item">Compras</span>
+        </a></li>
+
+        <li><a href="proveedores.php">
+            <i class="fas uil uil-user"></i>
+            <span class="nav-item">Proveedores</span>
+        </a></li>
+        
+        <li><a href="config/logout.php" class="logout">
+        <i class="fas uil uil-sign-out-alt"></i>
+        <span class="nav-item">Cerrar Sesión</span>
+        </a></li>';
+      }
+    ?>  
             </ul>
         </nav>
 
@@ -72,10 +116,17 @@
                 <h1>Listado Pedidos</h1>
                 <p><?php echo "Bienvenido" ." ". $_COOKIE['usuario'];?></p>
             </div>
+            <?php
+      if($_SESSION['rol'] != 971  && $_SESSION['rol'] != 578){
+        echo '';
+        }
+        elseif ($_SESSION['rol'] != 214 && $_SESSION['rol'] != 201) {
+            echo ' <div class="boton-modal">
+            <label for="btn-modal">Agregar Pedido</label>
+        </div>';
+        }
+            ?>
             
-            <div class="boton-modal">
-                <label for="btn-modal">Agregar Pedido</label>
-            </div>
 
             <input type="checkbox" id="btn-modal">
             <div class="container-modal">

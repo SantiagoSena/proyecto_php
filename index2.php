@@ -32,12 +32,16 @@ require_once 'config/validate_roles.php';
         <div class="dropdown-content">
         <a href="config/logout.php">Cerrar Sesion</a>
       </div> 
-    </div> 
-          
-    <div class="carrito">
-      <i class="uil uil-shopping-cart"></i>
-    </div>
-    
+    </div>  
+    <?php
+      if($_SESSION['rol'] != 971 && $_SESSION['rol'] !=214 && $_SESSION['rol'] != 578 && $_SESSION['rol'] !=201){
+        echo '';
+        
+      }
+      elseif ($_SESSION['rol'] != 354) {
+        echo '<a href="dashboard.php" class="carrito" data-toggle="tooltip" title="Dashboard"><i class="fa fa-database"></i></a>';
+      }
+    ?>  
 
   </header>
       

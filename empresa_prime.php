@@ -17,7 +17,7 @@
     </div>
 
     <div class="login">
-      <p>BIENVENIDO ADMINISTRADOR</p>
+    <p><?php echo "Bienvenido" ." ". $_COOKIE['usuario'];?></p>
       <div class="dropdown">
 
       <p></p>

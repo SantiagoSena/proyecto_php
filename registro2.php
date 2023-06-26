@@ -5,35 +5,33 @@
 <!DOCTYPE php>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registro Administrador</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <style>
-        body {
-          background-image: url(imagenes/fondo_blanco_pagina2.jpg);
-          background-size: cover;
-          background-repeat: no-repeat;
-          background-position: center;
-          background-attachment: fixed;
-        }
-    </style>
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="Css/index.css">
+  <title>Registro Usuario</title>
 </head>
-<body>
-    <nav class="navbar " style="background-color: rgb(194, 16, 16);" data-bs-theme="dark" >
-        <div class="container-fluid">
-          <a class="navbar-brand" href="ingresar.php">
-            <img src="imagenes/logo_empresa.png" alt="Logo" width="70" height="70" class="d-inline-block align-text-top">
-            ASAGO</a>
-        </div>
-      </nav>
+<body> 
+<header>
+    <div class="logo">
+      <a href="index.php"><img src="imagenes/logo_asago1.png" alt=""></a>
+      <h2>Asago S.A.S</h2>
+    </div>
+
+ 
+
+      <p></p>
+  </header>
+    
     
     <div class="container col-sm-6 col-md-6 col-lg-5 col-xl-5">
         <div class="card mt-4">
             <div class="card-header">
-                <i class="fa fa-user fa-2x text-danger me-3 " id="card" aria-hidden="true"></i><h4>Registrarse Administrador</h4>
+                <i class="fa fa-user fa-2x text-danger me-3 " id="card" aria-hidden="true"></i><h4>Registro Administrador</h4>
             </div>
             <div class="card-body mt-3 text-center">
                 <h5 class="card-tittle"> Ingresa tus datos para</h5>

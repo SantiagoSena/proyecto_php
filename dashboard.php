@@ -1,13 +1,31 @@
 <?php
 require_once 'config/validate_session.php';
 require_once 'config/validate_roles.php';
+include ("conexion.php");
 if(!isset($_SESSION['rol'])){
     header('Location: ingresar.php');
 }else{
-    if($_SESSION['rol'] != 971 ){
+    if($_SESSION['rol'] != 971 && $_SESSION['rol']!=214){
         header('Location: ingresar.php');
     }
 }
+
+$numeroUsuario = $conexion->query("SELECT COUNT(*) FROM usuarios");
+$numeroUsuario = $numeroUsuario->fetch_assoc();
+
+$numeroVenta = $conexion->query("SELECT COUNT(*) FROM venta");
+$numeroVenta = $numeroVenta->fetch_assoc();
+
+$numeroPedido = $conexion->query("SELECT COUNT(*) FROM pedido");
+$numeroPedido = $numeroPedido->fetch_assoc();
+
+$numeroCompra = $conexion->query("SELECT COUNT(*) FROM compra");
+$numeroCompra = $numeroCompra->fetch_assoc();
+
+$numeroProducto = $conexion->query("SELECT COUNT(*) FROM producto");
+$numeroProducto = $numeroProducto->fetch_assoc();
+
+
 ?>
 
 <!DOCTYPE html>
@@ -25,7 +43,7 @@ if(!isset($_SESSION['rol'])){
     <div class="container">
         <nav>
             <ul>
-                <li><a href="index.php" class="logo">
+                <li><a href="#" class="logo">
                     <img src="imagenes/logo_asago1.png">
                     <span class="nav-item">Asago S.A.S</span>
                 </a></li>
@@ -40,7 +58,7 @@ if(!isset($_SESSION['rol'])){
                     <span class="nav-item">Usuarios</span>
                 </a></li>
 
-                <li><a href="productos2.php">
+                <li><a href="productos.php">
                     <i class="fas uil uil-shopping-bag"></i>
                     <span class="nav-item">Productos</span>
                 </a></li>
@@ -65,7 +83,7 @@ if(!isset($_SESSION['rol'])){
                     <span class="nav-item">Proveedores</span>
                 </a></li>
 
-                <li><a href="#" class="logout">
+                <li><a href="config/logout.php" class="logout">
                     <i class="fas uil uil-sign-out-alt"></i>
                     <span class="nav-item">Cerrar Sesión</span>
                 </a></li>
@@ -76,6 +94,7 @@ if(!isset($_SESSION['rol'])){
             <div class="main-top">
                 <i class="fas uil uil-dashboard"></i>
                 <h1>Estadisticas Diarias</h1>
+                <p> <?php echo "Bienvenido" ." ". $_COOKIE['usuario'];?></p>
             </div>
 
             <section class="contenedor">
@@ -85,7 +104,7 @@ if(!isset($_SESSION['rol'])){
                             <i class="uil uil-users-alt"></i>
                         </div>
                         <span class="titulo-item">Usuarios</span>
-                        <span class="card-text">100</span>        
+                        <span class="card-text"><?php echo $numeroUsuario['COUNT(*)'];?></span>       
                     </div>
 
                     <div class="item"> 
@@ -93,7 +112,7 @@ if(!isset($_SESSION['rol'])){
                             <i class="uil uil-shopping-bag"></i>
                         </div>
                         <span class="titulo-item">Productos</span>
-                        <span class="card-text">200</span>
+                        <span class="card-text"><?php echo $numeroProducto['COUNT(*)'];?></span>
                     </div>
 
                     <div class="item">
@@ -101,7 +120,7 @@ if(!isset($_SESSION['rol'])){
                             <i class="uil uil-bill"></i>
                         </div>
                         <span class="titulo-item">Ventas</span>
-                        <span class="card-text">80</span>
+                        <span class="card-text"><?php echo $numeroVenta['COUNT(*)'];?></span>
                     </div>
 
                     <div class="item">
@@ -109,7 +128,7 @@ if(!isset($_SESSION['rol'])){
                             <i class="uil uil-truck"></i>
                         </div>
                         <span class="titulo-item">Pedidos</span>
-                        <span class="card-text">60</span>
+                        <span class="card-text"><?php echo $numeroPedido['COUNT(*)'];?></span>
                     </div>
 
                     <div class="item">
@@ -117,15 +136,7 @@ if(!isset($_SESSION['rol'])){
                             <i class="uil uil-store"></i>
                         </div>
                         <span class="titulo-item">Compras</span>
-                        <span class="card-text">50</span>
-                    </div>
-
-                    <div class="item">
-                        <div class="iconBx">
-                            <i class="uil uil-user"></i>
-                        </div>
-                        <span class="titulo-item">Proveedores</span>
-                        <span class="card-text">10</span>
+                        <span class="card-text">465</span>
                     </div>
                 </div>
             </section>

@@ -64,6 +64,7 @@
     <section class="main">
       <div class="main-top">
         <h1>Proveedores</h1>
+        <p><?php echo "Bienvenido" ." ". $_COOKIE['usuario'];?></p>
       </div>
 
       <section class="contenedor">

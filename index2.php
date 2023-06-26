@@ -1,13 +1,7 @@
 <?php
 require_once 'config/validate_session.php';
 require_once 'config/validate_roles.php';
-if(!isset($_SESSION['rol'])){
-    header('Location: ingresar.php');
-}else{
-    if($_SESSION['rol'] != 354 && $_SESSION['rol'] != 214){
-        header('Location: ingresar.php');
-    }
-}
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -32,7 +26,7 @@ if(!isset($_SESSION['rol'])){
     </div>
 
     <div class="login">
-      <p><?php echo "Bienvenido" ." ". $_SESSION["user"];?></p>
+      <p><?php echo "Bienvenido" ." ". $_COOKIE['usuario'];?></p>
       <div class="dropdown">
         <button class="dropbtn"><i class="uil uil-angle-down"></i></button>
         <div class="dropdown-content">

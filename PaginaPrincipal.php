@@ -116,7 +116,7 @@
             
       <div class="box">
         <h2>SOBRE NOSOTROS</h2>
-        <p>Nos dedicamos a la comercializacion de Pollo, Carne y Queso, cortamos la carne a tu gusto y empacamos al vacío como tu lo quieras, Productos de calidad y terneza.
+        <p>Nos dedicamos a la comercializacion de Pollo, Carne y Cerdo, cortamos la carne a tu gusto y empacamos al vacío como tu lo quieras, Productos de calidad y terneza.
         Escríbenos ahora y olvidate de llegar a separar tus porciones, nosotros lo hacemos por ti.</p>
       </div>
 

@@ -147,7 +147,7 @@ display: flex;
 .contenedor-proveedores .item{
     display: flex;
     overflow: hidden;
-    width: 240px;
+    width: 265px;
     height: 380px;
     padding: 1rem;
     margin: 2rem;
@@ -170,7 +170,7 @@ display: flex;
 .contenedor-items .item{
     display: flex;
     overflow: hidden;
-    width: 250px;
+    width: 255px;
     height: 180px;
     padding: 1rem;
     margin: 1rem;

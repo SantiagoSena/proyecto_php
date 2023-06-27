@@ -102,7 +102,6 @@
 
                         <div class="row">
                             <label>Estado</label>
-                            c
                         </div>
 
                         <div class="row">
@@ -157,7 +156,6 @@
                             <tr>                              
                                 <th>Id</th>
                                 <th>Rol</th>
-                                <th>Estado</th>
                                 <th>Nombres</th>
                                 <th>Apellido</th>
                                 <th>Fecha Nacimiento</th>
@@ -177,7 +175,6 @@
                         <tr>
                             <td><?php echo $row["IdUsuario"];?></td>
                             <td><?php echo $row["Rol"];?></td>
-                            <td><?php echo $row["Estado"];?></td>
                             <td><?php echo $row["Nombres"];?></td>
                             <td><?php echo $row["Apellidos"];?></td>
                             <td><?php echo $row["FechaNacimiento"];?></td>
@@ -203,7 +200,6 @@
                             <tr>                                  
                                 <th>Id</th>
                                 <th>Rol</th>
-                                <th>Estado</th>
                                 <th>Nombres</th>
                                 <th>Apellido</th>
                                 <th>Fecha de Nacimiento</th>
@@ -222,7 +218,6 @@
                         <tr>
                             <td><?php echo $row["IdUsuario"];?></td>
                             <td><?php echo $row["Rol"];?></td>
-                            <td><?php echo $row["Estado"];?></td>
                             <td><?php echo $row["Nombres"];?></td>
                             <td><?php echo $row["Apellidos"];?></td>
                             <td><?php echo $row["FechaNacimiento"];?></td>
@@ -248,7 +243,6 @@
                             <tr>                                  
                                 <th>Id</th>
                                 <th>Rol</th>
-                                <th>Estado</th>
                                 <th>Nombres</th>
                                 <th>Apellido</th>
                                 <th>Fecha de Nacimiento</th>
@@ -267,7 +261,6 @@
                         <tr>
                             <td><?php echo $row["IdUsuario"];?></td>
                             <td><?php echo $row["Rol"];?></td>
-                            <td><?php echo $row["Estado"];?></td>
                             <td><?php echo $row["Nombres"];?></td>
                             <td><?php echo $row["Apellidos"];?></td>
                             <td><?php echo $row["FechaNacimiento"];?></td>
@@ -293,7 +286,6 @@
                             <tr>                                  
                                 <th>Id</th>
                                 <th>Rol</th>
-                                <th>Estado</th>
                                 <th>Nombres</th>
                                 <th>Apellido</th>
                                 <th>Fecha de Nacimiento</th>
@@ -312,7 +304,6 @@
                         <tr>
                             <td><?php echo $row["IdUsuario"];?></td>
                             <td><?php echo $row["Rol"];?></td>
-                            <td><?php echo $row["Estado"];?></td>
                             <td><?php echo $row["Nombres"];?></td>
                             <td><?php echo $row["Apellidos"];?></td>
                             <td><?php echo $row["FechaNacimiento"];?></td>
@@ -338,7 +329,6 @@
                             <tr>                                  
                                 <th>Id</th>
                                 <th>Rol</th>
-                                <th>Estado</th>
                                 <th>Nombres</th>
                                 <th>Apellido</th>
                                 <th>Fecha de Nacimiento</th>
@@ -357,7 +347,6 @@
                         <tr>
                             <td><?php echo $row["IdUsuario"];?></td>
                             <td><?php echo $row["Rol"];?></td>
-                            <td><?php echo $row["Estado"];?></td>
                             <td><?php echo $row["Nombres"];?></td>
                             <td><?php echo $row["Apellidos"];?></td>
                             <td><?php echo $row["FechaNacimiento"];?></td>

@@ -12,10 +12,7 @@
     <title>Productos Carne</title>
   
 </head>
-
 <body>
-  
-
   <header>
     <div class="logo">
       <a href="index.php"><img src="imagenes/logo_asago1.png" alt=""></a>
@@ -31,7 +28,6 @@
         <a href="registro2.php">Registrarse</a>
       </div> 
     </div> 
-          
   </header>
   
   <div class="tittle">

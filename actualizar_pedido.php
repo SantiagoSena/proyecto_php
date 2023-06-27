@@ -71,7 +71,7 @@
                 ?>
             </tbody>
           </table>
-          <input class="btn btn-danger" type="submit" value="Actualizar" style="background-color: rgb(230, 72, 72);">
+          <input class="btn-actualizar" type="submit" value="Actualizar" style="background-color: rgb(230, 72, 72);">
         </form>
       </div>
     </div>

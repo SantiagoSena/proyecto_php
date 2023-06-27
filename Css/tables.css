@@ -157,6 +157,17 @@ display: flex;
     bottom: 0;
 }
 
+.dashboard-list .btn-actualizar{
+    padding: 10px;
+    color: white;
+    border: none;
+    font-weight: bold;
+    margin-top: 10px;
+    border-radius: 25px;
+    cursor: pointer;
+    background-color: rgb(194, 16, 16);
+}
+
 .table{
     border-collapse: collapse;
     margin: 10px 0;

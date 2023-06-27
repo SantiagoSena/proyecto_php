@@ -217,7 +217,7 @@ if(!isset($_SESSION['rol'])){
                                 <td><?php echo $row["FechaVencimiento"];?></td>
                                 <td><?php echo "$". $row["Valorlibra"];?></td>
                                 <td><?php echo "$". $row["Saldo"];?></td>
-                                <td><a href="actualizar_producto.php?id_producto=<?php echo $row["IdProducto"];?>"data-toggle="tooltip" title="Editar" aria-hidden="true"><i class="uil uil-edit"></i></a></td>
+                                <td><a href="actualizar_producto.php?id_producto=<?php echo $row["IdProducto"];?>" class="edit" data-toggle="tooltip" title="Editar" aria-hidden="true"><i class="uil uil-edit"></i></a></td>
                             </tr>
                             <?php
                             } mysqli_free_result($resultado);
@@ -261,7 +261,7 @@ if(!isset($_SESSION['rol'])){
                                 <td><?php echo $row["FechaVencimiento"];?></td>
                                 <td><?php echo "$". $row["Valorlibra"];?></td>
                                 <td><?php echo "$". $row["Saldo"];?></td>
-                                <td><a href="actualizar_producto.php?id_producto=<?php echo $row["IdProducto"];?>" data-toggle="tooltip" title="Editar" aria-hidden="true"><i class="uil uil-edit"></i></a></td>
+                                <td><a href="actualizar_producto.php?id_producto=<?php echo $row["IdProducto"];?>" class="edit" data-toggle="tooltip" title="Editar" aria-hidden="true"><i class="uil uil-edit"></i></a></td>
                             </tr>
                             <?php
                             } mysqli_free_result($resultado);
@@ -305,7 +305,7 @@ if(!isset($_SESSION['rol'])){
                                 <td><?php echo $row["FechaVencimiento"];?></td>
                                 <td><?php echo "$". $row["Valorlibra"];?></td>
                                 <td><?php echo "$". $row["Saldo"];?></td>
-                                <td><a href="actualizar_producto.php?id_producto=<?php echo $row["IdProducto"];?>" data-toggle="tooltip" title="Editar" aria-hidden="true"><i class="uil uil-edit"></i></a></td>
+                                <td><a href="actualizar_producto.php?id_producto=<?php echo $row["IdProducto"];?>" class="edit" data-toggle="tooltip" title="Editar" aria-hidden="true"><i class="uil uil-edit"></i></a></td>
                             </tr>
                             <?php
                                 } mysqli_free_result($resultado);
@@ -349,7 +349,7 @@ if(!isset($_SESSION['rol'])){
                                 <td><?php echo $row["FechaVencimiento"];?></td>
                                 <td><?php echo "$". $row["Valorlibra"];?></td>
                                 <td><?php echo "$". $row["Saldo"];?></td>
-                                <td><a href="actualizar_producto.php?id_producto=<?php echo $row["IdProducto"];?>" data-toggle="tooltip" title="Editar" aria-hidden="true"><i class="uil uil-edit"></i></a></td>
+                                <td><a href="actualizar_producto.php?id_producto=<?php echo $row["IdProducto"];?>" class="edit" data-toggle="tooltip" title="Editar" aria-hidden="true"><i class="uil uil-edit"></i></a></td>
                             </tr>
                             <?php
                                 } mysqli_free_result($resultado);

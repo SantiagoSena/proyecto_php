@@ -167,7 +167,7 @@ $numeroProducto = $numeroProducto->fetch_assoc();
                             <i class="uil uil-store"></i>
                         </div>
                         <span class="titulo-item">Compras</span>
-                        <span class="card-text">465</span>
+                        <span class="card-text"><?php echo $numeroCompra['COUNT(*)'];?></span>
                     </div>
                 </div>
             </section>

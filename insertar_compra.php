@@ -3,24 +3,24 @@ include("conexion.php");
 
 $id_compra = $_POST['id_compra'];
 $fecha_emision = $_POST['fecha_emision'];
-$nombre_producto = $_POST['nombre_producto'];
-$categoria = $_POST['categoria'];
-$cantidad = $_POST['cantidad'];
-$fecha_vencimiento = $_POST['fecha_vencimiento'];
-$valor_libra = $_POST['valor_libra'];
-$saldo = $_POST['saldo_producto'];
+$id_proveedor = $_POST['id_proveedor'];
+$id_producto = $_POST['id_producto'];
+$descripcion = $_POST['descripcion'];
+$valor_producto = $_POST['valor_producto'];
+$subtotal = $_POST['subtotal'];
+$valor_total = $_POST['valor_total'];
 
 
 //Actualizar los datos
 
-$insertar_producto = "INSERT INTO producto(IdProducto, FechaRegistro, NomProducto, NomCategoria, cantidad, FechaVencimiento, Valorlibra, Saldo) VALUES ('$id_compra', '$fecha_emision', '$nombre_producto', '$categoria', '$cantidad', '$fecha_vencimiento', '$valor_libra', '$saldo')";
+$insertar_compra = "INSERT INTO compra(IdCompra, FechaEmision, IdProveedor, IdProducto, Descripcion, ValorProducto, SubTotal, ValorTotal) VALUES ('$id_compra', '$fecha_emision', '$id_proveedor', '$id_producto', '$descripcion', '$valor_producto', '$subtotal', '$valor_total')";
 
-$resultado = mysqli_query($conexion, $insertar_producto);
+$resultado = mysqli_query($conexion, $insertar_compra);
 
 if ($resultado) {
-    echo "<script>alert('Se ha registrado el producto con éxito'); window.location='/productos.php'</script>";
+    echo "<script>alert('Se ha registrado la compra con éxito'); window.location='/compras.php'</script>";
 } else {
-    echo "<script>alert('No se pudo registrar el producto: " . mysqli_error($conexion) . "'); window.history.go(-1);</script>";
+    echo "<script>alert('No se pudo registrar la compra: " . mysqli_error($conexion) . "'); window.history.go(-1);</script>";
 }
 
 ?>

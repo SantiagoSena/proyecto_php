@@ -118,7 +118,7 @@
 
                         <div class="row">
                             <label>SubTotal</label>
-                            <input type="number" name="sub_total"  required>
+                            <input type="number" name="subtotal"  required>
                         </div>
 
                         <div class="row">

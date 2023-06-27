@@ -117,15 +117,15 @@ if(!isset($_SESSION['rol'])){
                 <p><?php echo "Bienvenido" ." ". $_COOKIE['usuario'];?></p>
             </div>
             <?php
-      if($_SESSION['rol'] != 971  && $_SESSION['rol'] != 578){
-        echo '';
-        }
-        elseif ($_SESSION['rol'] != 214 && $_SESSION['rol'] != 201) {
-            echo ' <div class="boton-modal">
-            <label for="btn-modal">Agregar Pedido</label>
-        </div>';
-        }
-            ?>
+            if($_SESSION['rol'] != 971  && $_SESSION['rol'] != 578){
+                echo '';
+                }
+                elseif ($_SESSION['rol'] != 214 && $_SESSION['rol'] != 201) {
+                    echo ' <div class="boton-modal">
+                    <label for="btn-modal">Agregar Pedido</label>
+                </div>';
+                }
+                    ?>
             
 
             <input type="checkbox" id="btn-modal">
@@ -135,7 +135,7 @@ if(!isset($_SESSION['rol'])){
                         <span>Registrar Pedido</span>
                     </div>   
 
-                    <form action="config/login.php" method="post">
+                    <form action="insertar_pedido.php" method="post">
                         <div class="row">
                             <label>ID Pedido</label>
                             <input type="number" name="id_pedido" required>

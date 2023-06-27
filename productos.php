@@ -133,7 +133,7 @@ if(!isset($_SESSION['rol'])){
                         <span>Registrar Producto</span>
                     </div>   
 
-                    <form action="config/login.php" method="post">
+                    <form action="insertar_producto.php" method="post">
                         <div class="row">
                             <label>ID Producto</label>
                             <input type="number" name="id_producto" required>
@@ -162,7 +162,7 @@ if(!isset($_SESSION['rol'])){
 
                         <div class="row">
                             <label>Cantidad</label>
-                            <input type="number" name="categoria" required>
+                            <input type="number" name="cantidad" required>
                         </div>
 
                         <div class="row">
@@ -170,9 +170,14 @@ if(!isset($_SESSION['rol'])){
                             <input type="date" name="fecha_vencimiento" required>
                         </div>
 
-                        <div class="row block">
+                        <div class="row">
                             <label>Valor Libra</label>
                             <input type="number" name="valor_libra" required>
+                        </div>
+
+                        <div class="row">
+                            <label>Saldo</label>
+                            <input type="number" name="saldo_producto" required>
                         </div>
 
                         <div class="row block">
@@ -218,6 +223,7 @@ if(!isset($_SESSION['rol'])){
                                 <td><?php echo "$". $row["Valorlibra"];?></td>
                                 <td><?php echo "$". $row["Saldo"];?></td>
                                 <td><a href="actualizar_producto.php?id_producto=<?php echo $row["IdProducto"];?>" class="edit" data-toggle="tooltip" title="Editar" aria-hidden="true"><i class="uil uil-edit"></i></a></td>
+                            
                             </tr>
                             <?php
                             } mysqli_free_result($resultado);

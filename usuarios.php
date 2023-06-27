@@ -73,81 +73,6 @@
                 <p><?php echo "Bienvenido" ." ". $_COOKIE['usuario'];?></p>
             </div>
 
-            <div class="boton-modal">
-                <label for="btn-modal">Registrar Usuario</label>
-            </div>
-
-            <input type="checkbox" id="btn-modal">
-            <div class="container-modal">
-                <div class="content-modal">
-                    <div class="tittle">
-                        <span>Registrar Usuario</span>
-                    </div>   
-
-                    <form action="" method="post">
-                        <div class="row">
-                            <label>Id</label>
-                            <input type="number" name="id_usuario" required>
-                        </div>
-
-                        <div class="row">
-                            <label>Rol</label>
-                            <select name="rol" class="form-select" >
-                                <option value="">Seleccione un Rol</option>
-                                <option value="201">Domiciliario</option>
-                                <option value="214">Vendedor</option>
-                                <option value="578">Administrador</option>
-                            </select>
-                        </div>
-
-                        <div class="row">
-                            <label>Estado</label>
-                        </div>
-
-                        <div class="row">
-                            <label>Nombre</label>
-                            <input type="text" name="nombre" required>
-                        </div>
-
-                        <div class="row">
-                            <label>Apellido</label>
-                            <input type="text" name="apellido" required>
-                        </div>
-
-                        <div class="row">
-                            <label>Fecha Nacimiento</label>
-                            <input type="date" name="fe####" required>
-                        </div>
-
-                        <div class="row">
-                            <label>Dirección</label>
-                            <input type="text" name="###" required>
-                        </div>
-
-                        <div class="row">
-                            <label>Teléfono</label>
-                            <input type="number" name="###" required>
-                        </div>
-                        
-                        <div class="row">
-                            <label>Email</label>
-                            <input type="text" name="###" required>
-                        </div>
-
-                        <div class="row">
-                            <label>Contraseña</label>
-                            <input type="password" name="###" required>
-                        </div>
-
-                        <div class="row block">
-                            <input class="btn" type="submit" value="Registrar Usuario">
-                        </div>
-                    </form>                    
-                   
-                    <label for="btn-modal" class="cerrar-modal"></label>
-                </div>
-            </div>
-
             <section class="dashboard">
                 <div class="dashboard-list">
                     <h1>Clientes</h1>
@@ -156,13 +81,15 @@
                             <tr>                              
                                 <th>Id</th>
                                 <th>Rol</th>
+                                <!--<th>Estado</th>-->
                                 <th>Nombres</th>
                                 <th>Apellido</th>
                                 <th>Fecha Nacimiento</th>
                                 <th>Direccion</th>
                                 <th>Telefono</th>
                                 <th>Email</th>
-                                <th>Contraseña</th> 
+                                <th>Contraseña</th>
+                                <th></th>
                             </tr>
                         </thead>
 
@@ -175,6 +102,7 @@
                         <tr>
                             <td><?php echo $row["IdUsuario"];?></td>
                             <td><?php echo $row["Rol"];?></td>
+                           <!--<td><?php echo $row["Estado"];?></td>-->
                             <td><?php echo $row["Nombres"];?></td>
                             <td><?php echo $row["Apellidos"];?></td>
                             <td><?php echo $row["FechaNacimiento"];?></td>
@@ -182,6 +110,7 @@
                             <td><?php echo $row["Telefono"];?></td>
                             <td><?php echo $row["Email"];?></td>
                             <td><?php echo $row["Contrasena"];?></td>
+                            <td><a href="actualizar_usuario.php?id_usuario=<?php echo $row["IdUsuario"];?>"data-toggle="tooltip" title="Editar" aria-hidden="true"><i class="uil uil-edit"></i></a></td>
                         </tr>
                         <?php
                             } mysqli_free_result($resultado);
@@ -200,13 +129,15 @@
                             <tr>                                  
                                 <th>Id</th>
                                 <th>Rol</th>
+                                <th>Estado</th>
                                 <th>Nombres</th>
                                 <th>Apellido</th>
                                 <th>Fecha de Nacimiento</th>
                                 <th>Dirección</th>
                                 <th>Teléfono</th>
                                 <th>Email</th>
-                                <th>Contraseña</th>  
+                                <th>Contraseña</th>
+                                <th></th>  
                             </tr>
                         </thead>
 
@@ -218,6 +149,7 @@
                         <tr>
                             <td><?php echo $row["IdUsuario"];?></td>
                             <td><?php echo $row["Rol"];?></td>
+                            <td><?php echo $row["Estado"];?></td>
                             <td><?php echo $row["Nombres"];?></td>
                             <td><?php echo $row["Apellidos"];?></td>
                             <td><?php echo $row["FechaNacimiento"];?></td>
@@ -225,6 +157,7 @@
                             <td><?php echo $row["Telefono"];?></td>
                             <td><?php echo $row["Email"];?></td>
                             <td><?php echo $row["Contrasena"];?></td>
+                            <td><a href="actualizar_usuario.php?id_usuario=<?php echo $row["IdUsuario"];?>"data-toggle="tooltip" title="Editar" aria-hidden="true"><i class="uil uil-edit"></i></a></td>
                         </tr>
                         <?php
                             } mysqli_free_result($resultado);
@@ -243,13 +176,15 @@
                             <tr>                                  
                                 <th>Id</th>
                                 <th>Rol</th>
+                                <th>Estado</th>
                                 <th>Nombres</th>
                                 <th>Apellido</th>
                                 <th>Fecha de Nacimiento</th>
                                 <th>Dirección</th>
                                 <th>Teléfono</th>
                                 <th>Email</th>
-                                <th>Contraseña</th>  
+                                <th>Contraseña</th>
+                                <th></th>  
                             </tr>
                         </thead>
 
@@ -261,6 +196,7 @@
                         <tr>
                             <td><?php echo $row["IdUsuario"];?></td>
                             <td><?php echo $row["Rol"];?></td>
+                            <td><?php echo $row["Estado"];?></td>
                             <td><?php echo $row["Nombres"];?></td>
                             <td><?php echo $row["Apellidos"];?></td>
                             <td><?php echo $row["FechaNacimiento"];?></td>
@@ -268,6 +204,7 @@
                             <td><?php echo $row["Telefono"];?></td>
                             <td><?php echo $row["Email"];?></td>
                             <td><?php echo $row["Contrasena"];?></td>
+                            <td><a href="actualizar_usuario.php?id_usuario=<?php echo $row["IdUsuario"];?>"data-toggle="tooltip" title="Editar" aria-hidden="true"><i class="uil uil-edit"></i></a></td>
                         </tr>
                         <?php
                             } mysqli_free_result($resultado);
@@ -286,13 +223,15 @@
                             <tr>                                  
                                 <th>Id</th>
                                 <th>Rol</th>
+                                <th>Estado</th>
                                 <th>Nombres</th>
                                 <th>Apellido</th>
                                 <th>Fecha de Nacimiento</th>
                                 <th>Dirección</th>
                                 <th>Teléfono</th>
                                 <th>Email</th>
-                                <th>Contraseña</th>  
+                                <th>Contraseña</th>
+                                <th></th>  
                             </tr>
                         </thead>
 
@@ -304,6 +243,7 @@
                         <tr>
                             <td><?php echo $row["IdUsuario"];?></td>
                             <td><?php echo $row["Rol"];?></td>
+                            <td><?php echo $row["Estado"];?></td>
                             <td><?php echo $row["Nombres"];?></td>
                             <td><?php echo $row["Apellidos"];?></td>
                             <td><?php echo $row["FechaNacimiento"];?></td>
@@ -311,6 +251,7 @@
                             <td><?php echo $row["Telefono"];?></td>
                             <td><?php echo $row["Email"];?></td>
                             <td><?php echo $row["Contrasena"];?></td>
+                            <td><a href="actualizar_usuario.php?id_usuario=<?php echo $row["IdUsuario"];?>"data-toggle="tooltip" title="Editar" aria-hidden="true"><i class="uil uil-edit"></i></a></td>
                         </tr>
                         <?php
                             } mysqli_free_result($resultado);
@@ -329,13 +270,15 @@
                             <tr>                                  
                                 <th>Id</th>
                                 <th>Rol</th>
+                                <th>Estado</th>
                                 <th>Nombres</th>
                                 <th>Apellido</th>
                                 <th>Fecha de Nacimiento</th>
                                 <th>Dirección</th>
                                 <th>Teléfono</th>
                                 <th>Email</th>
-                                <th>Contraseña</th>  
+                                <th>Contraseña</th>
+                                <th></th>  
                             </tr>
                         </thead>
 
@@ -347,6 +290,7 @@
                         <tr>
                             <td><?php echo $row["IdUsuario"];?></td>
                             <td><?php echo $row["Rol"];?></td>
+                            <td><?php echo $row["Estado"];?></td>
                             <td><?php echo $row["Nombres"];?></td>
                             <td><?php echo $row["Apellidos"];?></td>
                             <td><?php echo $row["FechaNacimiento"];?></td>
@@ -354,6 +298,7 @@
                             <td><?php echo $row["Telefono"];?></td>
                             <td><?php echo $row["Email"];?></td>
                             <td><?php echo $row["Contrasena"];?></td>
+                            <td><a href="actualizar_usuario.php?id_usuario=<?php echo $row["IdUsuario"];?>"data-toggle="tooltip" title="Editar" aria-hidden="true"><i class="uil uil-edit"></i></a></td>
                         </tr>
                         <?php
                             } mysqli_free_result($resultado);

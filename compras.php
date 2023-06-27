@@ -68,8 +68,8 @@
 
         <section class="main">
             <div class="main-top">
-                <i class="fas uil uil-bill"></i>
-                <h1>Compras</h1>
+                <i class="fas uil uil-store"></i>
+                <h1>Listado Compras</h1>
                 <p><?php echo "Bienvenido" ." ". $_COOKIE['usuario'];?></p>
             </div>
 
@@ -84,41 +84,46 @@
                         <span>Registrar Compra</span>
                     </div>   
 
-                    <form action="" method="post">
+                    <form action="insertar_compra.php" method="post">
                         <div class="row">
-                            <label>Id</label>
-                            <input type="number" name="id_usuario" required>
+                            <label>Id Compra</label>
+                            <input type="number" name="id_compra" required>
                         </div>
 
                         <div class="row">
                             <label>Fecha Emisión</label>
-                            <input type="date" name="fe####" required>
+                            <input type="date" name="fecha_emision" required>
                         </div>
 
 
                         <div class="row">
                             <label>Id Proveedor</label>
-                            <input type="number" name="###" required>
+                            <input type="number" name="id_proveedor" required>
                         </div>
 
                         <div class="row">
                             <label>Id Producto</label>
-                            <input type="number" name="###" required>
+                            <input type="number" name="id_producto" required>
                         </div>
 
                         <div class="row">
                             <label>Descripción</label>
-                            <input type="text" name="###" required>
+                            <input type="text" name="descripcion" required>
                         </div>                     
 
                         <div class="row">
                             <label>Valor Producto</label>
-                            <input type="number" name="###" required>
+                            <input type="number" name="valor_producto"  required>
                         </div>
 
                         <div class="row">
                             <label>SubTotal</label>
-                            <input type="number" name="###" required>
+                            <input type="number" name="sub_total"  required>
+                        </div>
+
+                        <div class="row">
+                            <label>Valor Total</label>
+                            <input type="number" name="valor_total"  required>
                         </div>
 
                         <div class="row block">

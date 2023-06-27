@@ -117,17 +117,16 @@ if(!isset($_SESSION['rol'])){
                 <p><?php echo "Bienvenido" ." ". $_COOKIE['usuario'];?></p>
             </div>
             <?php
-      if($_SESSION['rol'] != 971  && $_SESSION['rol'] != 578){
-        echo '';
-        }
-        elseif ($_SESSION['rol'] != 214 && $_SESSION['rol'] != 201) {
-          echo ' <div class="boton-modal">
-                 <label for="btn-modal">Agregar Venta</label>
-                 </div>';
-        }
-            ?>
-           
-
+            if($_SESSION['rol'] != 971  && $_SESSION['rol'] != 578){
+                echo '';
+                }
+                elseif ($_SESSION['rol'] != 214 && $_SESSION['rol'] != 201) {
+                echo ' <div class="boton-modal">
+                        <label for="btn-modal">Agregar Venta</label>
+                        </div>';
+                }
+                ?>
+        
             <input type="checkbox" id="btn-modal">
             <div class="container-modal">
                 <div class="content-modal">
@@ -135,7 +134,7 @@ if(!isset($_SESSION['rol'])){
                         <span>Registrar Venta</span>
                     </div>   
 
-                    <form action="config/login.php" method="post">
+                    <form action="insertar_venta.php" method="post">
                         <div class="row">
                             <label>ID Venta</label>
                             <input type="text" name="id_venta" required>

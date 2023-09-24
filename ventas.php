@@ -188,7 +188,6 @@ if(!isset($_SESSION['rol'])){
                             <input class="btn" type="submit" value="Agregar Venta">
                         </div>
                     </form>                    
-                   
                     <label for="btn-modal" class="cerrar-modal"></label>
                 </div>
             </div>

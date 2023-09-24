@@ -32,6 +32,10 @@ nav:hover{
     transition: 1s;
 }
 
+.container-botones{
+    justify-content: end;
+}
+
 .logo{
     text-align: center;
     display: flex;
@@ -144,6 +148,7 @@ display: flex;
 }
 
 .dashboard-list{
+    display: block;
     width: 100%;
     padding: 10px;
     margin-top: 10px;
@@ -250,7 +255,7 @@ table thead tbody td i:hover{
 
 .container-modal{
     width: 100%;
-    height: 100vh;
+    height: 100%;
     position: fixed;
     top: 0; left: 0;
     background-color: rgba(144, 148, 150, 0.8);
@@ -265,9 +270,9 @@ table thead tbody td i:hover{
 }
 
 .content-modal{
-    width: 70%;
+    width: auto;
     max-width: 750px;
-    height: 95%;
+    height: auto;
     padding: 15px;
     background-color: #fff;
     border-radius: 4px;
@@ -335,6 +340,19 @@ form .row select{
     position: absolute;
     top:0; left: 0;
     z-index: -1;
+}
+
+#btn-modal-registrar:checked ~ #container-modal-registrar {
+    display: flex;
+}
+
+
+#btn-modal-consultar:checked ~ #container-modal-consultar {
+    display: flex;
+}
+
+.checkbox-hidden {
+    display: none;
 }
 
 @media screen and (max-width:800px) {

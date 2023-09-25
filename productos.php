@@ -12,6 +12,9 @@ if(!isset($_SESSION['rol'])){
 
 include ("conexion.php");
   $producto = "SELECT * FROM producto";
+
+$totalProducto = $conexion->query("SELECT SUM(Valorlibra) FROM producto");
+$totalProducto = $totalProducto->fetch_assoc();
 ?>
 
 <!DOCTYPE html>
@@ -26,6 +29,7 @@ include ("conexion.php");
 </head>
 
 <body>
+    
     <div class="container">
         <nav>
             <ul>
@@ -126,11 +130,20 @@ include ("conexion.php");
             ?>
 
             <div class="container-botones">
-                <div class="boton-modal">
-                    <label for="btn-modal-registrar">Agregar Equipo</label>
-                    <label for="btn-modal-consultar">Consultar</label>               
-                </div>
-            </div>
+                <div class="hhh">
+                    <div class="boton-modal">
+                        <label for="btn-modal-registrar">Agregar Equipo</label>
+                        <label for="btn-modal-consultar">Consultar</label>               
+                    </div>
+                    <div class="contenedor-items">
+                        <div class="item"> 
+                            <div class="iconBx">
+                                <i class="uil uil-usd-circle"></i>
+                            </div>
+                        <span class="card-text"><?php echo $totalProducto['SUM(Valorlibra)'];?></span>
+                    </div>
+                </div>                
+            </div>         
 
             <input type="checkbox" id="btn-modal-registrar" class="checkbox-hidden">
             <div class="container-modal" id="container-modal-registrar">
@@ -177,13 +190,17 @@ include ("conexion.php");
                         </div>
 
                         <div class="row">
-                            <label>Valor Libra</label>
-                            <input type="number" name="valor_libra" required>
+                            <label>Estado</label>
+                            <select name="prod_estado" class="form-select" >
+                                <option value="">Seleccione un Estado</option>
+                                <option value="Disponible">Disponible</option>
+                                <option value="No Disponible">No Disponible</option>
+                            </select>
                         </div>
 
                         <div class="row">
-                            <label>Saldo</label>
-                            <input type="number" name="saldo_producto" required>
+                            <label>Valor Libra</label>
+                            <input type="number" name="valor_libra" required>
                         </div>
 
                         <div class="row block">
@@ -230,7 +247,7 @@ include ("conexion.php");
 
                         <div class="row">
                             <label>Estado</label>
-                            <select name="equi_estado" class="form-select" >
+                            <select name="prod_estado" class="form-select" >
                                 <option value="">Seleccione un Estado</option>
                                 <option value="Disponible">Disponible</option>
                                 <option value="No Disponible">No Disponible</option>
@@ -261,7 +278,10 @@ include ("conexion.php");
 
             if (isset($_POST['cantidad'])) {
                 $cantidad = $_POST['cantidad'];
-
+            }
+            
+            if (isset($_POST['prod_estado'])) {
+                $prod_estado = $_POST['prod_estado'];
             }
 
             $producto = "SELECT * FROM producto WHERE 1";
@@ -281,6 +301,11 @@ include ("conexion.php");
             if (!empty($cantidad)){
                 $producto .= " AND cantidad = '$cantidad'";
             }
+
+            if (!empty($prod_estado)){
+                $producto .= " AND Estado = '$prod_estado'";
+            }
+
             ?>
 
             <section class="dashboard">
@@ -294,8 +319,8 @@ include ("conexion.php");
                             <th>Categoria</th>
                             <th>cantidad</th>
                             <th>Fecha Vencimiento</th>
+                            <th>Estado</th>
                             <th>Valor libra</th>
-                            <th>Saldo</th>
                             <th>Acciones</th>
                         </tr>
                         </thead>
@@ -313,8 +338,8 @@ include ("conexion.php");
                                 <td><?php echo $row["NomCategoria"];?></td>
                                 <td><?php echo $row["cantidad"];?></td>
                                 <td><?php echo $row["FechaVencimiento"];?></td>
+                                <td><?php echo $row["Estado"];?></td>
                                 <td><?php echo "$". $row["Valorlibra"];?></td>
-                                <td><?php echo "$". $row["Saldo"];?></td>
                                 <td><a href="actualizar_producto.php?id_producto=<?php echo $row["IdProducto"];?>" class="edit" data-toggle="tooltip" title="Editar" aria-hidden="true"><i class="uil uil-edit"></i></a></td>
                             </tr>
                             <?php
@@ -338,6 +363,7 @@ include ("conexion.php");
                             <th>Categoria</th>
                             <th>cantidad</th>
                             <th>Fecha Vencimiento</th>
+                            <th>Estado</th>
                             <th>Valor libra</th>
                             <th>Saldo</th>
                             <th>Acciones</th>
@@ -357,6 +383,7 @@ include ("conexion.php");
                                 <td><?php echo $row["NomCategoria"];?></td>
                                 <td><?php echo $row["cantidad"];?></td>
                                 <td><?php echo $row["FechaVencimiento"];?></td>
+                                <td><?php echo $row["Estado"];?></td>
                                 <td><?php echo "$". $row["Valorlibra"];?></td>
                                 <td><?php echo "$". $row["Saldo"];?></td>
                                 <td><a href="actualizar_producto.php?id_producto=<?php echo $row["IdProducto"];?>" class="edit" data-toggle="tooltip" title="Editar" aria-hidden="true"><i class="uil uil-edit"></i></a></td>

@@ -32,6 +32,12 @@ nav:hover{
     transition: 1s;
 }
 
+.hhh{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
 .container-botones{
     justify-content: end;
 }
@@ -354,6 +360,49 @@ form .row select{
 .checkbox-hidden {
     display: none;
 }
+
+
+
+
+.contenedor-items{
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    transition: .3s;
+}
+
+.contenedor-items .item{
+    display: flex;
+    overflow: hidden;
+    width: 22rem;
+    height: 12vh;
+    border-radius: 10px;
+    text-align: center;
+    justify-content: center;
+    transition: all .3s;
+    border: 1px solid rgb(194, 16, 16);
+}
+
+.item:hover{
+    scale: 1.05;
+}
+
+.item .iconBx{
+    font-size: 3rem;
+}
+
+.item .card-text{
+    font-size: 3rem;
+}
+
+.item a:link .item a:visited{
+    display: inline-block;
+    padding: 1.2rem 3rem;
+    border-radius: 1rem;
+    margin-top: 1rem;
+    transition: all .3s;
+}
+
 
 @media screen and (max-width:800px) {
     .content-modal{

@@ -348,7 +348,7 @@ form .row select{
     z-index: -1;
 }
 
-#btn-modal-registrar:checked ~ #container-modal-registrar {
+#btn-modal-agregar:checked ~ #container-modal-agregar {
     display: flex;
 }
 

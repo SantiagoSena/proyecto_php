@@ -120,19 +120,20 @@ $totalProducto = $totalProducto->fetch_assoc();
                 <h1>Listado Productos</h1>
                 <p><?php echo "Bienvenido" ." ". $_COOKIE['usuario'];?></p>
             </div>
+
             <?php
-      if($_SESSION['rol'] != 971  && $_SESSION['rol'] != 578){
-        echo '';
-        }
-        elseif ($_SESSION['rol'] != 214 && $_SESSION['rol'] != 201) {
-          echo '';
-        }
+            if($_SESSION['rol'] != 971  && $_SESSION['rol'] != 578){
+                echo '';
+                }
+                elseif ($_SESSION['rol'] != 214 && $_SESSION['rol'] != 201) {
+                echo '';
+                }
             ?>
 
             <div class="container-botones">
                 <div class="hhh">
                     <div class="boton-modal">
-                        <label for="btn-modal-registrar">Agregar Equipo</label>
+                        <label for="btn-modal-agregar">Agregar Producto</label>
                         <label for="btn-modal-consultar">Consultar</label>               
                     </div>
                     <div class="contenedor-items">
@@ -145,8 +146,8 @@ $totalProducto = $totalProducto->fetch_assoc();
                 </div>                
             </div>         
 
-            <input type="checkbox" id="btn-modal-registrar" class="checkbox-hidden">
-            <div class="container-modal" id="container-modal-registrar">
+            <input type="checkbox" id="btn-modal-agregar" class="checkbox-hidden">
+            <div class="container-modal" id="container-modal-agregar">
                 <div class="content-modal">
                     <div class="tittle">
                         <span>Registrar Producto</span>
@@ -207,7 +208,7 @@ $totalProducto = $totalProducto->fetch_assoc();
                             <input class="btn" type="submit" value="Agregar Producto">
                         </div>
                     </form>     
-                    <label for="btn-modal-registrar" class="cerrar-modal"></label>                
+                    <label for="btn-modal-agregar" class="cerrar-modal"></label>                
                 </div>
             </div>
 

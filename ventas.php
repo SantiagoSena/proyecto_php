@@ -115,19 +115,25 @@ if(!isset($_SESSION['rol'])){
                 <h1>Listado Ventas</h1>
                 <p><?php echo "Bienvenido" ." ". $_COOKIE['usuario'];?></p>
             </div>
+            
             <?php
             if($_SESSION['rol'] != 971  && $_SESSION['rol'] != 578){
                 echo '';
                 }
                 elseif ($_SESSION['rol'] != 214 && $_SESSION['rol'] != 201) {
-                echo ' <div class="boton-modal">
-                        <label for="btn-modal">Agregar Venta</label>
-                        </div>';
+                echo '';
                 }
-                ?>
+            ?>
+                
+            <div class="container-botones">
+                <div class="boton-modal">
+                    <label for="btn-modal-agregar">Agregar Venta</label>
+                    <label for="btn-modal-consultar">Consultar</label>               
+                </div>            
+            </div>       
         
-            <input type="checkbox" id="btn-modal">
-            <div class="container-modal">
+            <input type="checkbox" id="btn-modal-agregar" class="checkbox-hidden">
+            <div class="container-modal" id="container-modal-agregar">
                 <div class="content-modal">
                     <div class="tittle">
                         <span>Registrar Venta</span>
@@ -147,11 +153,6 @@ if(!isset($_SESSION['rol'])){
                         <div class="row">
                             <label>Id Pedido</label>
                             <input type="text" name="id_pedido" required>
-                        </div>
-
-                        <div class="row">
-                            <label>Id Cliente</label>
-                            <input type="text" name="id_cliente" required>
                         </div>
 
                         <div class="row">
@@ -188,9 +189,87 @@ if(!isset($_SESSION['rol'])){
                             <input class="btn" type="submit" value="Agregar Venta">
                         </div>
                     </form>                    
-                    <label for="btn-modal" class="cerrar-modal"></label>
+                    <label for="btn-modal-agregar" class="cerrar-modal"></label>
                 </div>
             </div>
+
+            <input type="checkbox" id="btn-modal-consultar" class="checkbox-hidden">
+            <div class="container-modal" id="container-modal-consultar">
+                <div class="content-modal">
+                    <div class="tittle">
+                        <span>Consultar</span>
+                    </div>
+
+                    <form action="" method="post">
+                        <div class="row">
+                            <label>Id Venta</label>
+                            <input type="number" name="id_venta" >
+                        </div>
+
+                        <div class="row">
+                            <label>Producto</label>
+                            <input type="text" name="nom_producto" >
+                        </div>
+
+                        <div class="row">
+                            <label>Tipo</label>
+                            <select name="tipo" class="form-select" >
+                                <option value="">Seleccione una Opción</option>
+                                <option value="Fisico">Punto Fisico</option>
+                                <option value="linea">En linea</option>
+                            </select>
+                        </div>
+
+                        <div class="row">
+                            <label>Cantidad</label>
+                            <input type="text" name="Cantidad" >
+                        </div>
+
+                        <div class="row block">
+                            <input class="btn" type="submit" value="Consultar">
+                        </div>
+                    </form>
+                    <label for="btn-modal-consultar" class="cerrar-modal"></label>
+                </div>
+            </div>
+
+            <?php
+            if (isset($_POST['id_venta'])) {
+                $id_Venta = $_POST['id_venta'];
+            }
+
+            if (isset($_POST['nom_producto'])) {
+                $nom_Producto = $_POST['nom_producto'];
+            }
+
+            if (isset($_POST['tipo'])) {
+                $Tipo = $_POST['tipo'];
+            }
+
+            if (isset($_POST['Cantidad'])) {
+                $Cantidad = $_POST['Cantidad'];
+            }
+            
+
+            $venta = "SELECT * FROM venta WHERE 1";
+
+            if (!empty($id_Venta)){
+                $venta.= " AND IdVenta LIKE '%$id_Venta%'";
+            }
+
+            if (!empty($nom_Producto)){
+                $venta.= " AND Producto LIKE '%$nom_Producto%'";
+            }
+
+            if (!empty($tipo)){
+                $venta.= " AND Tipo = '$Tipo'";
+            }
+
+            if (!empty($Cantidad)){
+                $venta.= " AND Cantidad = '$Cantidad'";
+            }
+
+            ?>
 
             <section class="dashboard">
                 <div class="dashboard-list">
@@ -199,33 +278,31 @@ if(!isset($_SESSION['rol'])){
                         <tr>
                             <th>Id</th>
                             <th>Fecha Emisión</th>
-                            <th>Id Pedido</th>
-                            <th>Id Cliente</th>
+                            <th>Tipo</th>
                             <th>Id Producto</th>
-                            <th>Producto</th>
+                            <th>Productos</th>
                             <th>Cantidad</th>
-                            <th>Valor Producto</th>
                             <th>SubTotal</th>
                             <th>Valor Total</th>
+                            <th>Acciones</th>
                         </tr>
                         </thead>
 
                         <tbody>
                         <?php
-                            $resultado = mysqli_query($conexion, $Venta);
+                            $resultado = mysqli_query($conexion, $venta);
                             while($row = mysqli_fetch_assoc($resultado)){
                         ?>
                         <tr>
                             <td><?php echo $row["IdVenta"];?></td>
                             <td><?php echo $row["FechaEmision"];?></td>
-                            <td><?php echo $row["IdPedido"];?></td>
-                            <td><?php echo $row["IdCliente"];?></td>
+                            <td><?php echo $row["Tipo"];?></td>
                             <td><?php echo $row["IdProducto"];?></td>
                             <td><?php echo $row["Producto"];?></td>
                             <td><?php echo $row["Cantidad"];?></td>
-                            <td><?php echo "$". $row["ValorProducto"];?></td>
                             <td><?php echo "$". $row["SubTotal"];?></td>
                             <td><?php echo "$". $row["ValorTotal"];?></td>
+                            <td></td>
                         </tr>
                         <?php
                             } mysqli_free_result($resultado);

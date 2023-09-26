@@ -150,10 +150,12 @@ if(!isset($_SESSION['rol'])){
                             <input type="date" name="fecha_emision" required>
                         </div>
 
+                        <!--
                         <div class="row">
                             <label>Id Pedido</label>
                             <input type="text" name="id_pedido" required>
                         </div>
+                        -->
 
                         <div class="row">
                             <label>Id Producto</label>
@@ -166,14 +168,25 @@ if(!isset($_SESSION['rol'])){
                         </div>
 
                         <div class="row">
+                            <label>Tipo</label>
+                            <select name="ven_tipo" class="form-select" >
+                                <option value="">Seleccione una Opción</option>
+                                <option value="Fisico">Punto Fisico</option>
+                                <option value="linea">En linea</option>
+                            </select>
+                        </div>
+
+                        <div class="row">
                             <label>Cantidad</label>
                             <input type="number" name="cantidad" required>
                         </div>
 
+                        <!--
                         <div class="row">
                             <label>Valor Producto</label>
                             <input type="number" name="valor_producto" required>
                         </div>
+                        -->
 
                         <div class="row">
                             <label>Valor SubTotal</label>
@@ -248,8 +261,7 @@ if(!isset($_SESSION['rol'])){
 
             if (isset($_POST['Cantidad'])) {
                 $Cantidad = $_POST['Cantidad'];
-            }
-            
+            }    
 
             $venta = "SELECT * FROM venta WHERE 1";
 
@@ -262,7 +274,7 @@ if(!isset($_SESSION['rol'])){
             }
 
             if (!empty($ven_Tipo)){
-                $venta .= " AND Tipo = '$ven_Tipo'";
+                $venta .= " AND Tipo LIKE '%$ven_Tipo%'";
             }           
 
             if (!empty($Cantidad)){
@@ -310,7 +322,17 @@ if(!isset($_SESSION['rol'])){
                         </tbody>
                     </table>
                 </div>
+            </section>
 
+            <section class="paginacion">
+                <ul>
+                    <li class="disabled">&laquo;</a></li>
+                    <li class="active"><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">&raquo;</a></li>
+                </ul>
             </section>
         </section>
     </div>

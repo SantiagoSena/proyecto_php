@@ -148,96 +148,6 @@ display: flex;
     width: 100%;
 }
 
-/*TABLAS*/
-
-.dashboard{
-    margin-top: 1rem;
-    text-transform: capitalize;
-}
-
-.dashboard-list{
-    display: block;
-    width: 100%;
-    padding: 10px;
-    margin-top: 10px;
-    background: #fff;
-    border-radius: 10px;
-    box-shadow: 10px 5px 40px 10px rgba(0, 0, 0, 0.1);
-}
-
-.dashboard-list h1{
-    font-size: 30px;
-    bottom: 0;
-}
-
-.dashboard-list .btn-actualizar{
-    padding: 10px;
-    color: white;
-    border: none;
-    font-weight: bold;
-    margin-top: 10px;
-    border-radius: 25px;
-    cursor: pointer;
-    background-color: rgb(194, 16, 16);
-}
-
-.table{
-    border-collapse: collapse;
-    margin: 10px 0;
-    font-size: 15px;
-    min-width: 100%;
-    overflow: hidden;
-    border-radius: 5px 5px 0 0;
-}
-
-table thead tr{
-    color: white;
-    background: rgb(194, 16, 16);
-    text-align: center;
-    font-weight: bold;
-}
-
-table thead tbody td i:hover{
-    width: 10px;
-}
-
-
-.table th,
-.table td{
-    text-align: center;
-    padding: 12px 15px;
-}
-
-.table tbody tr{
-    border-bottom: 1px solid #ddd;
-}
-
-.table tbody tr:nth-of-type(odd){
-    background: #f3f3f3;
-}
-
-.table tbody td .entregado{
-    font-weight: bold;
-    background-color: aqua;
-}
-
-.table tbody tr:last-of-type{
-    border-bottom: 2px solid rgb(194, 16, 16);
-}
-
-.table button{
-    padding: 6px 20px;
-    border-radius: 10px;
-    cursor: pointer;
-    background: transparent;
-    border: 1px solid #4AD489;
-}
-
-.table button:hover{
-    background: #4AD489;
-    color: #fff;
-    transition: 0.5rem;
-}
 
 /*MODAL*/
 
@@ -369,6 +279,149 @@ form .row select{
 
 .checkbox-hidden {
     display: none;
+}
+
+
+/*TABLAS*/
+
+.dashboard{
+    margin-top: 1rem;
+    text-transform: capitalize;
+}
+
+.dashboard-list{
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 10px 5px 40px 10px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-list h1{
+    font-size: 30px;
+    bottom: 0;
+}
+
+.dashboard-list .btn-actualizar{
+    padding: 10px;
+    color: white;
+    border: none;
+    font-weight: bold;
+    margin-top: 10px;
+    border-radius: 25px;
+    cursor: pointer;
+    background-color: rgb(194, 16, 16);
+}
+
+.table{
+    border-collapse: collapse;
+    margin: 10px 0;
+    font-size: 15px;
+    min-width: 100%;
+    overflow: hidden;
+    border-radius: 5px 5px 0 0;
+}
+
+table thead tr{
+    color: white;
+    background: rgb(194, 16, 16);
+    text-align: center;
+    font-weight: bold;
+}
+
+table thead tbody td i:hover{
+    width: 10px;
+}
+
+
+.table th,
+.table td{
+    text-align: center;
+    padding: 12px 15px;
+}
+
+.table tbody tr{
+    border-bottom: 1px solid #ddd;
+}
+
+.table tbody tr:nth-of-type(odd){
+    background: #f3f3f3;
+}
+
+.table tbody td .entregado{
+    font-weight: bold;
+    background-color: aqua;
+}
+
+.table tbody tr:last-of-type{
+    border-bottom: 2px solid rgb(194, 16, 16);
+}
+
+.table button{
+    padding: 6px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    background: transparent;
+    border: 1px solid #4AD489;
+}
+
+.table button:hover{
+    background: #4AD489;
+    color: #fff;
+    transition: 0.5rem;
+}
+
+/*PAGINACIÓN*/
+
+section .paginacion{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.paginacion ul{
+    list-style: none;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.paginacion ul li{
+    display: inline-block;
+    margin-right: 10px;
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+}
+
+.paginacion ul .active a{
+    background: rgb(194, 16, 16);
+    color: white;
+    padding: 10px 20px;
+}
+
+.paginacion ul .disabled{
+    cursor: not-allowed;
+    display: inline-block;
+    padding: 10px 20px;
+    cursor: not-allowed;
+    text-decoration: none;
+}
+
+.paginacion ul li a{
+    display: inline-block;
+    padding: 10px 19px;
+    border-radius: 100%;
+    color: rgb(194, 16, 16);
+    border: rgb(194, 16, 16) 2px solid;
+}
+
+.paginacion ul li a:hover{
+    text-decoration: none;
+    background-color: rgb(230, 72, 72);
+    color: white;
+    border: none;
 }
 
 /*SALDO PRODUCTOS*/

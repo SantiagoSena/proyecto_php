@@ -2,6 +2,7 @@
 require_once 'config/validate_session.php';
 require_once 'config/validate_roles.php';
 include ("conexion.php");
+
 if(!isset($_SESSION['rol'])){
     header('Location: ingresar.php');
 }else{
@@ -9,8 +10,9 @@ if(!isset($_SESSION['rol'])){
         header('Location: ingresar.php');
     }
 }
-    include ("conexion.php");
-    $pedido = "SELECT * FROM pedido"
+
+$pedido = "SELECT * FROM pedido"
+
 ?>
 
 <!DOCTYPE html>
@@ -109,7 +111,6 @@ if(!isset($_SESSION['rol'])){
             </ul>
         </nav>
 
-
         <section class="main">
             <div class="main-top">
                 <i class="fas uil uil-truck"></i>
@@ -121,15 +122,19 @@ if(!isset($_SESSION['rol'])){
                 echo '';
                 }
                 elseif ($_SESSION['rol'] != 214 && $_SESSION['rol'] != 201) {
-                    echo ' <div class="boton-modal">
-                    <label for="btn-modal">Agregar Pedido</label>
-                </div>';
+                    echo '';
                 }
-                    ?>
-            
+            ?>
 
-            <input type="checkbox" id="btn-modal">
-            <div class="container-modal">
+            <div class="container-botones">
+                <div class="boton-modal">
+                    <label for="btn-modal-agregar">Agregar Pedido</label>
+                    <label for="btn-modal-consultar">Consultar</label>               
+                </div>            
+            </div>  
+        
+            <input type="checkbox" id="btn-modal-agregar" class="checkbox-hidden">
+            <div class="container-modal" id="container-modal-agregar">
                 <div class="content-modal">
                     <div class="tittle">
                         <span>Registrar Pedido</span>
@@ -137,14 +142,16 @@ if(!isset($_SESSION['rol'])){
 
                     <form action="insertar_pedido.php" method="post">
                         <div class="row">
-                            <label>ID Pedido</label>
+                            <label>Id Pedido</label>
                             <input type="number" name="id_pedido" required>
                         </div>
-
+                        
+                        <!--
                         <div class="row">
                             <label>Id Cliente</label>
                             <input type="number" name="id_cliente" required>
                         </div>
+                        -->
 
                         <div class="row">
                             <label>Fecha Emisión</label>
@@ -155,14 +162,15 @@ if(!isset($_SESSION['rol'])){
                             <label>Estado Pedido</label>
                             <select name="estado" class="form-select" >
                                 <option value="">Seleccione una Estado</option>
-                                <option class="alistamiento" value="alistamiento">En Alistamiento</option>
-                                <option class="enviado" value="enviado">Enviado</option>
-                                <option class="entregado" value="entregado">Entegrado</option>
-                                <option class="anulado" value="anulado">Cancelado</option>
+                                <option class="alistamientos" value="alistamiento">En Alistamiento</option>
+                                <option class="caminos" value="camino">En Camino</option>
+                                <option class="entregados" value="entregado">Entegrado</option>
+                                <option class="esperas" value="espera">En Espera</option>
+                                <option class="anulados" value="anulado">Cancelado</option>
                             </select>
                         </div>
 
-                        <div class="row block">
+                        <div class="row">
                             <label>Valor Total</label>
                             <input type="number" name="valor_total" required>
                         </div>
@@ -172,9 +180,62 @@ if(!isset($_SESSION['rol'])){
                         </div>
                     </form>                    
                    
-                    <label for="btn-modal" class="cerrar-modal"></label>
+                    <label for="btn-modal-agregar" class="cerrar-modal"></label>
                 </div>
             </div>
+
+            <input type="checkbox" id="btn-modal-consultar" class="checkbox-hidden">
+            <div class="container-modal" id="container-modal-consultar">
+                <div class="content-modal">
+                    <div class="tittle">
+                        <span>Consultar</span>
+                    </div>
+
+                    <form action="" method="post">
+                        <div class="row">
+                            <label>Id Pedido</label>
+                            <input type="number" name="id_pedido" >
+                        </div>
+
+                        <div class="row">
+                            <label>Estado</label>
+                            <select name="estado" class="form-select" >
+                                <option value="">Seleccione una Estado</option>
+                                <option class="alistamientos" value="alistamiento">En Alistamiento</option>
+                                <option class="caminos" value="camino">En Camino</option>
+                                <option class="entregados" value="entregado">Entegrado</option>
+                                <option class="esperas" value="espera">En Espera</option>
+                                <option class="anulados" value="anulado">Cancelado</option>
+                            </select>
+                        </div>
+
+                        <div class="row block">
+                            <input class="btn" type="submit" value="Consultar">
+                        </div>
+                    </form>
+                    <label for="btn-modal-consultar" class="cerrar-modal"></label>
+                </div>
+            </div>
+
+            <?php
+            if (isset($_POST['id_pedido'])) {
+                $Id_pedido = $_POST['id_pedido'];
+            }
+
+            if (isset($_POST['estado'])) {
+                $Ped_estado = $_POST['estado'];
+            }
+            
+            $pedido = "SELECT * FROM pedido WHERE 1";
+
+            if (!empty($Id_pedido)){
+                $pedido .= " AND IdPedido LIKE '%$Id_pedido%'";
+            }
+
+            if (!empty($Ped_estado)){
+                $pedido .= " AND Estado LIKE '%$Ped_estado%'";
+            }
+            ?>
 
             <section class="dashboard">
                 <div class="dashboard-list">
@@ -182,7 +243,7 @@ if(!isset($_SESSION['rol'])){
                         <thead>
                             <tr>
                                 <th>Id Pedido</th>
-                                <th>Id Cliente</th>
+                                <!--<th>Id Cliente</th>-->
                                 <th>Fecha Emisión</th>
                                 <th>Estado Pedido</th>
                                 <th>Valor Total</th>
@@ -197,7 +258,7 @@ if(!isset($_SESSION['rol'])){
                         ?>
                         <tr>
                             <td><?php echo $row["IdPedido"];?></td>
-                            <td><?php echo $row["IdUsuario"];?></td>
+                            <!--<td><?php echo $row["IdUsuario"];?></td>-->
                             <td><?php echo $row["FechaEmision"];?></td>
                             <td><?php echo $row["Estado"];?></td>
                             <td><?php echo "$". $row["ValorTotal"];?></td>

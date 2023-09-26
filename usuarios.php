@@ -10,7 +10,6 @@ if(!isset($_SESSION['rol'])){
     }
 }
 
-include ("conexion.php");
 $Usuario_cliente = "SELECT * FROM usuarios WHERE Rol = '354'";
 
 ?>
@@ -130,7 +129,7 @@ $Usuario_cliente = "SELECT * FROM usuarios WHERE Rol = '354'";
                                 <th>Nombres</th>
                                 <th>Apellido</th>
                                 <th>Fecha Nacimiento</th>
-                                <th>Direccion</th>
+                                <th>Dirección</th>
                                 <th>Telefono</th>
                                 <th>Email</th>
                                 <th>Contraseña</th>
@@ -174,7 +173,7 @@ $Usuario_cliente = "SELECT * FROM usuarios WHERE Rol = '354'";
                             <tr>                                  
                                 <th>Id</th>
                                 <th>Rol</th>
-                                <th>Estado</th>
+                                <!--<th>Estado</th>-->
                                 <th>Nombres</th>
                                 <th>Apellido</th>
                                 <th>Fecha de Nacimiento</th>
@@ -194,7 +193,7 @@ $Usuario_cliente = "SELECT * FROM usuarios WHERE Rol = '354'";
                         <tr>
                             <td><?php echo $row["IdUsuario"];?></td>
                             <td><?php echo $row["Rol"];?></td>
-                            <td><?php echo $row["Estado"];?></td>
+                            <!--<td><?php echo $row["Estado"];?></td>-->
                             <td><?php echo $row["Nombres"];?></td>
                             <td><?php echo $row["Apellidos"];?></td>
                             <td><?php echo $row["FechaNacimiento"];?></td>
@@ -221,7 +220,7 @@ $Usuario_cliente = "SELECT * FROM usuarios WHERE Rol = '354'";
                             <tr>                                  
                                 <th>Id</th>
                                 <th>Rol</th>
-                                <th>Estado</th>
+                                <!--<th>Estado</th>-->
                                 <th>Nombres</th>
                                 <th>Apellido</th>
                                 <th>Fecha de Nacimiento</th>
@@ -241,7 +240,7 @@ $Usuario_cliente = "SELECT * FROM usuarios WHERE Rol = '354'";
                         <tr>
                             <td><?php echo $row["IdUsuario"];?></td>
                             <td><?php echo $row["Rol"];?></td>
-                            <td><?php echo $row["Estado"];?></td>
+                            <!--<td><?php echo $row["Estado"];?></td>-->
                             <td><?php echo $row["Nombres"];?></td>
                             <td><?php echo $row["Apellidos"];?></td>
                             <td><?php echo $row["FechaNacimiento"];?></td>
@@ -268,7 +267,7 @@ $Usuario_cliente = "SELECT * FROM usuarios WHERE Rol = '354'";
                             <tr>                                  
                                 <th>Id</th>
                                 <th>Rol</th>
-                                <th>Estado</th>
+                                <!--<th>Estado</th>-->
                                 <th>Nombres</th>
                                 <th>Apellido</th>
                                 <th>Fecha de Nacimiento</th>
@@ -288,7 +287,7 @@ $Usuario_cliente = "SELECT * FROM usuarios WHERE Rol = '354'";
                         <tr>
                             <td><?php echo $row["IdUsuario"];?></td>
                             <td><?php echo $row["Rol"];?></td>
-                            <td><?php echo $row["Estado"];?></td>
+                            <!--<td><?php echo $row["Estado"];?></td>-->
                             <td><?php echo $row["Nombres"];?></td>
                             <td><?php echo $row["Apellidos"];?></td>
                             <td><?php echo $row["FechaNacimiento"];?></td>
@@ -315,7 +314,7 @@ $Usuario_cliente = "SELECT * FROM usuarios WHERE Rol = '354'";
                             <tr>                                  
                                 <th>Id</th>
                                 <th>Rol</th>
-                                <th>Estado</th>
+                                <!--<th>Estado</th>-->
                                 <th>Nombres</th>
                                 <th>Apellido</th>
                                 <th>Fecha de Nacimiento</th>
@@ -335,7 +334,7 @@ $Usuario_cliente = "SELECT * FROM usuarios WHERE Rol = '354'";
                         <tr>
                             <td><?php echo $row["IdUsuario"];?></td>
                             <td><?php echo $row["Rol"];?></td>
-                            <td><?php echo $row["Estado"];?></td>
+                            <!--<td><?php echo $row["Estado"];?></td>-->
                             <td><?php echo $row["Nombres"];?></td>
                             <td><?php echo $row["Apellidos"];?></td>
                             <td><?php echo $row["FechaNacimiento"];?></td>

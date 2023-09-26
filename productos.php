@@ -2,6 +2,7 @@
 require_once 'config/validate_session.php';
 require_once 'config/validate_roles.php';
 include ("conexion.php");
+
 if(!isset($_SESSION['rol'])){
     header('Location: ingresar.php');
 }else{
@@ -10,8 +11,7 @@ if(!isset($_SESSION['rol'])){
     }
 }
 
-include ("conexion.php");
-  $producto = "SELECT * FROM producto";
+$producto = "SELECT * FROM producto";
 
 $totalProducto = $conexion->query("SELECT SUM(Valorlibra) FROM producto");
 $totalProducto = $totalProducto->fetch_assoc();
@@ -34,6 +34,8 @@ $totalProducto = $totalProducto->fetch_assoc();
         <nav>
             <ul>
                 <?php
+                
+
                 if($_SESSION['rol'] != 971  && $_SESSION['rol'] != 578){
                     echo '
                         <li><a href="index2.php" class="logo">
@@ -270,7 +272,6 @@ $totalProducto = $totalProducto->fetch_assoc();
 
             if (isset($_POST['nombre_producto'])) {
                 $nombre_producto = $_POST['nombre_producto'];
-
             }
 
             if (isset($_POST['categoria'])) {
@@ -306,11 +307,10 @@ $totalProducto = $totalProducto->fetch_assoc();
             if (!empty($prod_estado)){
                 $producto .= " AND Estado = '$prod_estado'";
             }
-
             ?>
 
             <section class="dashboard">
-            <div class="dashboard-list">
+                <div class="dashboard-list">
                     <table class="table">
                         <thead>
                         <tr>
@@ -353,6 +353,7 @@ $totalProducto = $totalProducto->fetch_assoc();
                 <?php
                     $producto_carne = "SELECT * FROM producto WHERE NomCategoria = 'Carne' ";
                 ?>
+
                 <div class="dashboard-list">
                     <h1>Carne</h1>
                     <table class="table">

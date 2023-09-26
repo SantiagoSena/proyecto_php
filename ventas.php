@@ -9,8 +9,8 @@ if(!isset($_SESSION['rol'])){
         header('Location: ingresar.php');
     }
 }
-  include ("conexion.php");
-  $Venta = "SELECT * FROM venta";
+
+$Venta = "SELECT * FROM venta";
 ?>
 
 <!DOCTYPE html>

@@ -148,6 +148,8 @@ display: flex;
     width: 100%;
 }
 
+/*TABLAS*/
+
 .dashboard{
     margin-top: 1rem;
     text-transform: capitalize;
@@ -237,6 +239,10 @@ table thead tbody td i:hover{
     transition: 0.5rem;
 }
 
+/*MODAL*/
+
+/*Botones Modales*/
+
 .boton-modal{
     padding: 40px;
     background-color: #fff;
@@ -258,6 +264,8 @@ table thead tbody td i:hover{
 #btn-modal{
     display: none;
 }
+
+/*Modal*/
 
 .container-modal{
     width: 100%;
@@ -348,6 +356,8 @@ form .row select{
     z-index: -1;
 }
 
+/*Config. Modl Diferentes*/
+
 #btn-modal-agregar:checked ~ #container-modal-agregar {
     display: flex;
 }
@@ -361,8 +371,7 @@ form .row select{
     display: none;
 }
 
-
-
+/*SALDO PRODUCTOS*/
 
 .contenedor-items{
     display: flex;
@@ -403,6 +412,19 @@ form .row select{
     transition: all .3s;
 }
 
+/*FORMULARIO VENTASA*/
+/* Estilo para el botón de agregar producto */
+#agregarProductoBtn {
+    width: 100%;
+    padding: 10px;
+    margin-left: 10px;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 25px;
+    text-decoration: none;
+    color: rgb(194, 16, 16);
+    border: rgb(194, 16, 16) solid 1.5px;
+}
 
 @media screen and (max-width:800px) {
     .content-modal{

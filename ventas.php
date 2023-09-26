@@ -213,7 +213,7 @@ if(!isset($_SESSION['rol'])){
 
                         <div class="row">
                             <label>Tipo</label>
-                            <select name="tipo" class="form-select" >
+                            <select name="ven_tipo" class="form-select" >
                                 <option value="">Seleccione una Opción</option>
                                 <option value="Fisico">Punto Fisico</option>
                                 <option value="linea">En linea</option>
@@ -242,8 +242,8 @@ if(!isset($_SESSION['rol'])){
                 $nom_Producto = $_POST['nom_producto'];
             }
 
-            if (isset($_POST['tipo'])) {
-                $Tipo = $_POST['tipo'];
+            if (isset($_POST['ven_tipo'])) {
+                $ven_Tipo = $_POST['ven_tipo'];
             }
 
             if (isset($_POST['Cantidad'])) {
@@ -261,9 +261,9 @@ if(!isset($_SESSION['rol'])){
                 $venta.= " AND Producto LIKE '%$nom_Producto%'";
             }
 
-            if (!empty($tipo)){
-                $venta.= " AND Tipo = '$Tipo'";
-            }
+            if (!empty($ven_Tipo)){
+                $venta .= " AND Tipo = '$ven_Tipo'";
+            }           
 
             if (!empty($Cantidad)){
                 $venta.= " AND Cantidad = '$Cantidad'";
